@@ -7,9 +7,11 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
 
     Rigidbody2D player;
+    private Animator anim;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,17 @@ public class PlayerMovement : MonoBehaviour
         {
             player.velocity = new Vector2(player.velocity.x,7);
         }
+        if(dirX > 0f){
+            anim.SetBool("running",true);
+        }
+        else if (dirX < 0f)
+        {   
+            anim.SetBool("running",true);
+        }
+        else{
+            anim.SetBool("running",false);
 
+        }
 
 
     }
