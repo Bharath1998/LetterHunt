@@ -35,7 +35,13 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("running",false);
 
         }
+         
+    }
 
-
+    void OnCollisionEnter2D(Collision2D other){
+        Debug.Log("hit detected");
+        if(other.gameObject.tag == "letter") {
+            Destroy(other.gameObject);
+        }
     }
 }
