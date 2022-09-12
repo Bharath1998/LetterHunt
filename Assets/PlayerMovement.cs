@@ -41,7 +41,13 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other){
         Debug.Log("hit detected");
         if(other.gameObject.tag == "letter") {
+            //GameObject obj = new GameObject();
+           // obj.AddComponent<TextMesh>().text = other.gameObject.GetComponent<TextMesh>().text;
+           // obj.transform.localPosition = new Vector3(0, 0, 0);
+            
             Destroy(other.gameObject);
         }
+
+        Debug.Log(other.gameObject.GetComponent<TextMesh>().text);
     }
 }
