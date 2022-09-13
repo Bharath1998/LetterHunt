@@ -48,6 +48,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        Debug.Log(other.gameObject.GetComponent<TextMesh>().text);
+       // Debug.Log(other.gameObject.GetComponent<TextMesh>().text);
     }
 }
