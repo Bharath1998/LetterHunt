@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         float dirX = Input.GetAxisRaw("Horizontal");
         player.velocity = new Vector2(dirX * 7f, player.velocity.y);
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetKey(KeyCode.W))
         {
             player.velocity = new Vector2(player.velocity.x,7);
         }
