@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KillPlayerScript : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class KillPlayerScript : MonoBehaviour
     		Camera cam = Camera.main;
     		GameObject newCam = new GameObject("newMainCam");
     		newCam.AddComponent<Camera>();
+            SceneManager.LoadScene("Game Over");
     		
     	}
     	
