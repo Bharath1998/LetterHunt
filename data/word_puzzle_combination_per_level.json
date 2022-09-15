@@ -1,0 +1,14 @@
+{
+    "1": [
+        {
+            "target_word": "CAT",
+            "blanks": [0, 1],
+            "letters": ["A", "C", "E", "D", "G", "I", "K", "J", "M", "L", "O", "N", "Q", "P", "R", "T", "W", "V", "Y", "X", "Z"]
+        },
+        {
+            "target_word": "SAT",
+            "blanks": [0, 1],
+            "letters": ["A", "S", "T"]
+        }
+    ]
+}
