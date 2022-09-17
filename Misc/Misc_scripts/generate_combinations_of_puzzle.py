@@ -7,9 +7,9 @@ import re
 
 def set_all_possible_words():
     all_possible_words = []
-    with open('./scripts/words.txt', 'r') as file:
-        # print(file.readli)
-        all_possible_words = [word[:-2] for word in file.readlines()]
+    with open('./Misc/Misc_scripts/words.txt', 'r') as file:
+        # print(file.readlines())
+        all_possible_words = [word[:-2].upper() for word in file.readlines()]
     return all_possible_words
 
 # List of Characters in sequence with a boolean flag saying whether we display the letters
@@ -63,19 +63,19 @@ for index, target_word in enumerate(target_word_list):
     for word_search_regex in word_search_regexs:
         word_search_regex = '^' + word_search_regex + '$'
         regex_compiler = re.compile(word_search_regex)
-
+        # print(all_words)
         for word in all_words:
             if regex_compiler.search(word):
                 all_possible_words_matching_regexs.append(word)
     for word in all_possible_words_matching_regexs:
         for letter in word:
             unique_characters_in_matched_words.add(letter)
-    # print(set(select_characters).union(set(target_word_characters[index])))
-    # print(unique_characters_in_matched_words)
+    print(set(select_characters).union(set(target_word_characters[index])))
+    print(unique_characters_in_matched_words)
     set_of_characters_to_be_displayed = list((set(select_characters) - unique_characters_in_matched_words).union(set(target_word_characters[index])))
     all_set_of_characters_to_be_displayed.append(set_of_characters_to_be_displayed)
 
-with open('./data/word_puzzle_combination_per_level.json', 'w+') as json_file:
+with open('./Misc/Backend_data/word_puzzle_combination_per_level.json', 'w+') as json_file:
     levels = 10
     word_letter_combination_letter ={}
     for level in range(1, levels):
