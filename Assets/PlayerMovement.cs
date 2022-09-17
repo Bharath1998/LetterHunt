@@ -12,10 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
     bool facingRight = true;
     bool wordFormed = true;
+    //List to store Characters collected
+    public List<string> inventory;
+
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        inventory = new List<string>();
     }
 
     // Update is called once per frame
@@ -83,6 +87,16 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Letter")
         {
             Destroy(other.gameObject);
+            string characterType = other.gameObject.GetComponent<CollectableScript>().CharacterType;
+            print("Item Collected: "+ characterType);
+            inventory.Add(characterType);
+            print("Inventory Count: "+ inventory.Count);
+            string items = "";
+            for(int i=0;i<inventory.Count;i++)
+            {
+                items = items+inventory[i]+" ";
+            }
+            print(items);
         }
         // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
