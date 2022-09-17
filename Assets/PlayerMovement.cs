@@ -44,7 +44,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.tag == "Letter")
         {
-            Destroy(other.gameObject);
+            
+            if(other.gameObject.transform.GetChild(0).name=="a" || other.gameObject.transform.GetChild(0).name=="c" || other.gameObject.transform.GetChild(0).name=="t"){
+                WordManager.instance.updateWord(char.Parse(other.gameObject.transform.GetChild(0).name));
+                Destroy(other.gameObject);
+            } else {
+                // Vector2 pos=other.transform.position;
+
+            }
+            
+            
+
         }
+
+        
     }
 }
