@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D player;
     private Animator anim;
+    // private String word="CAT";
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
          
     }
 
+<<<<<<< Updated upstream
     void OnCollisionEnter2D(Collision2D other){
         Debug.Log("hit detected");
         if(other.gameObject.tag == "letter") {
@@ -49,5 +51,26 @@ public class PlayerMovement : MonoBehaviour
         }
 
        // Debug.Log(other.gameObject.GetComponent<TextMesh>().text);
+=======
+    void OnCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "Letter")
+        {
+            
+            if(other.gameObject.transform.GetChild(0).name=="a" || other.gameObject.transform.GetChild(0).name=="c" || other.gameObject.transform.GetChild(0).name=="t"){
+                WordManager.instance.updateWord(char.Parse(other.gameObject.transform.GetChild(0).name));
+                Destroy(other.gameObject);
+            } else {
+                // Vector2 pos=other.transform.position;
+
+            }
+            
+            
+
+        }
+
+        
+>>>>>>> Stashed changes
     }
 }
