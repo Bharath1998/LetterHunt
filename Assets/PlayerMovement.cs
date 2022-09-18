@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     private Vector2 movement;
     bool facingRight = true;
+    bool wordFormed = true;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -81,6 +83,11 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Letter")
         {
             Destroy(other.gameObject);
+        }
+        // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
+        if (other.gameObject.tag == "FinishLevel" && wordFormed)
+        {
+             SceneManager.LoadScene("Game Over");
         }
     }
 }
