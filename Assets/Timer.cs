@@ -11,7 +11,7 @@ public class Timer : MonoBehaviour
 
 
 	float currentTime = 0f;
-	float startingTime = 10f;
+	float startingTime = 30f;
 
 	public TMP_Text countdownText;
 
