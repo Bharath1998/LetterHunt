@@ -69,12 +69,12 @@ public class LetterSpawner : MonoBehaviour
     IEnumerator SpawnLetters() {
 
         while(i < index.Length){
-            yield return new WaitForSeconds(Random.Range(3, 5));
+            yield return new WaitForSeconds(3);
             randomIndex = Random.Range(0, letterReference.Length);
             //randomSide = Random.Range(0,2);
             //randomX = Random.Range(-7, 30);
             //randomY = Random.Range(0, 5);
-            Vector2 randomPosition = new Vector2(Random.Range(-7,30), Random.Range(0,5));
+            Vector2 randomPosition = new Vector2(Random.Range(-7,30), Random.Range(3,7));
             spawnedLetter = Instantiate(letterReference[index[i]]);
             i += 1;
             spawnedLetter.transform.position = randomPosition;          
