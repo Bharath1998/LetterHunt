@@ -1,0 +1,452 @@
+{
+    "lvl1": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl2": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl3": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl4": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl5": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl6": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl7": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl8": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ], 
+    "lvl9": [
+        {
+            "target_word": "CAT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "J", 
+                "Q", 
+                "T", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }, 
+        {
+            "target_word": "ACT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "letters": [
+                "A", 
+                "C", 
+                "B", 
+                "E", 
+                "D", 
+                "G", 
+                "F", 
+                "I", 
+                "H", 
+                "K", 
+                "J", 
+                "M", 
+                "O", 
+                "Q", 
+                "P", 
+                "S", 
+                "T", 
+                "W", 
+                "V", 
+                "Y", 
+                "X", 
+                "Z"
+            ]
+        }
+    ]
+}

@@ -485,6 +485,9 @@ MonoBehaviour:
   spawnedLetter: {fileID: 0}
   leftPos: {fileID: 1145904233}
   rightPos: {fileID: 37104722}
+  textJSON: {fileID: 4900000, guid: 30fed24bddd3f47d9a60519dbc591b3a, type: 3}
+  myPlayerList:
+    lvl1: []
 --- !u!4 &700888357
 Transform:
   m_ObjectHideFlags: 0
