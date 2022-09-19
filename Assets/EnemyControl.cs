@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
+
 
 public class EnemyControl : MonoBehaviour
 {
@@ -10,11 +14,14 @@ public class EnemyControl : MonoBehaviour
 	GameObject target;
 	float moveSpeed;
 	Vector3 directionToTarget;
+    public static float currentTime;
+    public static bool kill = false;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        // timer currentTime = 
         target = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
         moveSpeed = Random.Range(1f, 3f);
@@ -29,6 +36,7 @@ public class EnemyControl : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
     	switch(collision.gameObject.tag){
     		case "Player":
+                Debug.Log(gameObject.name);
 	    		EnemySpawnerScript.spawnAllowed = false;
 	    		Destroy(collision.gameObject);
 	    		target = null;
@@ -39,6 +47,14 @@ public class EnemyControl : MonoBehaviour
 	    		break;
 	    	case "Bullet":
 	    		Destroy(collision.gameObject);
+	    		if (gameObject.tag == "Enemy1")
+	    		{
+                    // timer.currentTime += 5 * Time.deltaTime;
+                    // Debug.Log(timer.currentTime);
+                    kill = true; 
+
+	    			
+	    		}
 	    		Destroy(gameObject);
 	    		break;
     	}

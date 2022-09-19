@@ -5,7 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Letter
+  - FinishLevel
   - Bullet
+  - Enemy1
   layers:
   - Default
   - TransparentFX

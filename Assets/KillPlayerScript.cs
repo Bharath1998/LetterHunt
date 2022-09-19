@@ -18,7 +18,7 @@ public class KillPlayerScript : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-    	if(collision.gameObject.name == "Enemy1"){
+    	if(collision.gameObject.name == "Enemy"){
     		Destroy(gameObject);
     		Camera cam = Camera.main;
     		GameObject newCam = new GameObject("newMainCam");
