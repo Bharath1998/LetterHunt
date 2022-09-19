@@ -74,7 +74,7 @@ public class LetterSpawner : MonoBehaviour
             //randomSide = Random.Range(0,2);
             //randomX = Random.Range(-7, 30);
             //randomY = Random.Range(0, 5);
-            Vector2 randomPosition = new Vector2(Random.Range(-7,30), Random.Range(3,7));
+            Vector2 randomPosition = new Vector2(Random.Range(-7,30), 16);
             spawnedLetter = Instantiate(letterReference[index[i]]);
             i += 1;
             spawnedLetter.transform.position = randomPosition;          
