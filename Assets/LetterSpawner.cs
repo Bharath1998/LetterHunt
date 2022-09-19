@@ -13,7 +13,7 @@ public class LetterSpawner : MonoBehaviour
     private float randomX;
     private float randomY;
     //private int[] index = {0, 5, 4, 8, 15, 25, 1, 0, 16};
-    private int[] index = new int[26];
+    private int[] index;
     private int i = 0;
 
     private string target_word;
@@ -54,7 +54,7 @@ public class LetterSpawner : MonoBehaviour
             i++;
             
         }
-
+        index = new int[letters.Length];
         for(int j=0; j<letters.Length; j++)
         {
             int ascii = (int)letters[j][0];
