@@ -937,7 +937,7 @@ MonoBehaviour:
   spawnedLetter: {fileID: 0}
   leftPos: {fileID: 1145904233}
   rightPos: {fileID: 37104722}
-  textJSON: {fileID: 4900000, guid: 30fed24bddd3f47d9a60519dbc591b3a, type: 3}
+  textJSON: {fileID: 4900000, guid: 299bed34224464cb293d1294722387e0, type: 3}
   myPlayerList:
     lvl1: []
 --- !u!1 &910830192
