@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,12 +16,27 @@ public class PlayerMovement : MonoBehaviour
     bool wordFormed = true;
     //List to store Characters collected
     public List<string> inventory;
-
+    public static string target;
+    
+	public TMP_Text wordTMP;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
+
+try
+{
+ target = LetterSpawner.target_word;
+    	int n = target.Length;
+        string temp = new string('_',n);
+        wordTMP.text = temp;
+}
+catch (NullReferenceException e)
+{
+   
+}
+		
     }
 
     // Update is called once per frame
@@ -88,15 +105,39 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             string characterType = other.gameObject.GetComponent<CollectableScript>().CharacterType;
-            print("Item Collected: "+ characterType);
-            inventory.Add(characterType);
-            print("Inventory Count: "+ inventory.Count);
-            string items = "";
-            for(int i=0;i<inventory.Count;i++)
-            {
-                items = items+inventory[i]+" ";
+            // print("Item Collected: "+ characterType);
+            // inventory.Add(characterType);
+            // print("Inventory Count: "+ inventory.Count);
+            // string items = "";
+            // for(int i=0;i<inventory.Count;i++)
+            // {
+            //     items = items+inventory[i]+" ";
+            // }
+            // print(items);
+            try
+                {
+                
+            char lastCharacter = characterType[characterType.Length - 1];
+            target = LetterSpawner.target_word;
+            string wordtmptext=wordTMP.text;
+            char[] arr2 = wordtmptext.ToCharArray();
+            
+            if (target.Contains(lastCharacter)){
+                int idx = target.IndexOf(lastCharacter);
+                arr2[idx] = lastCharacter;
+                // GameObject go = GameObject.Find("go" + idx.ToString());
+                // Destroy(go.gameObject);
             }
-            print(items);
+            wordTMP.text = new string(arr2);
+                
+            }
+            catch (NullReferenceException e)
+            {
+   
+            }
+
+           
+
         }
         // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
