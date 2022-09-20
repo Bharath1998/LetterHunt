@@ -16,7 +16,7 @@ public class LetterSpawner : MonoBehaviour
     private int[] index;
     private int i = 0;
 
-    private string target_word;
+    public static string target_word;
     private int[] blanks;
     private string[] letters;
 
@@ -70,7 +70,7 @@ public class LetterSpawner : MonoBehaviour
 
         while(i < index.Length){
             if(i!=0){
-                yield return new WaitForSeconds(3);
+                yield return new WaitForSeconds(1);
             } 
             randomIndex = Random.Range(0, letterReference.Length);
             
