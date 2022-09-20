@@ -16,7 +16,7 @@ public class LetterSpawner : MonoBehaviour
     private int[] index;
     private int i = 0;
 
-    private string target_word;
+    public static string target_word;
     private int[] blanks;
     private string[] letters;
 
@@ -25,9 +25,9 @@ public class LetterSpawner : MonoBehaviour
     [System.Serializable]
     public class Player
     {
-        public string target_word;
-        public int[] blanks;
-        public string[] letters;
+        public string target_word1;
+        public int[] blanks1;
+        public string[] letters1;
     }
 
     [System.Serializable]
@@ -47,9 +47,9 @@ public class LetterSpawner : MonoBehaviour
         foreach (Player player in myPlayerList.lvl1)
         {
             if(i==rInt){
-                target_word = player.target_word;
-                blanks = player.blanks;
-                letters = player.letters;
+                target_word = player.target_word1;
+                blanks = player.blanks1;
+                letters = player.letters1;
             }
             i++;
             
