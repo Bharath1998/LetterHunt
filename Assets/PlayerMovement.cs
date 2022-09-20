@@ -132,8 +132,11 @@ catch (NullReferenceException e)
                 
             if(wordTMP.text == target){
                 // Change to next level and so on.
-                SceneManager.LoadScene("Game Over");
+                StartCoroutine(SetWinText ());
+                // SceneManager.LoadScene("Game Over");
             }
+
+            
             }
             catch (NullReferenceException e)
             {
@@ -148,5 +151,11 @@ catch (NullReferenceException e)
         {
              SceneManager.LoadScene("Game Over");
         }
+    }
+
+     IEnumerator SetWinText () {
+        yield return new WaitForSeconds(3f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Game Over");
     }
 }
