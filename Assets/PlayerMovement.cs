@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
         movement = new Vector2(Input.GetAxisRaw("Horizontal"),0).normalized ;
         anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             float dirX = Input.GetAxisRaw("Horizontal");
             // player.velocity = new Vector2(dirX * 6f, player.velocity.y);
