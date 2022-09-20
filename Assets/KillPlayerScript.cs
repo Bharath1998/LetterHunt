@@ -1,68 +1,73 @@
-using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class KillPlayerScript : MonoBehaviour
 {
-	public DatabaseModel data;
+    public DatabaseModel data;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
-    private void OnCollisionEnter2D(Collision2D collision){
-    	if(collision.gameObject.name == "Enemy"){
-	        StartCoroutine(Upload());
-    		Destroy(gameObject);
-    		Camera cam = Camera.main;
-    		GameObject newCam = new GameObject("newMainCam");
-    		newCam.AddComponent<Camera>();
-            SceneManager.LoadScene("Game Over");
-    		
-    	}
-    	
-    }
-    IEnumerator Upload()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-	    data = new DatabaseModel();
-	    data.name = "Vini Jr.";
-	    data.age = "22";
-	    data.position = "Forward";
-	    Debug.Log("Started");
-	    Debug.Log(UnityWebRequest.EscapeURL(data.Stringify()));
+        if (collision.gameObject.name == "Enemy")
+        {
+            StartCoroutine(Upload());
+            Destroy (gameObject);
+            Camera cam = Camera.main;
+            GameObject newCam = new GameObject("newMainCam");
+            newCam.AddComponent<Camera>();
+            SceneManager.LoadScene("Game Over");
+        }
+    }
 
-	    UnityWebRequest www = UnityWebRequest.Post("https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry", UnityWebRequest.EscapeURL(data.Stringify()));
-	    www.SendWebRequest();
-	    while(!www.isDone)
-	    {
-		    continue;
-	    }
+    IEnumerator Upload(System.Action<bool> callback = null)
+    {
+        data = new DatabaseModel();
+        data.name = "Vini Jr.";
+        data.age = "22";
+        data.position = "Forward";
+        Debug.Log("Started 1");
+        Debug.Log(data.Stringify());
 
-	    if (www.isDone){
-		    var data = www.downloadHandler.text;
+        var url =
+            "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
+        var json = data.Stringify();
 
-		    if (www.result != UnityWebRequest.Result.Success)
-		    {
-			    Debug.Log(www.error);
-		    }
-		    else
-		    {
-			    Debug.Log("Data upload complete!");
-			    Debug.Log(data);
-		    }
+        using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
+        {
+            request.SetRequestHeader("Content-Type", "application/json");
+            byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(json);
+            request.uploadHandler =
+                (UploadHandler) new UploadHandlerRaw(bodyRaw);
 
-		    www.Dispose();
+            request.downloadHandler =
+                (DownloadHandler) new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+            request.SendWebRequest();
 
-		    yield return null;
-	    }
+            if (
+                request.result == UnityWebRequest.Result.ConnectionError ||
+                request.result == UnityWebRequest.Result.ProtocolError
+            )
+            {
+                Debug.Log(request.error);
+            }
+            else
+            {
+                Debug.Log(request.downloadHandler.text);
+            }
+            yield return null;
+        }
     }
 }
