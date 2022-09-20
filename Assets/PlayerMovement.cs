@@ -130,6 +130,10 @@ catch (NullReferenceException e)
             }
             wordTMP.text = new string(arr2);
                 
+            if(wordTMP.text == target){
+                // Change to next level and so on.
+                SceneManager.LoadScene("Game Over");
+            }
             }
             catch (NullReferenceException e)
             {
