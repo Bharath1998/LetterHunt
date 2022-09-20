@@ -69,12 +69,31 @@ public class LetterSpawner : MonoBehaviour
     IEnumerator SpawnLetters() {
 
         while(i < index.Length){
-            yield return new WaitForSeconds(3);
+            if(i!=0){
+                yield return new WaitForSeconds(3);
+            } 
             randomIndex = Random.Range(0, letterReference.Length);
-            //randomSide = Random.Range(0,2);
-            //randomX = Random.Range(-7, 30);
-            //randomY = Random.Range(0, 5);
-            Vector2 randomPosition = new Vector2(Random.Range(-7,30), 16);
+            
+            float x = Random.Range(-7,30);
+            float y = Random.Range(0,16);
+            Vector3 randomPosition = new Vector3(x,y,0);
+            while(true){
+                if( (x >= -8.5 && x <= -3 && y >=0 && y<=4.5) ||
+                (x >= -8.5 && x <= -0.5 && y >=7 && y<=11) ||
+                (x >= -8.5 && x <= 31 && y >=15 && y<=18) ||
+                (x >= 1.5 && x <= 11.5 && y >=0 && y<=4) ||
+                (x >= 10 && x <= 20 && y >= 2.5 && y<=9) ||
+                (x >= 20 && x <= 30 && y >= 1.5 && y<=4)){
+                    randomPosition = new Vector3(x,y,0);
+                    break;
+                }else{
+                    x = Random.Range(-7,30);
+                    y = Random.Range(0,16);
+                }
+            }
+            if(i==0){
+                randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
+            }
             spawnedLetter = Instantiate(letterReference[index[i]]);
             i += 1;
             spawnedLetter.transform.position = randomPosition;          
