@@ -15,6 +15,7 @@ public class EnemyControl : MonoBehaviour
 	float moveSpeed;
 	Vector3 directionToTarget;
     public static float currentTime;
+    PlayerMovement playerMovement;
     public static bool kill = false;
     
 
@@ -38,12 +39,9 @@ public class EnemyControl : MonoBehaviour
     		case "Player":
                 Debug.Log(gameObject.name);
 	    		EnemySpawnerScript.spawnAllowed = false;
-	    		Destroy(collision.gameObject);
-	    		target = null;
-                Camera cam = Camera.main;
-                GameObject newCam = new GameObject("newMainCam");
-                newCam.AddComponent<Camera>();
-                SceneManager.LoadScene("Game Over");
+                playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+                playerMovement.TakeDamage();
+
 	    		break;
 	    	case "Bullet":
 	    		Destroy(collision.gameObject);
