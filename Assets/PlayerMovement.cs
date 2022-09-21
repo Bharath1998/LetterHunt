@@ -104,6 +104,9 @@ catch (NullReferenceException e)
 
         if (other.gameObject.tag == "Letter")
         {
+            Vector3 oldPosition = other.gameObject.transform.position;
+            Vector3 oldscale = other.gameObject.transform.localScale;
+            print(oldPosition);
             Destroy(other.gameObject);
             string characterType = other.gameObject.GetComponent<CollectableScript>().CharacterType;
             // print("Item Collected: "+ characterType);
@@ -136,6 +139,10 @@ catch (NullReferenceException e)
                     {
                         print("working");
                     }
+                    GameObject spawnedLetter = Instantiate(gameObject);
+                    spawnedLetter.transform.position = oldPosition;
+                    spawnedLetter.transform.localScale = oldscale;
+                    Destroy(spawnedLetter, 1);
 
                 }
             wordTMP.text = new string(arr2);
