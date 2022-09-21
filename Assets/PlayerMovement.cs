@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     //List to store Characters collected
     public List<string> inventory;
     public static string target;
+    GameObject gameObject;
     
 	public TMP_Text wordTMP;
     void Start()
@@ -103,6 +104,9 @@ catch (NullReferenceException e)
 
         if (other.gameObject.tag == "Letter")
         {
+            Vector3 oldPosition = other.gameObject.transform.position;
+            Vector3 oldscale = other.gameObject.transform.localScale;
+            print(oldPosition);
             Destroy(other.gameObject);
             string characterType = other.gameObject.GetComponent<CollectableScript>().CharacterType;
             // print("Item Collected: "+ characterType);
@@ -128,6 +132,19 @@ catch (NullReferenceException e)
                 // GameObject go = GameObject.Find("go" + idx.ToString());
                 // Destroy(go.gameObject);
             }
+                else
+                {
+                    gameObject = Resources.Load("a/red_a_b_" + char.ToLower(lastCharacter)) as GameObject;
+                    if(gameObject != null)
+                    {
+                        print("working");
+                    }
+                    GameObject spawnedLetter = Instantiate(gameObject);
+                    spawnedLetter.transform.position = oldPosition;
+                    spawnedLetter.transform.localScale = oldscale;
+                    Destroy(spawnedLetter, 1);
+
+                }
             wordTMP.text = new string(arr2);
                 
             if(wordTMP.text == target){
