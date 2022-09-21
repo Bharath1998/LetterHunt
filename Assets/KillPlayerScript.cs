@@ -34,10 +34,8 @@ public class KillPlayerScript : MonoBehaviour
     IEnumerator Upload(System.Action<bool> callback = null)
     {
         data = new DatabaseModel();
-        data.name = "Vini Jr.";
-        data.age = "22";
-        data.position = "Forward";
-        Debug.Log("Started 1");
+        data.level = 1;
+        data.reason_end = "KILLED";
         Debug.Log(data.Stringify());
 
         var url =

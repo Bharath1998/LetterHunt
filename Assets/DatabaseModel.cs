@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DatabaseModel {
-    public string name;
-    public string age;
-    public string position;
+public class DatabaseModel
+{
+    public int level;
+    public string reason_end;
 
-    public string Stringify() {
+    public string Stringify()
+    {
         return JsonUtility.ToJson(this);
     }
 
-    public static DatabaseModel Parse(string json) {
+    public static DatabaseModel Parse(string json)
+    {
         return JsonUtility.FromJson<DatabaseModel>(json);
     }
-
 }
