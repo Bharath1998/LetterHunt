@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     //List to store Characters collected
     public List<string> inventory;
     public static string target;
+    GameObject gameObject;
     
 	public TMP_Text wordTMP;
     void Start()
@@ -128,6 +129,15 @@ catch (NullReferenceException e)
                 // GameObject go = GameObject.Find("go" + idx.ToString());
                 // Destroy(go.gameObject);
             }
+                else
+                {
+                    gameObject = Resources.Load("a/red_a_b_" + char.ToLower(lastCharacter)) as GameObject;
+                    if(gameObject != null)
+                    {
+                        print("working");
+                    }
+
+                }
             wordTMP.text = new string(arr2);
                 
             if(wordTMP.text == target){
