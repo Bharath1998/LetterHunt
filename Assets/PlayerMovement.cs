@@ -18,25 +18,32 @@ public class PlayerMovement : MonoBehaviour
     public List<string> inventory;
     public static string target;
     GameObject gameObject;
-    
+    public HealthBar healthBar;
 	public TMP_Text wordTMP;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public int damage = 10;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
+        healthBar = new HealthBar();
+        Debug.Log(healthBar);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(currentHealth);
 
-try
-{
- target = LetterSpawner.target_word;
-    	int n = target.Length;
-        string temp = new string('_',n);
-        wordTMP.text = temp;
-}
-catch (NullReferenceException e)
-{
-   
-}
+        try
+        {
+            target = LetterSpawner.target_word;
+            int n = target.Length;
+            string temp = new string('_',n);
+            wordTMP.text = temp;
+        }
+        catch (NullReferenceException e)
+        {
+        
+        }
 		
     }
 
@@ -97,7 +104,21 @@ catch (NullReferenceException e)
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
+    public void TakeDamage(){
+        currentHealth -= damage;
+        if(currentHealth <=0){
 
+            Destroy(this.gameObject);
+            target = null;
+            Camera cam = Camera.main;
+            GameObject newCam = new GameObject("newMainCam");
+            newCam.AddComponent<Camera>();
+            SceneManager.LoadScene("Game Over");
+        }
+        else{
+            healthBar.SetHealth(currentHealth);
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
