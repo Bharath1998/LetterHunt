@@ -28,7 +28,7 @@ public class DataCollection
             request.downloadHandler =
                 (DownloadHandler) new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
-            // request.SendWebRequest();
+            request.SendWebRequest();
 
             if (
                 request.result == UnityWebRequest.Result.ConnectionError ||
