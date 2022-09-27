@@ -15,4 +15,6 @@ public class GameOverScreen : MonoBehaviour
         Debug.Log("Byee");
         SceneManager.LoadScene("Menu");
     }
+    
+  
 }
