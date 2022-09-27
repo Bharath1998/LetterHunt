@@ -13,16 +13,20 @@ public class Timer : MonoBehaviour
     public static float currentTime = 0f;
 
     public static bool kill;
-	float startingTime = 30f;
+
+    float startingTime = 10f;
 
     public TMP_Text countdownText;
 
     void Start()
     {
         currentTime = startingTime;
+    }
 
+    void Update()
+    {
         kill = IncreaseTime.kill;
-        
+
         if (kill == true)
         {
             Debug.Log("Previous current time = " + currentTime);
@@ -33,7 +37,7 @@ public class Timer : MonoBehaviour
         {
             currentTime -= 1 * Time.deltaTime;
         }
-		
+
         IncreaseTime.kill = false;
 
         countdownText.text = currentTime.ToString("0");
