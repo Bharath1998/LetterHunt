@@ -35,8 +35,9 @@ public class EnemyControl : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
     	switch(collision.gameObject.tag){
     		case "Player":
+                //Destroy(collision.gameObject);
                 Debug.Log(gameObject.name);
-	    		EnemySpawnerScript.spawnAllowed = false;
+                EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.TakeDamage();
 
