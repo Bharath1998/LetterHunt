@@ -41,15 +41,24 @@ public class LetterInfo : MonoBehaviour
             string dialogue_instructionstext=wordFormed.text;
             char[] arr2 = dialogue_instructionstext.ToCharArray();
             if(lastCharacter == 'C'){
-                dialogue_instructions.text="Correct Letters help you guess the word!";
+                string ins_1="Correct Letters help you guess the word!";
+                StopAllCoroutines();
+                StartCoroutine(typeSentence(ins_1));
+                // dialogue_instructions.text="Correct Letters help you guess the word!";
             }
             if(lastCharacter == 'N'){
-                dialogue_instructions.text="Wrong Letters turn RED!";
+                string ins_2="Wrong Letters turn RED!";
+                StopAllCoroutines();
+                StartCoroutine(typeSentence(ins_2));
+                // dialogue_instructions.text="Wrong Letters turn RED!";
             }
 
             if(lastCharacter == 'D'){
                 StartCoroutine(wait());
-                dialogue_instructions.text = "Press Up Arrow to jump!";
+                string ins_3 = "Press Up Arrow to jump!";
+                StopAllCoroutines();
+                StartCoroutine(typeSentence(ins_3));
+                // dialogue_instructions.text = "Press Up Arrow to jump!";
             }
             if (target_word.Contains(lastCharacter)){
                 int idx = target_word.IndexOf(lastCharacter);
@@ -68,7 +77,10 @@ public class LetterInfo : MonoBehaviour
             wordFormed.text = new string(arr2);
                 
             if(wordFormed.text == target_word){
-                dialogue_instructions.text = "Great Going!";
+                string ins_4 = "Great Going!";
+                StopAllCoroutines();
+                StartCoroutine(typeSentence(ins_4));
+                // dialogue_instructions.text = "Great Going!";
                 StartCoroutine(LoadPowerUpTutorial());
             }
             }
@@ -81,6 +93,17 @@ public class LetterInfo : MonoBehaviour
 
     IEnumerator wait(){
         yield return new WaitForSeconds(1f);
+    }
+
+    // Animator to type sentence
+    IEnumerator typeSentence(string sentence){
+        dialogue_instructions.text="";
+        foreach(char letter in sentence.ToCharArray()){
+            dialogue_instructions.text+=letter;
+            yield return null;
+
+        }
+
     }
     IEnumerator LoadPowerUpTutorial () {
         yield return new WaitForSeconds(3f);
