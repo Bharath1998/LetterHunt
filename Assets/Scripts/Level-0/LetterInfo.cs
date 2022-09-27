@@ -69,7 +69,7 @@ public class LetterInfo : MonoBehaviour
                 
             if(wordFormed.text == target_word){
                 dialogue_instructions.text = "Great Going!";
-                StartCoroutine(LoadLevel1 ());
+                StartCoroutine(LoadPowerUpTutorial());
             }
             }
             catch (NullReferenceException e)
@@ -82,10 +82,10 @@ public class LetterInfo : MonoBehaviour
     IEnumerator wait(){
         yield return new WaitForSeconds(1f);
     }
-    IEnumerator LoadLevel1 () {
-        yield return new WaitForSeconds(5f);
+    IEnumerator LoadPowerUpTutorial () {
+        yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
         // Load Next Scene
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("PowerInfo");
     }
 }
