@@ -46,6 +46,11 @@ public class LetterInfo : MonoBehaviour
             if(lastCharacter == 'N'){
                 dialogue_instructions.text="Wrong Letters turn RED!";
             }
+
+            if(lastCharacter == 'D'){
+                StartCoroutine(wait());
+                dialogue_instructions.text = "Press Up Arrow to jump!";
+            }
             if (target_word.Contains(lastCharacter)){
                 int idx = target_word.IndexOf(lastCharacter);
                 arr2[idx] = lastCharacter;
@@ -74,6 +79,9 @@ public class LetterInfo : MonoBehaviour
         }
     }
 
+    IEnumerator wait(){
+        yield return new WaitForSeconds(1f);
+    }
     IEnumerator LoadLevel1 () {
         yield return new WaitForSeconds(5f);
         Destroy(this.gameObject);
