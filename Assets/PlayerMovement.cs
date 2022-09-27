@@ -25,13 +25,27 @@ public class PlayerMovement : MonoBehaviour
 
     public static string target;
 
+    GameObject gameObject;
+
+    public HealthBar healthBar;
+
     public TMP_Text wordTMP;
+
+    public int maxHealth = 100;
+
+    public int currentHealth;
+
+    public int damage = 10;
 
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
+        healthBar = new HealthBar();
+        Debug.Log (healthBar);
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth (currentHealth);
 
         try
         {
@@ -99,10 +113,32 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
     }
 
+    public void TakeDamage()
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            StartCoroutine(DataCollection.Upload(1, "KILLED"));
+            Destroy(this.gameObject);
+            target = null;
+            Camera cam = Camera.main;
+            GameObject newCam = new GameObject("newMainCam");
+            newCam.AddComponent<Camera>();
+            SceneManager.LoadScene("Game Over");
+        }
+        else
+        {
+            healthBar.SetHealth (currentHealth);
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Letter")
         {
+            Vector3 oldPosition = other.gameObject.transform.position;
+            Vector3 oldscale = other.gameObject.transform.localScale;
+            print (oldPosition);
             Destroy(other.gameObject);
             string characterType =
                 other
@@ -133,6 +169,37 @@ public class PlayerMovement : MonoBehaviour
                     // GameObject go = GameObject.Find("go" + idx.ToString());
                     // Destroy(go.gameObject);
                 }
+                else
+                {
+                    gameObject =
+                        Resources
+                            .Load("a/red_a_b_" + char.ToLower(lastCharacter)) as
+                        GameObject;
+                    if (gameObject != null)
+                    {
+                        print("working");
+                    }
+                    GameObject spawnedLetter = Instantiate(gameObject);
+                    spawnedLetter.transform.position = oldPosition;
+                    spawnedLetter.transform.localScale = oldscale;
+                    Destroy(spawnedLetter, 1);
+                }
+                wordTMP.text = new string(arr2);
+
+                if (wordTMP.text == target)
+                {
+                    // Change to next level and so on.
+                    StartCoroutine(SetWinText());
+                    // SceneManager.LoadScene("Game Over");
+                }
+
+                if (target.Contains(lastCharacter))
+                {
+                    int idx = target.IndexOf(lastCharacter);
+                    arr2[idx] = lastCharacter;
+                    // GameObject go = GameObject.Find("go" + idx.ToString());
+                    // Destroy(go.gameObject);
+                }
                 wordTMP.text = new string(arr2);
 
                 if (wordTMP.text == target)
@@ -140,6 +207,7 @@ public class PlayerMovement : MonoBehaviour
                     // Change to next level and so on.
                     Debug.Log("WON");
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
+
                     // StartCoroutine(SetWinText());
                     Destroy(this.gameObject);
                     SceneManager.LoadScene("Game Over");
