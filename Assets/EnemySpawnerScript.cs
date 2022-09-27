@@ -11,14 +11,14 @@ public class EnemySpawnerScript : MonoBehaviour
     public GameObject[] monsters;
     int randomSpawnPoint, randomMonster;
     public static bool spawnAllowed;
-    int spawnedMonsters = 0;
-    int spawnLimit = 5;
+    public static int spawnedMonsters = 0;
+    int spawnLimit = 9;
 
     void Start()
     {
         
         spawnAllowed = true;
-        InvokeRepeating("SpawnAMonster", 1f, 3f);
+        InvokeRepeating("SpawnAMonster", 3f, 6f);
     }
 
     void SpawnAMonster(){

@@ -8,6 +8,10 @@ TagManager:
   - FinishLevel
   - Enemy1
   - Bullet
+  - power_up_dest_enemies
+  - power_up_highlight
+  - power_up_add_time
+  - Enemy2
   layers:
   - Default
   - TransparentFX
