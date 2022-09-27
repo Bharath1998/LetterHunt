@@ -1,56 +1,58 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+using static DataCollection;
 
 public class Timer : MonoBehaviour
 {
+    public static float currentTime = 0f;
 
-
-	public static float currentTime = 0f;
     public static bool kill;
-	float startingTime = 30f;
 
-	public TMP_Text countdownText;
+    float startingTime = 30f;
 
-	void Start(){
-		currentTime = startingTime;
-	}
+    public TMP_Text countdownText;
 
-	void Update(){
+    void Start()
+    {
+        currentTime = startingTime;
+    }
 
+    void Update()
+    {
         kill = EnemyControl.kill;
-        
+
         if (kill == true)
         {
             Debug.Log("Previous current time = " + currentTime);
             currentTime += 5;
             Debug.Log("New current time = " + currentTime);
-
-
-        }  
+        }
         else
         {
             currentTime -= 1 * Time.deltaTime;
         }
-		
+
         EnemyControl.kill = false;
 
-		countdownText.text = currentTime.ToString("0");
+        countdownText.text = currentTime.ToString("0");
 
-		if (currentTime <=0){
-			currentTime = 0;
-			SceneManager.LoadScene("Game Over");
-		}
-	}
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+            StartCoroutine(DataCollection.Upload(1, "TIME_UP"));
+            SceneManager.LoadScene("Game Over");
+        }
+    }
 
-	// public float timeValue = 90;
-	// public Text timeText;
+    // public float timeValue = 90;
+    // public Text timeText;
     // // Start is called before the first frame update
-    
 
     // // Update is called once per frame
     // void Update()
@@ -66,9 +68,7 @@ public class Timer : MonoBehaviour
     // 	}
 
     // 	DisplayTime(timeValue);
-    	
 
-        
     // }
 
     // void DisplayTime(float timeToDisplay)

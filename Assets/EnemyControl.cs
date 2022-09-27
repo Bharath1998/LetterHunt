@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
-
+using static DataCollection;
 
 
 public class EnemyControl : MonoBehaviour
@@ -36,6 +36,7 @@ public class EnemyControl : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
     	switch(collision.gameObject.tag){
     		case "Player":
+                StartCoroutine(DataCollection.Upload(1, "KILLED"));
                 Debug.Log(gameObject.name);
 	    		EnemySpawnerScript.spawnAllowed = false;
 	    		Destroy(collision.gameObject);
