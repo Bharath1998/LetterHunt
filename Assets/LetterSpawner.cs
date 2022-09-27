@@ -5,6 +5,7 @@ using UnityEngine;
 public class LetterSpawner : MonoBehaviour
 {
     public GameObject[] letterReference;
+    // public GameObject power_up_highlight;
 
     public GameObject spawnedLetter;
     public Transform leftPos, rightPos;
@@ -91,9 +92,14 @@ public class LetterSpawner : MonoBehaviour
                     y = Random.Range(0,16);
                 }
             }
+
             if(i==0){
                 randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
             }
+            // if(i==2){
+            //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
+            //     power_up_highlight_ins.transform.position = randomPosition;
+            // }
             spawnedLetter = Instantiate(letterReference[index[i]]);
             i += 1;
             spawnedLetter.transform.position = randomPosition;          
