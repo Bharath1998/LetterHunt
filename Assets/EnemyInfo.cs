@@ -8,21 +8,14 @@ using System;
 public class EnemyInfo : MonoBehaviour
 {
     // Start is called before the first frame update
-
+   Rigidbody2D rb;
     public TMP_Text dialogue_instructions;
-    //public TMP_Text wordFormed;
-    //public string target_word = "CAT";
     GameObject gameObject;
     void Start()
     {
         dialogue_instructions.text = "Enemies deteriorate your health!";
-        //wordFormed.text = "___";
-
-        //StartCoroutine(wait());
+        rb = GetComponent<Rigidbody2D>();
         callCoroutines();
-        
-        
-        
 
     }
 
@@ -34,43 +27,45 @@ public class EnemyInfo : MonoBehaviour
 
     void callCoroutines()
     {
-        //yield return new WaitForSeconds(3f);
         StartCoroutine(wait());
-        //StopAllCoroutines();
-        //dialogue_instructions.text = "Shoot!";
-        
-        //StopAllCoroutines();
     }
 
-    
-    
 
     IEnumerator wait()
     {
-        print("wait");
         yield return new WaitForSeconds(3f);
-        string ins_1 = "Shoot using your mouse";
+        string ins_1 = "Aim & Shoot using your mouse left click";
         StartCoroutine(typeSentence(ins_1));
 
     }
 
-    // Animator to type sentence
     IEnumerator typeSentence(string sentence)
     {
         dialogue_instructions.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
-            print(letter);
             dialogue_instructions.text += letter;
             yield return null;
 
         }
-
+        
+        
     }
-    public IEnumerator LoadPowerUpTutorial()
+
+    // void OnCollisionEnter2D(Collision2D collision){
+    //     if(collision.gameObject.tag == "Enemy1"){
+    //         rb.velocity = Vector2.zero;
+    //         rb.isKinematic = true;
+    //         Destroy(collision.gameObject);
+    //         Destroy(this.gameObject);
+    //         StartCoroutine(LoadPowerUpTutorial());
+    //     }
+        
+        
+    // }
+    IEnumerator LoadPowerUpTutorial()
     {
-        yield return new WaitForSeconds(3f);
-        Destroy(this.gameObject);
+        yield return new WaitForSeconds(2f);
         // Load Next Scene
         SceneManager.LoadScene("PowerInfo");
     }

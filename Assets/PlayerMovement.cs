@@ -209,8 +209,10 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
 
                     // StartCoroutine(SetWinText());
+                    StopAllCoroutines();
                     Destroy(this.gameObject);
-                    SceneManager.LoadScene("Game Over");
+                    StartCoroutine(SetWinText());
+                    // SceneManager.LoadScene("Win");
                     // SceneManager.LoadScene("Game Over");
                 }
             }
@@ -232,8 +234,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetWinText()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        SceneManager.LoadScene("Game Over");
+        SceneManager.LoadScene("Win");
     }
 }
