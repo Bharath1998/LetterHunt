@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
 
 	void Update(){
 
-        kill = EnemyControl.kill;
+        kill = IncreaseTime.kill;
         
         if (kill == true)
         {
@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
             currentTime -= 1 * Time.deltaTime;
         }
 		
-        EnemyControl.kill = false;
+        IncreaseTime.kill = false;
 
 		countdownText.text = currentTime.ToString("0");
 

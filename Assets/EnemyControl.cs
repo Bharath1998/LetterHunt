@@ -45,14 +45,14 @@ public class EnemyControl : MonoBehaviour
 	    		break;
 	    	case "Bullet":
 	    		Destroy(collision.gameObject);
-	    		if (gameObject.tag == "Enemy1")
-	    		{
-                    // timer.currentTime += 5 * Time.deltaTime;
-                    // Debug.Log(timer.currentTime);
-                    kill = true; 
+	    		// if (gameObject.tag == "Enemy1")
+	    		// {
+                //     // timer.currentTime += 5 * Time.deltaTime;
+                //     // Debug.Log(timer.currentTime);
+                //     kill = true; 
 
 	    			
-	    		}
+	    		// }
 	    		Destroy(gameObject);
 	    		break;
     	}
