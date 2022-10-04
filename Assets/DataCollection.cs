@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 using static ShootScript;
 using static EnemyControl;
+using static PlayerMovement;
 
 public class DataCollection
 {
@@ -18,6 +19,7 @@ public class DataCollection
         data.reason_end = reasonEnd;
         data.enemies_killed = EnemyControl.enemiesKilled;
         data.total_bullets = ShootScript.totalBullets;
+        data.final_health = PlayerMovement.currentHealth;
         EnemyControl.enemiesKilled = 0;
         ShootScript.totalBullets = 0;
         var url =

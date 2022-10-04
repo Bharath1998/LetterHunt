@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 100;
 
-    public int currentHealth;
+    [SerializeField]
+    public static int currentHealth;
 
     public int damage = 10;
 

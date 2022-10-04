@@ -8,6 +8,7 @@ public class DatabaseModel
     public string reason_end;
     public int enemies_killed;
     public int total_bullets;
+    public int final_health;
 
     public string Stringify()
     {
