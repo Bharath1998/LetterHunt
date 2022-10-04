@@ -7,11 +7,10 @@ using UnityEngine.SceneManagement;
 using static ShootScript;
 using static EnemyControl;
 using static PlayerMovement;
+using static Timer;
 
 public class DataCollection
 {
-    // [SerializeField]
-    // public static ShootScript shootScript;
     public static IEnumerator Upload(int level = 1, string reasonEnd = "KILLED")
     {
         DatabaseModel data = new DatabaseModel();
@@ -20,6 +19,7 @@ public class DataCollection
         data.enemies_killed = EnemyControl.enemiesKilled;
         data.total_bullets = ShootScript.totalBullets;
         data.final_health = PlayerMovement.currentHealth;
+        data.time_remaining = (int)Mathf.Round(Timer.currentTime);
         EnemyControl.enemiesKilled = 0;
         ShootScript.totalBullets = 0;
         var url =
