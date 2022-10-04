@@ -15,6 +15,8 @@ public class EnemyControl : MonoBehaviour
     public static float currentTime;
     PlayerMovement playerMovement;
     public static bool kill = false;
+    [SerializeField]
+    public static int enemiesKilled = 0;
     
 
     // Start is called before the first frame update
@@ -43,6 +45,7 @@ public class EnemyControl : MonoBehaviour
 
 	    		break;
 	    	case "Bullet":
+                enemiesKilled += 1;
 	    		Destroy(collision.gameObject);
 	    		// if (gameObject.tag == "Enemy1")
 	    		// {

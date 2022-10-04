@@ -6,6 +6,8 @@ public class DatabaseModel
 {
     public int level;
     public string reason_end;
+    public int enemies_killed;
+    public int total_bullets;
 
     public string Stringify()
     {

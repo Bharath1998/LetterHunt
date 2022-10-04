@@ -4,16 +4,22 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
+using static ShootScript;
+using static EnemyControl;
+
 public class DataCollection
 {
+    // [SerializeField]
+    // public static ShootScript shootScript;
     public static IEnumerator Upload(int level = 1, string reasonEnd = "KILLED")
     {
-        Debug.Log(reasonEnd);
         DatabaseModel data = new DatabaseModel();
         data.level = level;
         data.reason_end = reasonEnd;
-        Debug.Log("DC");
-
+        data.enemies_killed = EnemyControl.enemiesKilled;
+        data.total_bullets = ShootScript.totalBullets;
+        EnemyControl.enemiesKilled = 0;
+        ShootScript.totalBullets = 0;
         var url =
             "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
         var json = data.Stringify();
