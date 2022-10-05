@@ -6,17 +6,19 @@ public class ShootScript : MonoBehaviour
 {
     public float LaunchForce;
     public GameObject Bullet;
+    [SerializeField]
+    public static int totalBullets = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0))
         {
+            totalBullets += 1;
             Shoot();
         }     
     }
