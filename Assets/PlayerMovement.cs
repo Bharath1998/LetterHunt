@@ -38,6 +38,11 @@ public class PlayerMovement : MonoBehaviour
 
     public int damage = 10;
 
+    [SerializeField]
+    public static int correctLetters;
+    
+    [SerializeField]
+    public static int incorrectLetters;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -47,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log (healthBar);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth (currentHealth);
+        correctLetters=0;
+        incorrectLetters=0;
 
         try
         {
@@ -165,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (target.Contains(lastCharacter))
                 {
+                    correctLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
                     arr2[idx] = lastCharacter;
                     // GameObject go = GameObject.Find("go" + idx.ToString());
@@ -172,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    incorrectLetters+=1;
                     gameObject =
                         Resources
                             .Load("a/red_a_b_" + char.ToLower(lastCharacter)) as
