@@ -10,6 +10,8 @@ public class DatabaseModel
     public int total_bullets;
     public int final_health;
     public float time_remaining;
+    public int correct_letters;
+    public int incorrect_letters;
 
     public string Stringify()
     {

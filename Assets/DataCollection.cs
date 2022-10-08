@@ -20,6 +20,10 @@ public class DataCollection
         data.total_bullets = ShootScript.totalBullets;
         data.final_health = PlayerMovement.currentHealth;
         data.time_remaining = (int)Mathf.Round(Timer.currentTime);
+        data.correct_letters = PlayerMovement.correctLetters;
+        data.incorrect_letters = PlayerMovement.incorrectLetters;
+        PlayerMovement.correctLetters = 0;
+        PlayerMovement.incorrectLetters = 0;
         EnemyControl.enemiesKilled = 0;
         ShootScript.totalBullets = 0;
         var url =
