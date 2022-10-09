@@ -103,6 +103,6 @@ public class LetterInfo : MonoBehaviour
     IEnumerator LoadLevel01Tutorial () {
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
-        SceneManager.LoadScene("PowerInfo");
+        SceneManager.LoadScene("Level01");
     }
 }
