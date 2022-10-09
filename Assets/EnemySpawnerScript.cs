@@ -17,12 +17,12 @@ public class EnemySpawnerScript : MonoBehaviour
     void Start()
     {
         
-        spawnAllowed = true;
+        // spawnAllowed = true;
         InvokeRepeating("SpawnAMonster", 3f, 6f);
     }
 
     void SpawnAMonster(){
-        if(spawnAllowed){
+        // if(spawnAllowed){
             randomSpawnPoint = Random.Range(0, spawnPoints.Length);
             randomMonster = Random.Range(0, monsters.Length);
             if(spawnedMonsters != spawnLimit){
@@ -30,7 +30,7 @@ public class EnemySpawnerScript : MonoBehaviour
                 spawnedMonsters++;
             }
             
-        }
+        // }
     }
 
     // Update is called once per frame

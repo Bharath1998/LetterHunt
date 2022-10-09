@@ -39,7 +39,7 @@ public class EnemyControl : MonoBehaviour
     		case "Player":
                 //Destroy(collision.gameObject);
                 Debug.Log(gameObject.name);
-                EnemySpawnerScript.spawnAllowed = false;
+                // EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.TakeDamage();
 
