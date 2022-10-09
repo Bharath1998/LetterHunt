@@ -33,10 +33,16 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 100;
 
-    public int currentHealth;
+    [SerializeField]
+    public static int currentHealth;
 
     public int damage = 10;
 
+    [SerializeField]
+    public static int correctLetters;
+    
+    [SerializeField]
+    public static int incorrectLetters;
     void Start()
     {
         player = GetComponent<Rigidbody2D>();
@@ -46,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log (healthBar);
         currentHealth = maxHealth;
         healthBar.SetMaxHealth (currentHealth);
+        correctLetters=0;
+        incorrectLetters=0;
 
         try
         {
@@ -164,6 +172,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (target.Contains(lastCharacter))
                 {
+                    correctLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
                     arr2[idx] = lastCharacter;
                     // GameObject go = GameObject.Find("go" + idx.ToString());
@@ -171,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
+                    incorrectLetters+=1;
                     gameObject =
                         Resources
                             .Load("a/red_a_b_" + char.ToLower(lastCharacter)) as
@@ -209,8 +219,10 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
 
                     // StartCoroutine(SetWinText());
+                    StopAllCoroutines();
                     Destroy(this.gameObject);
-                    SceneManager.LoadScene("Game Over");
+                    StartCoroutine(SetWinText());
+                    // SceneManager.LoadScene("Win");
                     // SceneManager.LoadScene("Game Over");
                 }
             }
@@ -232,8 +244,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetWinText()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        SceneManager.LoadScene("Game Over");
+        SceneManager.LoadScene("Win");
     }
 }

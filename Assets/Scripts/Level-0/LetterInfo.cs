@@ -36,7 +36,6 @@ public class LetterInfo : MonoBehaviour
             Destroy(other.gameObject);
             try
             {
-                
             char lastCharacter = characterType[characterType.Length - 1];
             string dialogue_instructionstext=wordFormed.text;
             char[] arr2 = dialogue_instructionstext.ToCharArray();
@@ -44,13 +43,11 @@ public class LetterInfo : MonoBehaviour
                 string ins_1="Correct Letters help you guess the word!";
                 StopAllCoroutines();
                 StartCoroutine(typeSentence(ins_1));
-                // dialogue_instructions.text="Correct Letters help you guess the word!";
             }
             if(lastCharacter == 'N'){
                 string ins_2="Wrong Letters turn RED!";
                 StopAllCoroutines();
                 StartCoroutine(typeSentence(ins_2));
-                // dialogue_instructions.text="Wrong Letters turn RED!";
             }
 
             if(lastCharacter == 'D'){
@@ -58,7 +55,6 @@ public class LetterInfo : MonoBehaviour
                 string ins_3 = "Press Up Arrow to jump!";
                 StopAllCoroutines();
                 StartCoroutine(typeSentence(ins_3));
-                // dialogue_instructions.text = "Press Up Arrow to jump!";
             }
             if (target_word.Contains(lastCharacter)){
                 int idx = target_word.IndexOf(lastCharacter);
@@ -80,8 +76,7 @@ public class LetterInfo : MonoBehaviour
                 string ins_4 = "Great Going!";
                 StopAllCoroutines();
                 StartCoroutine(typeSentence(ins_4));
-                // dialogue_instructions.text = "Great Going!";
-                StartCoroutine(LoadPowerUpTutorial());
+                StartCoroutine(LoadLevel01Tutorial());
             }
             }
             catch (NullReferenceException e)
@@ -105,10 +100,9 @@ public class LetterInfo : MonoBehaviour
         }
 
     }
-    IEnumerator LoadPowerUpTutorial () {
+    IEnumerator LoadLevel01Tutorial () {
         yield return new WaitForSeconds(3f);
         Destroy(this.gameObject);
-        // Load Next Scene
         SceneManager.LoadScene("PowerInfo");
     }
 }

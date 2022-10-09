@@ -43,7 +43,9 @@ public class EnemyControlLevel01 : MonoBehaviour
                 //EnemySpawnerScript.spawnAllowed = false;
                 //playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 //playerMovement.TakeDamage();
+
                 StartCoroutine(LoadLevel01());
+
                 break;
             case "Bullet":
                 Destroy(collision.gameObject);
@@ -57,10 +59,12 @@ public class EnemyControlLevel01 : MonoBehaviour
 
                 // }
                 Destroy(gameObject);
+
                 StopAllCoroutines();
                 StartCoroutine(wait());
                 StopAllCoroutines();
                 StartCoroutine(LoadLevel01Tutorial());
+
                 break;
         }
 
@@ -80,6 +84,7 @@ public class EnemyControlLevel01 : MonoBehaviour
             rb.velocity = Vector3.zero;
         }
     }
+
 
     
 
@@ -109,4 +114,5 @@ public class EnemyControlLevel01 : MonoBehaviour
         SceneManager.LoadScene("Level01");
         yield return null;
     }
+
 }
