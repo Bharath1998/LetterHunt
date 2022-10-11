@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 using static DataCollection;
 
 public class PlayerMovement : MonoBehaviour
@@ -26,7 +26,6 @@ public class PlayerMovement : MonoBehaviour
     public static string target;
 
     GameObject gameObject;
-
     public HealthBar healthBar;
 
     public TMP_Text wordTMP;
@@ -121,8 +120,10 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void TakeDamage()
-    {
+    public void TakeDamage(){
+    
+    if((GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)==false){
+        Debug.Log("taking damage");
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
@@ -136,8 +137,11 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            Debug.Log("player shielded");
             healthBar.SetHealth (currentHealth);
         }
+    }
+        
     }
 
     void OnCollisionEnter2D(Collision2D other)
