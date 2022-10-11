@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         inventory = new List<string>();
         healthBar = new HealthBar();
-        Debug.Log (healthBar);
+        
         currentHealth = maxHealth;
         healthBar.SetMaxHealth (currentHealth);
         correctLetters=0;
@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
             // player.velocity = new Vector2(dirX * 6f, player.velocity.y);
             player.velocity = new Vector2(player.velocity.x, 6);
-            Debug.Log("BRO ITS greater");
+            
             }
         }
         bool flipped = movement.x < 0;
@@ -133,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage(){
     
     if((GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)==false){
-        Debug.Log("taking damage");
+        
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log("player shielded");
+            
             healthBar.SetHealth (currentHealth);
         }
     }
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "ground")
         {
         JumpCount = MaxJumps;
-        Debug.Log("BRO ITS hitting");
+        
 
         }
         if (other.gameObject.tag == "Letter")
@@ -239,7 +239,7 @@ public class PlayerMovement : MonoBehaviour
                 if (wordTMP.text == target)
                 {
                     // Change to next level and so on.
-                    Debug.Log("WON");
+                
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
 
                     // StartCoroutine(SetWinText());
@@ -261,7 +261,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
         {
             // Game won
-            Debug.Log("W");
+
             StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
