@@ -16,10 +16,14 @@ public class LetterSpawner : MonoBehaviour
     //private int[] index = {0, 5, 4, 8, 15, 25, 1, 0, 16};
     private int[] index;
     private int i = 0;
+    public List<float[]> seenList;
 
     public static string target_word;
     private int[] blanks;
     private string[] letters;
+
+    public Collider2D[] colliders;
+    public float radius;
 
     public TextAsset textJSON;
 
@@ -45,6 +49,8 @@ public class LetterSpawner : MonoBehaviour
         int len = myPlayerList.lvl1.Length;
         int rInt = Random.Range(0, len);
         int i=0;
+        seenList = new List<float[]>();
+        radius = 2f;
         foreach (Player player in myPlayerList.lvl1)
         {
             if(i==rInt){
@@ -78,23 +84,29 @@ public class LetterSpawner : MonoBehaviour
             float x = Random.Range(-7,30);
             float y = Random.Range(0,16);
             Vector3 randomPosition = new Vector3(x,y,0);
+            
             while(true){
-                if( (x >= -8.5 && x <= -3 && y >=0 && y<=4.5) ||
-                (x >= -8.5 && x <= -0.5 && y >=7 && y<=11) ||
-                (x >= -8.5 && x <= 31 && y >=15 && y<=18) ||
-                (x >= 1.5 && x <= 11.5 && y >=0 && y<=4) ||
-                (x >= 10 && x <= 20 && y >= 2.5 && y<=9) ||
-                (x >= 20 && x <= 30 && y >= 1.5 && y<=4)){
+                
+                if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
+                (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
+                (x >= -8 && x <= 31 && y >=15.7 && y<=17) ||
+                (x >= 1.75 && x <= 11 && y >=0 && y<=4) ||
+                (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
+                (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
                     randomPosition = new Vector3(x,y,0);
+                    seenList.Add(new float[2]{x,y});
                     break;
+
                 }else{
                     x = Random.Range(-7,30);
                     y = Random.Range(0,16);
                 }
+
             }
 
             if(i==0){
                 randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
+                seenList.Add(new float[2]{-5.5f,-0.25f});
             }
             // if(i==2){
             //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
@@ -104,6 +116,44 @@ public class LetterSpawner : MonoBehaviour
             i += 1;
             spawnedLetter.transform.position = randomPosition;          
         }
+    }
+
+    bool checkCollision(float x, float y){
+        float left = x - radius;
+        float right = x + radius;
+        float low = y - radius;
+        float high = y + radius;
+        for(int j=0;j < seenList.Count; j++){
+            float posX = seenList[j][0];
+            float posY = seenList[j][1];
+            if( posX >= left && posX <= right){
+                if(posY >=low && posY <= high){
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
+    bool PreventSpawnOverLap(Vector3 spawnPos){
+        colliders = Physics2D.OverlapCircleAll(transform.position, radius);
+
+        for(int i=0;i<colliders.Length;i++){
+            Vector3 centerPoint = colliders[i].bounds.center;
+            float width = colliders[i].bounds.extents.x;
+            float height = colliders[i].bounds.extents.y;
+            float left = centerPoint.x-width;
+            float right = centerPoint.x+width;
+            float lower = centerPoint.y-height;
+            float upper = centerPoint.y+height;
+
+            if(spawnPos.x>= left && spawnPos.x <= right){
+               if(spawnPos.y >= lower && spawnPos.y <= upper){
+                    return false;
+               } 
+            }
+        }
+        return true;
     }
     // Update is called once per frame
     void Update()
