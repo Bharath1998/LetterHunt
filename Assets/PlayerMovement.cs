@@ -146,6 +146,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if(other.gameObject.name.Contains("Enemy") && (GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)){
+            Destroy(other.gameObject);
+        }
         if (other.gameObject.tag == "Letter")
         {
             Vector3 oldPosition = other.gameObject.transform.position;
@@ -224,7 +227,8 @@ public class PlayerMovement : MonoBehaviour
 
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
-                    Destroy(this.gameObject);
+                    SceneManager.LoadScene("Win");
+                    // DestroyImmediate(this.gameObject);
                     StartCoroutine(SetWinText());
                     // SceneManager.LoadScene("Win");
                     // SceneManager.LoadScene("Game Over");
