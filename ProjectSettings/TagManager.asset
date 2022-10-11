@@ -12,6 +12,7 @@ TagManager:
   - power_up_highlight
   - power_up_add_time
   - Enemy2
+  - ground
   layers:
   - Default
   - TransparentFX
