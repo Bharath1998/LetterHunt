@@ -42,8 +42,12 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField]
     public static int incorrectLetters;
+
+    int JumpCount = 0;
+    public int MaxJumps = 2; //Maximum amount of jumps (i.e. 2 for double jumps)
     void Start()
     {
+         JumpCount = MaxJumps;
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
@@ -92,10 +96,16 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+
+            if (JumpCount > 0)
+            {
+            Jump();
             float dirX = Input.GetAxisRaw("Horizontal");
 
             // player.velocity = new Vector2(dirX * 6f, player.velocity.y);
             player.velocity = new Vector2(player.velocity.x, 6);
+            Debug.Log("BRO ITS greater");
+            }
         }
         bool flipped = movement.x < 0;
 
@@ -148,6 +158,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if(other.gameObject.name.Contains("Enemy") && (GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)){
             Destroy(other.gameObject);
+        }
+         
+        if (other.gameObject.tag == "ground")
+        {
+        JumpCount = MaxJumps;
+        Debug.Log("BRO ITS hitting");
+
         }
         if (other.gameObject.tag == "Letter")
         {
@@ -255,5 +272,10 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Win");
+    }
+     public void Jump()
+    {
+        GetComponent<Rigidbody2D>().velocity = transform.up * 10;
+        JumpCount -= 1;
     }
 }

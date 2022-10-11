@@ -1289,8 +1289,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   wordTMP: {fileID: 0}
   maxHealth: 100
-  currentHealth: 0
   damage: 10
+  MaxJumps: 2
 --- !u!61 &1037078949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1354,8 +1354,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   wordTMP: {fileID: 1212421833}
   maxHealth: 100
-  currentHealth: 0
   damage: 10
+  MaxJumps: 2
 --- !u!212 &1037078952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 1455273740}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4646,7 +4646,7 @@ GameObject:
   - component: {fileID: 1593291257}
   m_Layer: 3
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
