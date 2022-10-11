@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class LetterSpawner : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LetterSpawner : MonoBehaviour
     private float randomY;
     //private int[] index = {0, 5, 4, 8, 15, 25, 1, 0, 16};
     private int[] index;
+    private int[] target_index;
     private int i = 0;
     public List<float[]> seenList;
 
@@ -62,6 +64,7 @@ public class LetterSpawner : MonoBehaviour
             
         }
         index = new int[letters.Length];
+        target_index = new int[target_word.Length];
         for(int j=0; j<letters.Length; j++)
         {
             int ascii = (int)letters[j][0];
@@ -69,15 +72,22 @@ public class LetterSpawner : MonoBehaviour
             index[j] = ascii;
             //print(index[j]);
         }
+
+        for(int j=0; j<target_word.Length; j++){
+            int ascii = (int)target_word[j];
+            ascii = ascii - 65;
+            target_index[j] = ascii;
+            //print("tar_index"+target_index[j]);
+        }
         print("Word is ="+target_word);
         StartCoroutine(SpawnLetters());
     }
 
     IEnumerator SpawnLetters() {
-
+        int t=10;
         while(i < index.Length){
             if(i!=0){
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(2);
             } 
             randomIndex = Random.Range(0, letterReference.Length);
             
@@ -113,8 +123,14 @@ public class LetterSpawner : MonoBehaviour
             //     power_up_highlight_ins.transform.position = randomPosition;
             // }
             spawnedLetter = Instantiate(letterReference[index[i]]);
-            i += 1;
-            spawnedLetter.transform.position = randomPosition;          
+            
+            spawnedLetter.transform.position = randomPosition;  
+            if(!target_index.Contains(index[i])){
+                //print(index[i]);
+                Destroy(spawnedLetter.gameObject, t);
+                t+=10;
+            } 
+            i += 1;      
         }
     }
 
