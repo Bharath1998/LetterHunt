@@ -25,6 +25,8 @@ public class LetterSpawner : MonoBehaviour
     private int[] target_index;
     private int i = 0;
     public List<float[]> seenList;
+    public int[] indexes;
+    public int[] colors;
 
     public static string target_word;
     private int[] blanks;
@@ -79,6 +81,12 @@ public class LetterSpawner : MonoBehaviour
         yellow_index = new int[yellow_letters.Length];
         purple_index = new int[purple_letters.Length];
         target_index = new int[target_word.Length];
+        int total_length = orange_letters.Length + yellow_letters.Length + purple_letters.Length;
+        indexes = new int[total_length];
+        colors = new int[total_length];
+        int pointer = 0;
+        int index_pointer = 0;
+        
         for(int j=0; j<orange_letters.Length; j++)
         {
             int ascii = (int)orange_letters[j][0];
@@ -109,13 +117,35 @@ public class LetterSpawner : MonoBehaviour
             target_index[j] = ascii;
             //print("tar_index"+target_index[j]);
         }
+
+        int max_index = System.Math.Max(orange_letters.Length, System.Math.Max(yellow_letters.Length, purple_letters.Length));
+        while(pointer < max_index){
+            if(pointer < orange_letters.Length){
+                colors[index_pointer] = 1;    
+                indexes[index_pointer] = orange_index[pointer];
+                index_pointer++;
+            }
+            if(pointer < yellow_index.Length){
+                colors[index_pointer] = 2;
+                indexes[index_pointer] = yellow_index[pointer];
+                index_pointer++;
+            }
+            if(pointer < purple_letters.Length ){
+                colors[index_pointer] = 3;
+                indexes[index_pointer] = purple_index[pointer];
+                index_pointer++;
+            }
+            pointer++;
+        }
+
+
         print("Word is ="+target_word);
         StartCoroutine(SpawnLetters());
     }
 
     IEnumerator SpawnLetters() {
         int t=10;
-        while(i < orange_index.Length && i<yellow_index.Length && i<purple_index.Length){
+        while(i < indexes.Length){
             if(i!=0){
                 yield return new WaitForSeconds(2);
             } 
@@ -144,22 +174,27 @@ public class LetterSpawner : MonoBehaviour
 
             }
 
+            int color = colors[i];
+            int letter_index = indexes[i];
+            /*
             if(i==0){
                 randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
                 seenList.Add(new float[2]{-5.5f,-0.25f});
-            }
+            }*/
             // if(i==2){
             //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
             //     power_up_highlight_ins.transform.position = randomPosition;
             // }
-            spawnedLetter = Instantiate(letterReference[orange_index[i]]);           
-            spawnedLetter.transform.position = randomPosition;  
-
-            spawnedLetter = Instantiate(letterReference[yellow_index[i]]);           
-            spawnedLetter.transform.position = randomPosition; 
-
-            spawnedLetter = Instantiate(letterReference[purple_index[i]]);           
-            spawnedLetter.transform.position = randomPosition; 
+            if(color == 1){
+                spawnedLetter = Instantiate(highLetterReference[letter_index]);           
+                spawnedLetter.transform.position = randomPosition;  
+            }else if(color == 2){
+                spawnedLetter = Instantiate(mediumLetterReference[letter_index]);           
+                spawnedLetter.transform.position = randomPosition; 
+            }else{
+                spawnedLetter = Instantiate(lowLetterReference[letter_index]);           
+                spawnedLetter.transform.position = randomPosition; 
+            }
             // if(!target_index.Contains(index[i])){
             //     //print(index[i]);
             //     Destroy(spawnedLetter.gameObject, t);
@@ -168,154 +203,7 @@ public class LetterSpawner : MonoBehaviour
             i += 1;      
         }
 
-        int o = i;
-        int y = i;
-        int p = i;
-        i=o;
-        while(i < orange_index.Length){
-            if(i!=0){
-                yield return new WaitForSeconds(2);
-            } 
-            randomIndex = Random.Range(0, letterReference.Length);
-            
-            float x = Random.Range(-7,30);
-            float y = Random.Range(0,16);
-            Vector3 randomPosition = new Vector3(x,y,0);
-            
-            while(true){
-                
-                if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
-                (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
-                (x >= -8 && x <= 31 && y >=15.7 && y<=17) ||
-                (x >= 1.75 && x <= 11 && y >=0 && y<=4) ||
-                (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
-                (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
-                    randomPosition = new Vector3(x,y,0);
-                    seenList.Add(new float[2]{x,y});
-                    break;
-
-                }else{
-                    x = Random.Range(-7,30);
-                    y = Random.Range(0,16);
-                }
-
-            }
-
-            if(i==0){
-                randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
-                seenList.Add(new float[2]{-5.5f,-0.25f});
-            }
-            // if(i==2){
-            //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
-            //     power_up_highlight_ins.transform.position = randomPosition;
-            // }
-            spawnedLetter = Instantiate(letterReference[orange_index[i]]);
-            
-            spawnedLetter.transform.position = randomPosition;  
-            // if(!target_index.Contains(index[i])){
-            //     //print(index[i]);
-            //     Destroy(spawnedLetter.gameObject, t);
-            //     t+=10;
-            // } 
-            i += 1;      
-        }
-
-        i=y;
-        while(i<yellow_index.Length){
-            if(i!=0){
-                yield return new WaitForSeconds(2);
-            } 
-            randomIndex = Random.Range(0, letterReference.Length);
-            
-            float x = Random.Range(-7,30);
-            float y = Random.Range(0,16);
-            Vector3 randomPosition = new Vector3(x,y,0);
-            
-            while(true){
-                
-                if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
-                (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
-                (x >= -8 && x <= 31 && y >=15.7 && y<=17) ||
-                (x >= 1.75 && x <= 11 && y >=0 && y<=4) ||
-                (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
-                (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
-                    randomPosition = new Vector3(x,y,0);
-                    seenList.Add(new float[2]{x,y});
-                    break;
-
-                }else{
-                    x = Random.Range(-7,30);
-                    y = Random.Range(0,16);
-                }
-
-            }
-
-            if(i==0){
-                randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
-                seenList.Add(new float[2]{-5.5f,-0.25f});
-            }
-            // if(i==2){
-            //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
-            //     power_up_highlight_ins.transform.position = randomPosition;
-            // }
-            spawnedLetter = Instantiate(letterReference[yellow_index[i]]);
-            
-            spawnedLetter.transform.position = randomPosition;  
-            // if(!target_index.Contains(index[i])){
-            //     //print(index[i]);
-            //     Destroy(spawnedLetter.gameObject, t);
-            //     t+=10;
-            // } 
-            i += 1;      
-        }
-        i=p;
-        while(i<purple_index.Length){
-            if(i!=0){
-                yield return new WaitForSeconds(2);
-            } 
-            randomIndex = Random.Range(0, letterReference.Length);
-            
-            float x = Random.Range(-7,30);
-            float y = Random.Range(0,16);
-            Vector3 randomPosition = new Vector3(x,y,0);
-            
-            while(true){
-                
-                if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
-                (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
-                (x >= -8 && x <= 31 && y >=15.7 && y<=17) ||
-                (x >= 1.75 && x <= 11 && y >=0 && y<=4) ||
-                (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
-                (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
-                    randomPosition = new Vector3(x,y,0);
-                    seenList.Add(new float[2]{x,y});
-                    break;
-
-                }else{
-                    x = Random.Range(-7,30);
-                    y = Random.Range(0,16);
-                }
-
-            }
-
-            if(i==0){
-                randomPosition = new Vector3((float)-5.5,(float)-0.25,0);
-                seenList.Add(new float[2]{-5.5f,-0.25f});
-            }
-            // if(i==2){
-            //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
-            //     power_up_highlight_ins.transform.position = randomPosition;
-            // }
-            spawnedLetter = Instantiate(letterReference[purple_index[i]]);
-            
-            spawnedLetter.transform.position = randomPosition;  
-            // if(!target_index.Contains(index[i])){
-            //     //print(index[i]);
-            //     Destroy(spawnedLetter.gameObject, t);
-            //     t+=10;
-            // } 
-            i += 1;      
-        }
+        
 
     }
 
