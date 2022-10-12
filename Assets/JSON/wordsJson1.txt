@@ -1,68 +1,14 @@
 {
     "lvl1": [
         {
-            "target_word": "CAT", 
+            "target_word": "POWER", 
             "blanks": [
                 0, 
                 1
             ], 
-            "letters": [
-                "C",
-                "P",
-                "H",
-                "A", 
-                "R", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z",
-                "M"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "B",  
-                "M",
-                "C",  
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y"
-            ]
-        },
-        {
-            "target_word": "FAR", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "F", 
-                "B", 
-                "E",  
-                "J", 
-                "M",
-                "A",  
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "R", 
-                "V"
-            ]
+            "green_letters": ["P","O","A","M"],
+	   "orange_letters": ["W","E","R","F","C","B","K","I"],
+	"red_letters": ["N","L","U", "Z", "X", "Y"]
         }
     ], 
     "lvl2": [
