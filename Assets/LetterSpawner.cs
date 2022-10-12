@@ -6,6 +6,10 @@ using System.Linq;
 public class LetterSpawner : MonoBehaviour
 {
     public GameObject[] letterReference;
+    public GameObject[] highLetterReference;
+    public GameObject[] mediumLetterReference;
+    public GameObject[] lowLetterReference;
+    
     // public GameObject power_up_highlight;
 
     public GameObject spawnedLetter;
