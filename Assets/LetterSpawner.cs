@@ -15,18 +15,18 @@ public class LetterSpawner : MonoBehaviour
     private float randomX;
     private float randomY;
     //private int[] index = {0, 5, 4, 8, 15, 25, 1, 0, 16};
-    private int[] green_index;
     private int[] orange_index;
-    private int[] red_index;
+    private int[] yellow_index;
+    private int[] purple_index;
     private int[] target_index;
     private int i = 0;
     public List<float[]> seenList;
 
     public static string target_word;
     private int[] blanks;
-    private string[] green_letters;
     private string[] orange_letters;
-    private string[] red_letters;
+    private string[] yellow_letters;
+    private string[] purple_letters;
 
     public Collider2D[] colliders;
     public float radius;
@@ -38,9 +38,9 @@ public class LetterSpawner : MonoBehaviour
     {
         public string target_word;
         public int[] blanks;
-        public string[] green_letters;
         public string[] orange_letters;
-        public string[] red_letters;
+        public string[] yellow_letters;
+        public string[] purple_letters;
     }
 
     [System.Serializable]
@@ -64,26 +64,18 @@ public class LetterSpawner : MonoBehaviour
             if(i==rInt){
                 target_word = player.target_word;
                 blanks = player.blanks;
-                green_letters = player.green_letters;
                 orange_letters = player.orange_letters;
-                red_letters = player.red_letters;
+                yellow_letters = player.yellow_letters;
+                purple_letters = player.purple_letters;
             }
             i++;
             
         }
-        green_index = new int[green_letters.Length];
         orange_index = new int[orange_letters.Length];
-        red_index = new int[red_letters.Length];
+        yellow_index = new int[yellow_letters.Length];
+        purple_index = new int[purple_letters.Length];
         target_index = new int[target_word.Length];
-        for(int j=0; j<green_letters.Length; j++)
-        {
-            int ascii = (int)green_letters[j][0];
-            ascii = ascii - 65;
-            green_index[j] = ascii;
-            //print(index[j]);
-        }
-
-        for(int j=0; j<orange_index.Length; j++)
+        for(int j=0; j<orange_letters.Length; j++)
         {
             int ascii = (int)orange_letters[j][0];
             ascii = ascii - 65;
@@ -91,11 +83,19 @@ public class LetterSpawner : MonoBehaviour
             //print(index[j]);
         }
 
-        for(int j=0; j<red_index.Length; j++)
+        for(int j=0; j<yellow_index.Length; j++)
         {
-            int ascii = (int)red_letters[j][0];
+            int ascii = (int)yellow_letters[j][0];
             ascii = ascii - 65;
-            red_index[j] = ascii;
+            yellow_index[j] = ascii;
+            //print(index[j]);
+        }
+
+        for(int j=0; j<purple_index.Length; j++)
+        {
+            int ascii = (int)purple_letters[j][0];
+            ascii = ascii - 65;
+            purple_index[j] = ascii;
             //print(index[j]);
         }
 

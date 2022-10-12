@@ -6,9 +6,9 @@
                 0, 
                 1
             ], 
-            "green_letters": ["P","O","A","M"],
-	   "orange_letters": ["W","E","R","F","C","B","K","I"],
-	"red_letters": ["N","L","U", "Z", "X", "Y"]
+            "orange_letters": ["P","O","A","M"],
+	   "yellow_letters": ["W","E","R","F","C","B","K","I"],
+	"purple_letters": ["N","L","U", "Z", "X", "Y"]
         }
     ], 
     "lvl2": [
