@@ -14,14 +14,14 @@ public class GunScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 gunpos = transform.position;
-        direction = mousepos-gunpos;
-        FaceMouse();
+        // Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        // Vector2 gunpos = transform.position;
+        // direction = mousepos-gunpos;
+        // FaceMouse();
 
     }
 
     void FaceMouse(){
-        transform.right = direction;
+        // transform.right = direction;
     }
 }
