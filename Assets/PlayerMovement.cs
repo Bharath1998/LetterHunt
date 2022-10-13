@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     public static int incorrectLetters;
 
     int JumpCount = 0;
-    public int MaxJumps = 2; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
     void Start()
     {
          JumpCount = MaxJumps;
