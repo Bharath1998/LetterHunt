@@ -187,6 +187,8 @@ public class PlayerMovement : MonoBehaviour
             //     items = items+inventory[i]+" ";
             // }
             // print(items);
+            string characterColor = other.gameObject.GetComponent<CollectableScript>().letterColor;
+            print(characterColor);
             try
             {
                 char lastCharacter = characterType[characterType.Length - 1];
