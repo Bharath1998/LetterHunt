@@ -215,6 +215,8 @@ public class PlayerMovement : MonoBehaviour
                     {
                         print("working");
                     }
+                    currentHealth-=5;
+                    healthBar.SetHealth (currentHealth);
                     GameObject spawnedLetter = Instantiate(gameObject);
                     spawnedLetter.transform.position = oldPosition;
                     spawnedLetter.transform.localScale = oldscale;

@@ -16,7 +16,7 @@ public class ShootScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
+        if( Input.GetKeyDown("space"))
         {
             totalBullets += 1;
             Shoot();
