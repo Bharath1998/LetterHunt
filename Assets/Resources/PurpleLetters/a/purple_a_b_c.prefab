@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterType: CharC
+  letterColor: Purple
 --- !u!61 &767166240102502163
 BoxCollider2D:
   m_ObjectHideFlags: 0
