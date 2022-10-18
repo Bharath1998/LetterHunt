@@ -2,6 +2,8 @@
 
 ## Methodology
 
+![Letter Hunt](./../Misc/data/Analytics_Design.png)
+
 ### Step 1 - UnityWebRequest
 Collect data during the game. When the player dies / level ends, send the data using a UnityWebRequest API’s POST request to MongoDB Realm endpoint.
 

@@ -1,4 +1,5 @@
 # Letter Hunt
+![Letter Hunt](./Misc/data/L_tterH_nt-logos.jpeg)
 
 Collect characters with strategy while avoiding enemies.
 
@@ -40,9 +41,6 @@ This powerup kills all the enemies on the screen at that moment. This gives the 
 ### Increase time
 
 This powerup adds 5 seconds to the level.
-
-
-
 
  The level will end under the following conditions - 
 The player is able to guess the right target word. In this situation the player will move to the next level.
