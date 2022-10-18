@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5fb31968-ee5e-44dc-ad34-dfcb9bb5c985" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOverScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KillPlayerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/KillPlayerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LetterSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LetterSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

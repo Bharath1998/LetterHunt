@@ -89,8 +89,9 @@ public class LetterSpawner : MonoBehaviour
                 
                 if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
                 (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
-                (x >= -8 && x <= 31 && y >=15.7 && y<=17) ||
-                (x >= 1.75 && x <= 11 && y >=0 && y<=4) ||
+				(x >= -8 && x <= -3 && y >=7 && y<=11) ||
+                (x >= -8 && x <= 31 && y >=15 && y<=17) ||
+                (x >= 2 && x <= 11 && y >=0 && y<=4) ||
                 (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
                 (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
                     randomPosition = new Vector3(x,y,0);
