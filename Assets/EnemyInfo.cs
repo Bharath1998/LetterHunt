@@ -34,7 +34,7 @@ public class EnemyInfo : MonoBehaviour
     IEnumerator wait()
     {
         yield return new WaitForSeconds(3f);
-        string ins_1 = "Aim & Shoot using your mouse left click";
+        string ins_1 = "Shoot using space bar";
         StartCoroutine(typeSentence(ins_1));
 
     }
