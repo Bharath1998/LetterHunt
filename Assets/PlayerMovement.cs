@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
 
     int JumpCount = 0;
     public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public static string win_string = "_____";
+    public static char[] arr_win = win_string.ToCharArray();
+
     void Start()
     {
          JumpCount = MaxJumps;
@@ -62,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
         {
             target = LetterSpawner.target_word;
             int n = target.Length;
-            string temp = new string('_', n);
+            // string temp = new string('_', n);
+            string temp = "_  _  _  _  _";
             wordTMP.text = temp;
         }
         catch (NullReferenceException e)
@@ -182,7 +186,8 @@ public class PlayerMovement : MonoBehaviour
                 {
                     correctLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
-                    arr2[idx] = lastCharacter;
+                    arr2[idx*3] = lastCharacter;
+                    arr_win[idx] = lastCharacter;
                     // GameObject go = GameObject.Find("go" + idx.ToString());
                     // Destroy(go.gameObject);
                 }
@@ -206,26 +211,27 @@ public class PlayerMovement : MonoBehaviour
                 }
                 wordTMP.text = new string(arr2);
 
-                if (wordTMP.text == target)
+                if (string.Join("", arr_win) == target)
                 {
                     // Change to next level and so on.
                     StartCoroutine(SetWinText());
                     // SceneManager.LoadScene("Game Over");
                 }
 
-                if (target.Contains(lastCharacter))
-                {
-                    int idx = target.IndexOf(lastCharacter);
-                    arr2[idx] = lastCharacter;
-                    // GameObject go = GameObject.Find("go" + idx.ToString());
-                    // Destroy(go.gameObject);
-                }
-                wordTMP.text = new string(arr2);
+                // if (target.Contains(lastCharacter))
+                // {
+                //     int idx = target.IndexOf(lastCharacter);
+                //     arr2[idx] = lastCharacter;
+                //     // GameObject go = GameObject.Find("go" + idx.ToString());
+                //     // Destroy(go.gameObject);
+                // }
+                // wordTMP.text = new string(arr2);
 
-                if (wordTMP.text == target)
+                if (string.Join("", arr_win) == target)
                 {
                     // Change to next level and so on.
-                
+                    win_string = "_____";
+                    arr_win = win_string.ToCharArray();
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
 
                     // StartCoroutine(SetWinText());
@@ -255,6 +261,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetWinText()
     {
+        win_string = "_____";
+        arr_win = win_string.ToCharArray();
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Win");
