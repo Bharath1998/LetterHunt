@@ -5,6 +5,7 @@ using UnityEngine;
 public class CollectableScript : MonoBehaviour
 {
     public string CharacterType;
+    public string letterColor;
     // Start is called before the first frame update
     void Start()
     {

@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterType: CharG
+  letterColor: Yellow
 --- !u!1 &9214124509436779776
 GameObject:
   m_ObjectHideFlags: 0

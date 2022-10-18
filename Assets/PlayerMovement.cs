@@ -38,13 +38,28 @@ public class PlayerMovement : MonoBehaviour
     public int damage = 10;
 
     [SerializeField]
-    public static int correctLetters;
+    public static int correctPurpleLetters;
     
     [SerializeField]
-    public static int incorrectLetters;
+    public static int correctYellowLetters;
+    
+    [SerializeField]
+    public static int correctOrangeLetters;
+
+    [SerializeField]
+    public static int incorrectPurpleLetters;
+
+    [SerializeField]
+    public static int incorrectYellowLetters;
+
+    [SerializeField]
+    public static int incorrectOrangeLetters;
 
     int JumpCount = 0;
-    public int MaxJumps = 2; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public static string win_string = "_____";
+    public static char[] arr_win = win_string.ToCharArray();
+
     void Start()
     {
          JumpCount = MaxJumps;
@@ -55,14 +70,19 @@ public class PlayerMovement : MonoBehaviour
         
         currentHealth = maxHealth;
         healthBar.SetMaxHealth (currentHealth);
-        correctLetters=0;
-        incorrectLetters=0;
+        correctPurpleLetters=0;
+        correctYellowLetters=0;
+        correctOrangeLetters=0;
+        incorrectPurpleLetters=0;
+        incorrectYellowLetters=0;
+        incorrectOrangeLetters=0;
 
         try
         {
             target = LetterSpawner.target_word;
             int n = target.Length;
-            string temp = new string('_', n);
+            // string temp = new string('_', n);
+            string temp = "_  _  _  _  _";
             wordTMP.text = temp;
         }
         catch (NullReferenceException e)
@@ -74,38 +94,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float dirX = Input.GetAxisRaw("Horizontal");
-        // player.velocity = new Vector2(dirX * 7f, player.velocity.y);
-        // if(Input.GetKey(KeyCode.W))
-        // {
-        //     player.velocity = new Vector2(player.velocity.x,7);
-        // }
-        // bool flipped = dirX <0 ;
-        // transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
-        // if(dirX > 0f){
-        //     anim.SetBool("running",true);
-        // }
-        // else if (dirX  < 0f)
-        // {
-        //     anim.SetBool("running",true);
-        // }
-        // else{
-        //     anim.SetBool("running",false);
-        // }
+
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized;
         anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-
-            if (JumpCount > 0)
-            {
-            Jump();
             float dirX = Input.GetAxisRaw("Horizontal");
 
-            // player.velocity = new Vector2(dirX * 6f, player.velocity.y);
             player.velocity = new Vector2(player.velocity.x, 6);
+            // if (JumpCount > 0)
+            // {
+            // Jump();
+
             
-            }
+            // }
         }
         bool flipped = movement.x < 0;
 
@@ -187,6 +189,8 @@ public class PlayerMovement : MonoBehaviour
             //     items = items+inventory[i]+" ";
             // }
             // print(items);
+            string characterColor = other.gameObject.GetComponent<CollectableScript>().letterColor;
+            // print(characterColor);
             try
             {
                 char lastCharacter = characterType[characterType.Length - 1];
@@ -196,15 +200,20 @@ public class PlayerMovement : MonoBehaviour
 
                 if (target.Contains(lastCharacter))
                 {
-                    correctLetters+=1;
+                    if (characterColor == "Purple") correctPurpleLetters+=1;
+                    if (characterColor == "Orange") correctOrangeLetters+=1;
+                    if (characterColor == "Yellow") correctYellowLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
-                    arr2[idx] = lastCharacter;
+                    arr2[idx*3] = lastCharacter;
+                    arr_win[idx] = lastCharacter;
                     // GameObject go = GameObject.Find("go" + idx.ToString());
                     // Destroy(go.gameObject);
                 }
                 else
                 {
-                    incorrectLetters+=1;
+                    if (characterColor == "Purple") incorrectPurpleLetters+=1;
+                    if (characterColor == "Orange") incorrectOrangeLetters+=1;
+                    if (characterColor == "Yellow") incorrectYellowLetters+=1;
                     gameObject =
                         Resources
                             .Load("a/red_a_b_" + char.ToLower(lastCharacter)) as
@@ -213,6 +222,8 @@ public class PlayerMovement : MonoBehaviour
                     {
                         print("working");
                     }
+                    currentHealth-=5;
+                    healthBar.SetHealth (currentHealth);
                     GameObject spawnedLetter = Instantiate(gameObject);
                     spawnedLetter.transform.position = oldPosition;
                     spawnedLetter.transform.localScale = oldscale;
@@ -220,27 +231,25 @@ public class PlayerMovement : MonoBehaviour
                 }
                 wordTMP.text = new string(arr2);
 
-                if (wordTMP.text == target)
+                if (string.Join("", arr_win) == target)
                 {
-                    // Change to next level and so on.
-                    StartCoroutine(SetWinText());
-                    // SceneManager.LoadScene("Game Over");
-                }
-
-                if (target.Contains(lastCharacter))
-                {
-                    int idx = target.IndexOf(lastCharacter);
-                    arr2[idx] = lastCharacter;
-                    // GameObject go = GameObject.Find("go" + idx.ToString());
-                    // Destroy(go.gameObject);
-                }
-                wordTMP.text = new string(arr2);
-
-                if (wordTMP.text == target)
-                {
-                    // Change to next level and so on.
-                
                     StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
+                }
+
+                // if (target.Contains(lastCharacter))
+                // {
+                //     int idx = target.IndexOf(lastCharacter);
+                //     arr2[idx] = lastCharacter;
+                //     // GameObject go = GameObject.Find("go" + idx.ToString());
+                //     // Destroy(go.gameObject);
+                // }
+                // wordTMP.text = new string(arr2);
+
+                if (string.Join("", arr_win) == target)
+                {
+                    // Change to next level and so on.
+                    win_string = "_____";
+                    arr_win = win_string.ToCharArray();
 
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
@@ -269,6 +278,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator SetWinText()
     {
+        win_string = "_____";
+        arr_win = win_string.ToCharArray();
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Win");

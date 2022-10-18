@@ -232,3 +232,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterType: CharO
+  letterColor: Yellow
