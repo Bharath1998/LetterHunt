@@ -18,7 +18,7 @@ public class DataCollection
         data.reason_end = reasonEnd;
         data.enemies_killed = EnemyControl.enemiesKilled;
         data.total_bullets = ShootScript.totalBullets;
-        data.final_health = PlayerMovement.currentHealth;
+        data.final_health = PlayerMovement.currentHealth > -1 ? PlayerMovement.currentHealth : 0;
         data.time_remaining = (int)Mathf.Round(Timer.currentTime);
         data.correct_orange_letters = PlayerMovement.correctOrangeLetters;
         data.correct_purple_letters = PlayerMovement.correctPurpleLetters;
