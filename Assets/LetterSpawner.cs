@@ -224,15 +224,21 @@ public class LetterSpawner : MonoBehaviour
             //     GameObject power_up_highlight_ins = Instantiate(power_up_highlight);
             //     power_up_highlight_ins.transform.position = randomPosition;
             // }
+
+            int LayerLetter = LayerMask.NameToLayer("Letter");
+
             if(color == 1){
                 spawnedLetter = Instantiate(highLetterReference[letter_index]);           
                 spawnedLetter.transform.position = randomPosition;  
+                spawnedLetter.layer = LayerLetter;
             }else if(color == 2){
                 spawnedLetter = Instantiate(mediumLetterReference[letter_index]);           
                 spawnedLetter.transform.position = randomPosition; 
+                spawnedLetter.layer = LayerLetter;
             }else{
                 spawnedLetter = Instantiate(lowLetterReference[letter_index]);           
                 spawnedLetter.transform.position = randomPosition; 
+                spawnedLetter.layer = LayerLetter;
             }
             // if(!target_index.Contains(index[i])){
             //     //print(index[i]);
