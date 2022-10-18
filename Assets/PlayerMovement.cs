@@ -74,38 +74,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float dirX = Input.GetAxisRaw("Horizontal");
-        // player.velocity = new Vector2(dirX * 7f, player.velocity.y);
-        // if(Input.GetKey(KeyCode.W))
-        // {
-        //     player.velocity = new Vector2(player.velocity.x,7);
-        // }
-        // bool flipped = dirX <0 ;
-        // transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
-        // if(dirX > 0f){
-        //     anim.SetBool("running",true);
-        // }
-        // else if (dirX  < 0f)
-        // {
-        //     anim.SetBool("running",true);
-        // }
-        // else{
-        //     anim.SetBool("running",false);
-        // }
+
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized;
         anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
-
-            if (JumpCount > 0)
-            {
-            Jump();
             float dirX = Input.GetAxisRaw("Horizontal");
 
-            // player.velocity = new Vector2(dirX * 6f, player.velocity.y);
             player.velocity = new Vector2(player.velocity.x, 6);
+            // if (JumpCount > 0)
+            // {
+            // Jump();
+
             
-            }
+            // }
         }
         bool flipped = movement.x < 0;
 
@@ -215,6 +197,8 @@ public class PlayerMovement : MonoBehaviour
                     {
                         print("working");
                     }
+                    currentHealth-=5;
+                    healthBar.SetHealth (currentHealth);
                     GameObject spawnedLetter = Instantiate(gameObject);
                     spawnedLetter.transform.position = oldPosition;
                     spawnedLetter.transform.localScale = oldscale;
