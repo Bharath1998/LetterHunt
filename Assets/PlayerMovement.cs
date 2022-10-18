@@ -38,10 +38,22 @@ public class PlayerMovement : MonoBehaviour
     public int damage = 10;
 
     [SerializeField]
-    public static int correctLetters;
+    public static int correctPurpleLetters;
     
     [SerializeField]
-    public static int incorrectLetters;
+    public static int correctYellowLetters;
+    
+    [SerializeField]
+    public static int correctOrangeLetters;
+
+    [SerializeField]
+    public static int incorrectPurpleLetters;
+
+    [SerializeField]
+    public static int incorrectYellowLetters;
+
+    [SerializeField]
+    public static int incorrectOrangeLetters;
 
     int JumpCount = 0;
     public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
@@ -58,8 +70,12 @@ public class PlayerMovement : MonoBehaviour
         
         currentHealth = maxHealth;
         healthBar.SetMaxHealth (currentHealth);
-        correctLetters=0;
-        incorrectLetters=0;
+        correctPurpleLetters=0;
+        correctYellowLetters=0;
+        correctOrangeLetters=0;
+        incorrectPurpleLetters=0;
+        incorrectYellowLetters=0;
+        incorrectOrangeLetters=0;
 
         try
         {
@@ -184,7 +200,9 @@ public class PlayerMovement : MonoBehaviour
 
                 if (target.Contains(lastCharacter))
                 {
-                    correctLetters+=1;
+                    if (characterColor == "Purple") correctPurpleLetters+=1;
+                    if (characterColor == "Orange") correctOrangeLetters+=1;
+                    if (characterColor == "Yellow") correctYellowLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
                     arr2[idx*3] = lastCharacter;
                     arr_win[idx] = lastCharacter;
@@ -193,7 +211,9 @@ public class PlayerMovement : MonoBehaviour
                 }
                 else
                 {
-                    incorrectLetters+=1;
+                    if (characterColor == "Purple") incorrectPurpleLetters+=1;
+                    if (characterColor == "Orange") incorrectOrangeLetters+=1;
+                    if (characterColor == "Yellow") incorrectYellowLetters+=1;
                     gameObject =
                         Resources
                             .Load("a/red_a_b_" + char.ToLower(lastCharacter)) as
