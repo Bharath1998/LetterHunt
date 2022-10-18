@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3779836148483187532}
   - component: {fileID: 3779836148483187533}
   - component: {fileID: 3779836148483187534}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy2
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3779836148620047005}
   - component: {fileID: 3779836148620047004}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eagle Normal_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
