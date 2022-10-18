@@ -190,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
             // }
             // print(items);
             string characterColor = other.gameObject.GetComponent<CollectableScript>().letterColor;
-            print(characterColor);
+            // print(characterColor);
             try
             {
                 char lastCharacter = characterType[characterType.Length - 1];
@@ -233,9 +233,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (string.Join("", arr_win) == target)
                 {
-                    // Change to next level and so on.
-                    StartCoroutine(SetWinText());
-                    // SceneManager.LoadScene("Game Over");
+                    StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
                 }
 
                 // if (target.Contains(lastCharacter))
@@ -252,7 +250,6 @@ public class PlayerMovement : MonoBehaviour
                     // Change to next level and so on.
                     win_string = "_____";
                     arr_win = win_string.ToCharArray();
-                    StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
 
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
