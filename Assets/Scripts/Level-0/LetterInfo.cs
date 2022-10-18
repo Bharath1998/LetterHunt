@@ -45,7 +45,7 @@ public class LetterInfo : MonoBehaviour
                 StartCoroutine(typeSentence(ins_1));
             }
             if(lastCharacter == 'N'){
-                string ins_2="Wrong Letters turn RED!";
+                string ins_2="Your Health Decreases when you pick up wrong letters!";
                 StopAllCoroutines();
                 StartCoroutine(typeSentence(ins_2));
             }
