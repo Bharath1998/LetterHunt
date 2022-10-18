@@ -22,7 +22,6 @@ public class KillPlayerScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Enemy")
         {
-            // StartCoroutine(Upload(1, "KILLED"));
             Destroy (gameObject);
             Camera cam = Camera.main;
             GameObject newCam = new GameObject("newMainCam");
