@@ -254,6 +254,7 @@ public class PlayerMovement : MonoBehaviour
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
                     SceneManager.LoadScene("Win");
+                    SceneManager.LoadScene("Level 2");
                     // DestroyImmediate(this.gameObject);
                     StartCoroutine(SetWinText());
                     // SceneManager.LoadScene("Win");
