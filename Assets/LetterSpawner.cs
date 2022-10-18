@@ -164,7 +164,7 @@ public class LetterSpawner : MonoBehaviour
                     x = (float)Random.Range(-8, -0);
                     y = (float)Random.Range(7, 11);
                 }else if( i % 10 == 3){
-                    x = (float)Random.Range(-8, 31);
+                    x = (float)Random.Range(-8, 2);
                     y = (float)Random.Range(16, 17);
                 }else if( i % 10 == 2){
                     x = (float)Random.Range(2, 11);
@@ -176,7 +176,7 @@ public class LetterSpawner : MonoBehaviour
                     x = (float)Random.Range(20, 31);
                     y = (float)Random.Range(2, 4);
                 }else if( i % 10 == 7){
-                    x = (float)Random.Range(-8, 31);
+                    x = (float)Random.Range(-8, 2);
                     y = (float)Random.Range(16, 17);
                 }else if( i % 10 == 6){
                     x = (float)Random.Range(2, 11);
@@ -213,6 +213,12 @@ public class LetterSpawner : MonoBehaviour
                 */
             }
 
+            if(i==0){
+                x = -1;
+                y = 4;
+                randomPosition = new Vector3(x,y,0);
+                seenList.Add(new float[2]{x,y});
+            }
             int color = colors[i];
             int letter_index = indexes[i];
             /*
