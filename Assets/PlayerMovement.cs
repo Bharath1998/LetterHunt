@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-         JumpCount = MaxJumps;
+        JumpCount = MaxJumps;
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
@@ -77,18 +77,54 @@ public class PlayerMovement : MonoBehaviour
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
 
-        try
+
+
+        
+        
+        // target = "CROWNSA";
+        Scene currentScene = SceneManager.GetActiveScene ();
+ 
+         // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+ 
+        if (sceneName == "Level 1") 
         {
             target = LetterSpawner.target_word;
-            int n = target.Length;
-            // string temp = new string('_', n);
-            string temp = "_  _  _  _  _";
-            wordTMP.text = temp;
         }
-        catch (NullReferenceException e)
+        else if (sceneName == "Level 2")
         {
-            Debug.Log (e);
+            print("LEVEL 2");
+            target = LetterSpawnerLvl2.target_word;
+            print("inside if TARGET FROM PLAYER MOVE"+target);
         }
+        print("TARGET FROM PLAYER MOVE"+target);
+        int n = target.Length;
+        print("n FROM PLAYER MOVE"+n);
+        string pattern = "_  ";
+        string temp1 = "_  ";
+        for (int i = 0; i < n-2; i++) 
+        {
+            temp1 = temp1 + pattern;
+            
+        }
+        temp1 = temp1 + "_";
+
+        // string temp = new string('_', n);
+        // string temp = "_  _  _  _  _";
+        wordTMP.text = temp1;
+        if (wordTMP.text==null){
+            print("NULL");
+
+        }
+        else{
+            print("DASHES"+wordTMP.text);
+        }
+            
+        
+        // catch (NullReferenceException e)
+        // {
+        //     Debug.Log (e);
+        // }
     }
 
     // Update is called once per frame
