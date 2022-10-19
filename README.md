@@ -5,7 +5,8 @@ Collect characters with strategy while avoiding enemies.
 
 ![Final Protoype](./Misc/data/Finalprototype.png)
 
-Youtube Tutorial Video: 
+## Youtube Tutorial Video: https://youtu.be/6dwwZVI5uX4
+
 ## Try the game here: https://play.unity.com/p/letterhuntbuild/edit
 
 ### Game Introduction
