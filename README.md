@@ -3,6 +3,8 @@
 
 Collect characters with strategy while avoiding enemies.
 
+![Final Protoype](./Misc/data/Finalprototype.png)
+
 ## Try the game here: https://play.unity.com/p/letterhuntbuild/edit
 
 ### Game Introduction
