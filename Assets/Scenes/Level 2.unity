@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 93714434}
   - component: {fileID: 93714433}
   - component: {fileID: 93714432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -4314,6 +4314,7 @@ GameObject:
   - component: {fileID: 1082698801}
   - component: {fileID: 1082698800}
   - component: {fileID: 1082698807}
+  - component: {fileID: 1082698808}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4517,6 +4518,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 5455623346597643306, guid: 31521c72e48cd614b8345d4efca04c11, type: 3}
+--- !u!114 &1082698808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082698798}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8e3ecf2b6104096a35ba4e8ddb4b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166206509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,7 +5050,7 @@ GameObject:
   - component: {fileID: 1317471223}
   - component: {fileID: 1317471222}
   - component: {fileID: 1317471221}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -5052,7 +5065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317471219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.87, z: 0}
+  m_LocalPosition: {x: 0, y: -1.87, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6818,7 +6831,7 @@ MonoBehaviour:
   - {fileID: 2909525913776137473, guid: 65bb75a4bb57a42daa70760181746539, type: 3}
   - {fileID: 8509592179412008184, guid: 9bed5a8499aff4fdbb5b79f2251f20e0, type: 3}
   - {fileID: 422877886111286438, guid: 9edc338e444d94d10a9a4e466c5c36e5, type: 3}
-  index: 020000000000000001000000000000000200000001000000
+  index: 020000000000000002000000000000000200000000000000
 --- !u!4 &1977122130
 Transform:
   m_ObjectHideFlags: 0
