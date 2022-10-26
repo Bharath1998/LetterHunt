@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NextLevel.unity
     guid: ad7b7f6d0bf8e4a65aa224b3f0d3669a
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 6f81892b280bf440388475b2e2d87e5c
+  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: dd5a7e4d53fea4aaf8a2405bd5ae5d58
   - enabled: 1
