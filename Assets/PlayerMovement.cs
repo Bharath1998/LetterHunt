@@ -294,9 +294,19 @@ public class PlayerMovement : MonoBehaviour
 
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
-                    SceneManager.LoadScene("Win");
-                    // SceneManager.LoadScene("Level 2");
-                    // DestroyImmediate(this.gameObject);
+                    // SceneManager.LoadScene("Win");
+                    
+                    Scene currentScene = SceneManager.GetActiveScene ();
+                    string sceneName = currentScene.name;
+                    if (sceneName == "Level 2")
+                    {
+                        SceneManager.LoadScene("Game Over");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("NextLevel");
+                    }
+                     // DestroyImmediate(this.gameObject);
                     StartCoroutine(SetWinText());
                     // SceneManager.LoadScene("Win");
                     // SceneManager.LoadScene("Game Over");
@@ -324,7 +334,7 @@ public class PlayerMovement : MonoBehaviour
         arr_win = win_string.ToCharArray();
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("NextLevel");
     }
      public void Jump()
     {
