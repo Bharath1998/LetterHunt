@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-
+using UnityEngine.SceneManagement;
 
 public class EnemySpawnerScript : MonoBehaviour
 {
@@ -19,6 +19,23 @@ public class EnemySpawnerScript : MonoBehaviour
         
         // spawnAllowed = true;
         InvokeRepeating("SpawnAMonster", 3f, 6f);
+
+
+        Scene currentScene = SceneManager.GetActiveScene ();
+ 
+         // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+ 
+        if (sceneName == "Level 1") 
+        {
+            spawnLimit = 9;
+        }
+        else if (sceneName == "Level 2")
+        {
+            // print("LEVEL 2");
+            spawnLimit=15;
+            // print("inside if TARGET FROM PLAYER MOVE "+target);
+        }
     }
 
     void SpawnAMonster(){
