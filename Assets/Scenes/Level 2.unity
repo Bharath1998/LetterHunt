@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 93714434}
   - component: {fileID: 93714433}
   - component: {fileID: 93714432}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -4314,6 +4314,7 @@ GameObject:
   - component: {fileID: 1082698801}
   - component: {fileID: 1082698800}
   - component: {fileID: 1082698807}
+  - component: {fileID: 1082698808}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4517,6 +4518,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 5455623346597643306, guid: 31521c72e48cd614b8345d4efca04c11, type: 3}
+--- !u!114 &1082698808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082698798}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8e3ecf2b6104096a35ba4e8ddb4b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: []
+  healthBar: {fileID: 0}
+  wordTMP: {fileID: 54634562}
+  maxHealth: 100
+  damage: 10
+  MaxJumps: 5
 --- !u!1 &1166206509
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,7 +5056,7 @@ GameObject:
   - component: {fileID: 1317471223}
   - component: {fileID: 1317471222}
   - component: {fileID: 1317471221}
-  m_Layer: 3
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -5052,7 +5071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317471219}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.87, z: 0}
+  m_LocalPosition: {x: 0, y: -1.87, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6850,7 +6869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2006533641
 MonoBehaviour:
   m_ObjectHideFlags: 0
