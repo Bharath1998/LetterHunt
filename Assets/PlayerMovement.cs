@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             print("LEVEL 2");
             target = LetterSpawnerLvl2.target_word;
-            print("inside if TARGET FROM PLAYER MOVE"+target);
+            print("inside if TARGET FROM PLAYER MOVE "+target);
         }
         print("TARGET FROM PLAYER MOVE"+target);
         int n = target.Length;
@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
         else{
-            print("DASHES"+wordTMP.text);
+            print("DASHES "+wordTMP.text);
         }
             
         
@@ -230,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
             try
             {
                 char lastCharacter = characterType[characterType.Length - 1];
-                target = LetterSpawner.target_word;
+                target = LetterSpawnerLvl2.target_word;
                 string wordtmptext = wordTMP.text;
                 char[] arr2 = wordtmptext.ToCharArray();
 
