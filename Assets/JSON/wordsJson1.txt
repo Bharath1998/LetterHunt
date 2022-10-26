@@ -76,52 +76,34 @@
     ], 
     "lvl2": [
         {
-            "target_word": "CAT", 
+            "target_word": "ATHLETE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
+            "orange_letters": ["P","T","A","M"],
+	   "yellow_letters": ["H","E","E","F","C","B","K","I"],
+	"purple_letters": ["T","L","U", "Z", "X", "Y"]
         }, 
         {
-            "target_word": "ACT", 
+            "target_word": "STUDENT", 
             "blanks": [
                 0, 
                 1
             ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
+            "orange_letters": ["S","T","A","M"],
+	   "yellow_letters": ["D","E","T","F","C","B","K","I"],
+	"purple_letters": ["N","L","U", "Z", "X", "Y"]
+        },
+	{
+            "target_word": "COMPUTER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["C","O","A","M"],
+	   "yellow_letters": ["P","E","R","F","C","B","K","I"],
+	"purple_letters": ["N","L","U", "Z", "T", "Y"]
         }
     ], 
     "lvl3": [
