@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5fb31968-ee5e-44dc-ad34-dfcb9bb5c985" name="Changes" comment="Merging master">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Game Over 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/Game Over 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scenes/RoadMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/RoadMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scripts/PowerUpTutorial/PowerUpInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Scripts/PowerUpTutorial/PowerUpInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSON/wordsJson1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JSON/wordsJson1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +68,7 @@
       <workItem from="1663014170697" duration="2843000" />
       <workItem from="1663113104316" duration="1235000" />
       <workItem from="1663300171024" duration="8979000" />
-      <workItem from="1666751413742" duration="1850000" />
+      <workItem from="1666751413742" duration="2326000" />
     </task>
     <task id="LOCAL-00001" summary="Merging master">
       <created>1666751829968</created>

@@ -1,4 +1,116 @@
 {
+
+"lvl0": [
+        {
+            "target_word": "PET", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","T"],
+	   "yellow_letters": ["E","O","G"],
+	"purple_letters": ["A","U", "R"]
+        }, 
+        {
+            "target_word": "MAN", 
+            "blanks": [
+                0, 
+                1
+            ], 
+             "orange_letters": ["M","A"],
+	   "yellow_letters": ["N","R","L"],
+	"purple_letters": ["T", "F","Y"]
+        },
+        {
+            "target_word": "AID", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["A","D"],
+	   "yellow_letters": ["I","L","G"],
+	"purple_letters": ["E", "Z","N"]
+        },
+        {
+            "target_word": "WAR", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["W","A"],
+	   "yellow_letters": ["R","M","F"],
+	"purple_letters": ["N", "H","R"]
+        },
+        {
+            "target_word": "ZIP", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["Z","P","T"],
+	   "yellow_letters": ["I","R","G"],
+	"purple_letters": ["M", "R","O"]
+        }
+	
+    ], 
+
+
+
+ "lvl0.5": [
+        {
+            "target_word": "LIFE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","T"],
+	   "yellow_letters": ["I","M","G"],
+	"purple_letters": ["E","U", "Z","R"]
+        }, 
+        {
+            "target_word": "FISH", 
+            "blanks": [
+                0, 
+                1
+            ], 
+             "orange_letters": ["F","H","T"],
+	   "yellow_letters": ["I","M","G"],
+	"purple_letters": ["S","U", "Z","Y"]
+        },
+        {
+            "target_word": "TIME", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["T","M","S"],
+	   "yellow_letters": ["I","L","G"],
+	"purple_letters": ["E","U", "Z","N"]
+        },
+        {
+            "target_word": "SING", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","G","T"],
+	   "yellow_letters": ["I","M","F"],
+	"purple_letters": ["N","U", "H","R"]
+        },
+        {
+            "target_word": "FILM", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","T"],
+	   "yellow_letters": ["I","R","G"],
+	"purple_letters": ["M","U", "R","O"]
+        }
+	
+    ], 
+
+
     "lvl1": [
         {
             "target_word": "POWER", 
@@ -74,37 +186,117 @@
 	"purple_letters": ["N","E","W", "Z", "L", "Y"]
         }
     ], 
+
+
+
+
+    "lvl1.5": [
+        {
+            "target_word": "FAMILY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","E"],
+	   "yellow_letters": ["I","Y","G","P"],
+	"purple_letters": ["A","M","U", "Z", "X"]
+        }, 
+        {
+            "target_word": "SILVER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","E","F"],
+	   "yellow_letters": ["L","I","T","G","C","B","K","J"],
+	"purple_letters": ["V","R","U", "X", "D"]
+        },
+        {
+            "target_word": "NATURE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["N","T","M"],
+	   "yellow_letters": ["U","E","F","H","B","K"],
+	"purple_letters": ["A","R","G", "X", "Y"]
+        },
+        {
+            "target_word": "PERSON", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","O","A"],
+	   "yellow_letters": ["S","E","D","C","B","K"],
+	"purple_letters": ["R","N","U", "X", "Y"]
+        },
+        {
+            "target_word": "FATHER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","T","D"],
+	   "yellow_letters": ["E","R","M","F","C","B"],
+	"purple_letters": ["A","H","P", "X", "Y"]
+        }
+	
+    ], 
+
+
     "lvl2": [
         {
-            "target_word": "ATHLETE", 
+            "target_word": "VICTORY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["V","T","A","M"],
+	   "yellow_letters": ["C","O","Y","F","C","B","K"],
+	"purple_letters": ["I","R","U", "Z", "X"]
+        }, 
+        {
+            "target_word": "PAYMENT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","N","O","F"],
+	   "yellow_letters": ["Y","E","T","G","C","B","K"],
+	"purple_letters": ["A","M","U", "X", "D"]
+        },
+        {
+            "target_word": "PICTURE", 
             "blanks": [
                 0, 
                 1
             ], 
             "orange_letters": ["P","T","A","M"],
-	   "yellow_letters": ["H","E","E","F","C","B","K","I"],
-	"purple_letters": ["T","L","U", "Z", "X", "Y"]
-        }, 
-        {
-            "target_word": "STUDENT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["S","T","A","M"],
-	   "yellow_letters": ["D","E","T","F","C","B","K","I"],
-	"purple_letters": ["N","L","U", "Z", "X", "Y"]
+	   "yellow_letters": ["I","U","E","F","H","B","K"],
+	"purple_letters": ["C","R","G", "X", "Y"]
         },
-	{
-            "target_word": "COMPUTER", 
+        {
+            "target_word": "FRIENDS", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["C","O","A","M"],
-	   "yellow_letters": ["P","E","R","F","C","B","K","I"],
-	"purple_letters": ["N","L","U", "Z", "T", "Y"]
+            "orange_letters": ["F","S","A","M"],
+	   "yellow_letters": ["N","E","D","F","C","B","K"],
+	"purple_letters": ["R","I","U", "X", "Y"]
+        },
+        {
+            "target_word": "KINGDOM", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["K","G","A","R"],
+	   "yellow_letters": ["N","O","M","F","C","B","S"],
+	"purple_letters": ["I","D","T", "X", "Y"]
         }
+	
     ], 
     "lvl3": [
         {
