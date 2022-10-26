@@ -35,10 +35,6 @@ public class DataCollection
         PlayerMovement.incorrectPurpleLetters = 0;
         EnemyControl.enemiesKilled = 0;
         ShootScript.totalBullets = 0;
-        if (reasonEnd == "SUCCESS") {
-            levelIndicator += 1;
-        }
-        Debug.Log(levelIndicator);
         var url =
             "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
         var json = data.Stringify();
