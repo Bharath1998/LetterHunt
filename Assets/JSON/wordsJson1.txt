@@ -50,7 +50,7 @@
             "orange_letters": ["Z","P","T"],
 	   "yellow_letters": ["I","R","G"],
 	"purple_letters": ["M", "R","O"]
-        },
+        }
 	
     ], 
 
@@ -106,7 +106,7 @@
             "orange_letters": ["F","L","T"],
 	   "yellow_letters": ["I","R","G"],
 	"purple_letters": ["M","U", "R","O"]
-        },
+        }
 	
     ], 
 
@@ -240,7 +240,7 @@
             "orange_letters": ["F","T","D"],
 	   "yellow_letters": ["E","R","M","F","C","B"],
 	"purple_letters": ["A","H","P", "X", "Y"]
-        },
+        }
 	
     ], 
 
@@ -295,7 +295,7 @@
             "orange_letters": ["K","G","A","R"],
 	   "yellow_letters": ["N","O","M","F","C","B","S"],
 	"purple_letters": ["I","D","T", "X", "Y"]
-        },
+        }
 	
     ], 
     "lvl3": [
