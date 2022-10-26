@@ -158,35 +158,35 @@ public class LetterSpawnerLvl2 : MonoBehaviour
             while(true){
                 
                 if(i % 10 == 0){
-                    x = (float)Random.Range(-7, 0);
-                    y = (float)Random.Range(0, 4);
+                    x = (float)Random.Range((float)-6.16, (float)-0.44 );
+                    y = (float)Random.Range((float)-1.9, (float)2.26);
                 }else if( i % 10 == 1){
-                    x = (float)Random.Range((float)1.68, (float)31.83);
-                    y = (float)Random.Range(2, 5);
+                    x = (float)Random.Range((float)1.58, (float)31.76);
+                    y = (float)Random.Range((float)0.47, (float)3.19 );
                 }else if( i % 10 == 3){
-                    x = (float)Random.Range(-8, (float)-2.3);
-                    y = (float)Random.Range((float)12.7, (float)18.5);
+                    x = (float)Random.Range((float)-8.08, (float)-2.64);
+                    y = (float)Random.Range((float)11.28, (float)13.82);
                 }else if( i % 10 == 2){
-                    x = (float)Random.Range((float)-0.36, (float)5.5);
-                    y = (float)Random.Range((float)10.75, (float)12.7);
+                    x = (float)Random.Range((float)1.58, (float)31.76);
+                    y = (float)Random.Range((float)0.47, (float)3.19);
                 }else if( i % 10 == 4){
-                    x = (float)Random.Range((float)1.68, (float)31.83);
-                    y = (float)Random.Range(2, 5);
+                    x = (float)Random.Range((float)4.42, (float)10.38);
+                    y = (float)Random.Range((float)11.28, (float)13.82);
                 }else if( i % 10 == 5){
-                    x = (float)Random.Range(-7, 0);
-                    y = (float)Random.Range(0, 4);
+                    x = (float)Random.Range((float)1.58, (float)31.76);
+                    y = (float)Random.Range((float)0.47, (float)3.19);
                 }else if( i % 10 == 7){
-                    x = (float)Random.Range(-8, (float)-2.3);
-                    y = (float)Random.Range((float)12.7, (float)18.5);
+                    x = (float)Random.Range((float)11.54, (float)16.8);
+                    y = (float)Random.Range((float)9.43, (float)13.07);
                 }else if( i % 10 == 6){
-                    x = (float)Random.Range((float)-0.36, (float)5.5);
-                    y = (float)Random.Range((float)10.75, (float)12.7);
+                    x = (float)Random.Range((float)22.52, (float)32.12);
+                    y = (float)Random.Range((float)8.27, (float)13.47);
                 }else if( i % 10 == 8){
-                    x = (float)Random.Range((float)1.68, (float)31.83);
-                    y = (float)Random.Range(2, 5);
+                    x = (float)Random.Range((float)-8.07, (float)0.55);
+                    y = (float)Random.Range((float)7.23, (float)9.2);
                 }else if( i % 10 == 9){
-                    x = (float)Random.Range((float)-0.36, (float)5.5);
-                    y = (float)Random.Range((float)10.75, (float)12.7);
+                    x = (float)Random.Range((float)1.58, (float)31.76);
+                    y = (float)Random.Range((float)0.47, (float)3.19);
                 }
 
 
