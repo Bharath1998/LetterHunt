@@ -57,8 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     int JumpCount = 0;
     public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
-    public static string win_string = "_____";
-    public static char[] arr_win = win_string.ToCharArray();
+    // public static string win_string = "_____";
+    // public static char[] arr_win = win_string.ToCharArray();
+
+    public static string win_string;
+    public static char[] arr_win;
 
     void Start()
     {
@@ -77,9 +80,6 @@ public class PlayerMovement : MonoBehaviour
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
 
-
-
-        
         
         // target = "CROWNSA";
         Scene currentScene = SceneManager.GetActiveScene ();
@@ -93,9 +93,9 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (sceneName == "Level 2")
         {
-            print("LEVEL 2");
+            // print("LEVEL 2");
             target = LetterSpawnerLvl2.target_word;
-            print("inside if TARGET FROM PLAYER MOVE "+target);
+            // print("inside if TARGET FROM PLAYER MOVE "+target);
         }
         print("TARGET FROM PLAYER MOVE"+target);
         int n = target.Length;
@@ -111,6 +111,10 @@ public class PlayerMovement : MonoBehaviour
 
         // string temp = new string('_', n);
         // string temp = "_  _  _  _  _";
+
+        win_string = new string('_', n);
+        arr_win = win_string.ToCharArray();
+
         wordTMP.text = temp1;
         if (wordTMP.text==null){
             print("NULL");
@@ -230,7 +234,7 @@ public class PlayerMovement : MonoBehaviour
             try
             {
                 char lastCharacter = characterType[characterType.Length - 1];
-                target = LetterSpawnerLvl2.target_word;
+                // target = LetterSpawnerLvl2.target_word;
                 string wordtmptext = wordTMP.text;
                 char[] arr2 = wordtmptext.ToCharArray();
 
@@ -241,6 +245,7 @@ public class PlayerMovement : MonoBehaviour
                     if (characterColor == "Yellow") correctYellowLetters+=1;
                     int idx = target.IndexOf(lastCharacter);
                     arr2[idx*3] = lastCharacter;
+                    print("LAST CHARACTER: " + lastCharacter);
                     arr_win[idx] = lastCharacter;
                     // GameObject go = GameObject.Find("go" + idx.ToString());
                     // Destroy(go.gameObject);
@@ -284,13 +289,13 @@ public class PlayerMovement : MonoBehaviour
                 if (string.Join("", arr_win) == target)
                 {
                     // Change to next level and so on.
-                    win_string = "_____";
-                    arr_win = win_string.ToCharArray();
+                    // win_string = "_____";
+                    // arr_win = win_string.ToCharArray();
 
                     // StartCoroutine(SetWinText());
                     StopAllCoroutines();
                     SceneManager.LoadScene("Win");
-                    SceneManager.LoadScene("Level 2");
+                    // SceneManager.LoadScene("Level 2");
                     // DestroyImmediate(this.gameObject);
                     StartCoroutine(SetWinText());
                     // SceneManager.LoadScene("Win");
