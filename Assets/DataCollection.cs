@@ -11,10 +11,11 @@ using static Timer;
 
 public class DataCollection
 {
-    public static IEnumerator Upload(int level = 1, string reasonEnd = "KILLED")
+    public static int levelIndicator = 1;
+    public static IEnumerator Upload(string reasonEnd = "KILLED")
     {
         DatabaseModel data = new DatabaseModel();
-        data.level = level;
+        data.level = levelIndicator;
         data.reason_end = reasonEnd;
         data.enemies_killed = EnemyControl.enemiesKilled;
         data.total_bullets = ShootScript.totalBullets;
@@ -34,6 +35,10 @@ public class DataCollection
         PlayerMovement.incorrectPurpleLetters = 0;
         EnemyControl.enemiesKilled = 0;
         ShootScript.totalBullets = 0;
+        if (reasonEnd == "SUCCESS") {
+            levelIndicator += 1;
+        }
+        Debug.Log(levelIndicator);
         var url =
             "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
         var json = data.Stringify();
