@@ -45,7 +45,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
-            StartCoroutine(DataCollection.Upload(1, "TIME_UP"));
+            StartCoroutine(DataCollection.Upload("TIME_UP"));
             SceneManager.LoadScene("Game Over");
         }
     }

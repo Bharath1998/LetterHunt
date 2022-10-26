@@ -175,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            StartCoroutine(DataCollection.Upload(1, "KILLED"));
+            StartCoroutine(DataCollection.Upload("KILLED"));
             Destroy(this.gameObject);
             target = null;
             Camera cam = Camera.main;
@@ -269,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (string.Join("", arr_win) == target)
                 {
-                    StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
+                    StartCoroutine(DataCollection.Upload("SUCCESS"));
                 }
 
                 // if (target.Contains(lastCharacter))
@@ -308,7 +308,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Game won
 
-            StartCoroutine(DataCollection.Upload(1, "SUCCESS"));
+            StartCoroutine(DataCollection.Upload("SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
     }
