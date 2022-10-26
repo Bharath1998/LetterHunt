@@ -4530,12 +4530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8e3ecf2b6104096a35ba4e8ddb4b7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
-  healthBar: {fileID: 0}
-  wordTMP: {fileID: 54634562}
-  maxHealth: 100
-  damage: 10
-  MaxJumps: 5
 --- !u!1 &1166206509
 GameObject:
   m_ObjectHideFlags: 0
@@ -6837,7 +6831,7 @@ MonoBehaviour:
   - {fileID: 2909525913776137473, guid: 65bb75a4bb57a42daa70760181746539, type: 3}
   - {fileID: 8509592179412008184, guid: 9bed5a8499aff4fdbb5b79f2251f20e0, type: 3}
   - {fileID: 422877886111286438, guid: 9edc338e444d94d10a9a4e466c5c36e5, type: 3}
-  index: 020000000000000001000000000000000200000001000000
+  index: 020000000000000002000000000000000200000000000000
 --- !u!4 &1977122130
 Transform:
   m_ObjectHideFlags: 0
@@ -6869,7 +6863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2006533641
 MonoBehaviour:
   m_ObjectHideFlags: 0

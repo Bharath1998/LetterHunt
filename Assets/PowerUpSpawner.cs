@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUpSpawner : MonoBehaviour
 {
     public GameObject[] powerUpReference;
-    public int[] index = {2, 0, 1, 0, 2, 1};
+    public int[] index = {2, 0, 2, 0, 2, 0};
 
     public double[,] position = {{28.0,12.0},{24.5,12.76},{11.65,12.85},{-2.97,14.04}, {14.02,10.99},{29.15,5.92},{-7.78,13.1}};
     HashSet<int> used = new HashSet<int>();
