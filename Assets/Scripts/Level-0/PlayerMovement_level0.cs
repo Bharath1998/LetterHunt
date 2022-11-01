@@ -33,8 +33,16 @@ public class PlayerMovement_level0 : MonoBehaviour
             float dirX = Input.GetAxisRaw("Horizontal");
             player.velocity = new Vector2(player.velocity.x,6);
         }
-        bool flipped = movement.x <0 ;
-        this.transform.rotation = Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
+        bool flipped = movement.x < 0;
+        bool is_still = movement.x == 0;
+        if(flipped == true & facingRight == true){
+            facingRight = false;
+        }
+        if(flipped == false & facingRight == false & !is_still){
+            facingRight = true;
+        }
+        this.transform.rotation =
+            Quaternion.Euler(new Vector3(0f, !facingRight ? 180f : 0f, 0f));
     }
 
     private void FixedUpdate(){
