@@ -327,8 +327,19 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(DataCollection.Upload("SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
+        if (other.gameObject.tag == "platform")
+        {
+            JumpCount = MaxJumps;
+            Debug.Log("I am on the platform okay");
+            this.transform.parent = other.gameObject.transform;
+        }
     }
+    void OnCollisionExit2D(Collision2D other){
+        if (other.gameObject.tag == "platform"){
+            this.transform.parent = null;
+        }
 
+    }
     IEnumerator SetWinText()
     {
         win_string = "_____";

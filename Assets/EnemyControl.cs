@@ -17,7 +17,7 @@ public class EnemyControl : MonoBehaviour
     public static bool kill = false;
     [SerializeField]
     public static int enemiesKilled = 0;
-    
+    bool isEven = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,33 @@ public class EnemyControl : MonoBehaviour
     {
     	MoveMonster();   
     }
+    void OnCollisionStay2D(Collision2D collision){
+        Debug.Log("In Collision on Stay");
+        switch(collision.gameObject.tag){
+    		case "Player":
+                //Destroy(collision.gameObject);
+                Debug.Log(gameObject.name);
+                // EnemySpawnerScript.spawnAllowed = false;
+                playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
+                
+                var timeSpan = System.DateTime.Now;
+                Debug.Log("On collision stay");
+                if(timeSpan.Second %2 == 0){
+                    if(isEven == false){
+                        Debug.Log("In collision stay");
+                        playerMovement.TakeDamage();
+                    }
+                    isEven = true;
+                }
+                else{
+                    isEven = false;
+                }
+                
 
+	    		break;
+        }
+
+    }
     void OnCollisionEnter2D(Collision2D collision){
     	switch(collision.gameObject.tag){
     		case "Player":
@@ -41,7 +67,18 @@ public class EnemyControl : MonoBehaviour
                 Debug.Log(gameObject.name);
                 // EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
-                playerMovement.TakeDamage();
+                
+                var timeSpan = System.DateTime.Now;
+                if(timeSpan.Second %2 == 0){
+                    if(isEven == false){
+                        playerMovement.TakeDamage();
+                    }
+                    isEven = true;
+                }
+                else{
+                    isEven = false;
+                }
+                
 
 	    		break;
 	    	case "Bullet":
