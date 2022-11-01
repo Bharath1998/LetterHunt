@@ -13,6 +13,7 @@ TagManager:
   - power_up_add_time
   - Enemy2
   - ground
+  - platform
   layers:
   - Default
   - TransparentFX
@@ -20,10 +21,10 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - Enemy
-  - Letter
-  - Boundary
-  - Platforms
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
