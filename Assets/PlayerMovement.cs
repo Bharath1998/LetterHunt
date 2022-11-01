@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     public static int incorrectOrangeLetters;
 
     int JumpCount = 0;
-    public int MaxJumps = 5; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public int MaxJumps = 2; //Maximum amount of jumps (i.e. 2 for double jumps)
     // public static string win_string = "_____";
     // public static char[] arr_win = win_string.ToCharArray();
 
@@ -141,18 +141,21 @@ public class PlayerMovement : MonoBehaviour
         {
             float dirX = Input.GetAxisRaw("Horizontal");
 
-            player.velocity = new Vector2(player.velocity.x, 6);
-            // if (JumpCount > 0)
-            // {
-            // Jump();
-
-            
-            // }
+            // player.velocity = new Vector2(player.velocity.x, 6);
+            if (JumpCount > 0){
+                Jump();
+            }
         }
         bool flipped = movement.x < 0;
-
+        bool is_still = movement.x == 0;
+        if(flipped == true & facingRight == true){
+            facingRight = false;
+        }
+        if(flipped == false & facingRight == false & !is_still){
+            facingRight = true;
+        }
         this.transform.rotation =
-            Quaternion.Euler(new Vector3(0f, flipped ? 180f : 0f, 0f));
+            Quaternion.Euler(new Vector3(0f, !facingRight ? 180f : 0f, 0f));
     }
 
     private void FixedUpdate()
@@ -205,8 +208,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "ground")
         {
         JumpCount = MaxJumps;
-        
-
         }
         if (other.gameObject.tag == "Letter")
         {
