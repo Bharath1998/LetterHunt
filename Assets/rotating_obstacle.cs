@@ -8,7 +8,7 @@ public class rotating_obstacle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(_rotation * Time.deltaTime);
+        transform.Rotate(_rotation * moveSpeed * Time.deltaTime);
     }
     Rigidbody2D rb;
     GameObject target;
