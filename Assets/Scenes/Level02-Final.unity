@@ -574,7 +574,7 @@ GameObject:
   - component: {fileID: 316523242}
   - component: {fileID: 316523241}
   - component: {fileID: 316523240}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Background
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -2773,7 +2773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 617804601}
   - component: {fileID: 617804600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boundary Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4522,7 +4522,7 @@ GameObject:
   - component: {fileID: 1878645119}
   - component: {fileID: 1878645118}
   - component: {fileID: 1878645117}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Background
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -5447,7 +5447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020094150}
   - component: {fileID: 2020094149}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
