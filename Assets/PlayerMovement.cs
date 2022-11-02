@@ -301,7 +301,7 @@ public class PlayerMovement : MonoBehaviour
                     string sceneName = currentScene.name;
                     if (sceneName == "Level 2")
                     {
-                        SceneManager.LoadScene("Game Over");
+                        SceneManager.LoadScene("Win");
                     }
                     else
                     {
