@@ -350,7 +350,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 10;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 7;
         JumpCount -= 1;
     }
 }
