@@ -261,11 +261,17 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void TakeDamage(){
+    public void TakeDamage(int x = 0){
     
     if((GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)==false){
-        
-        currentHealth -= damage;
+        if (x == 0)
+            {
+                currentHealth -= damage;
+            }
+            else
+            {
+                currentHealth -= x;
+            }
         if (currentHealth <= 0)
         {
             StartCoroutine(DataCollection.Upload("KILLED"));
