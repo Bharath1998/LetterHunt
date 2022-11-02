@@ -14,6 +14,9 @@ TagManager:
   - Enemy2
   - ground
   - platform
+  - Teleporter
+  - Door1
+  - Door2
   layers:
   - Default
   - TransparentFX
