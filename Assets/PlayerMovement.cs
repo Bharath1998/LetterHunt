@@ -86,8 +86,12 @@ public class PlayerMovement : MonoBehaviour
  
          // Retrieve the name of this scene.
         string sceneName = currentScene.name;
- 
-        if (sceneName == "Level 1") 
+        if (sceneName == "Level02-Final") 
+        {
+            target = LetterSpawnerLvl02.target_word;
+            // print("target printed from player movement : " + target);
+        }
+        else if (sceneName == "Level 1") 
         {
             target = LetterSpawner.target_word;
         }
