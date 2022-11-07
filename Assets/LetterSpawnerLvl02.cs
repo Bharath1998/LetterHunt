@@ -59,6 +59,7 @@ public class LetterSpawnerLvl02 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         myPlayerList = JsonUtility.FromJson<PlayerList>(textJSON.text);
         int len = myPlayerList.lvl02.Length;
         int rInt = Random.Range(0, len);
