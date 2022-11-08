@@ -32,7 +32,13 @@ public class EnemySpawnerScript : MonoBehaviour
         else if (sceneName == "Final_Level2")
         {
             // print("LEVEL 2");
-            spawnLimit=6;
+            spawnLimit=5;
+            // print("inside if TARGET FROM PLAYER MOVE "+target);
+        }
+        else if (sceneName == "Level 3")
+        {
+            // print("LEVEL 2");
+            spawnLimit=7;
             // print("inside if TARGET FROM PLAYER MOVE "+target);
         }
         else if (sceneName == "Level 1") 
