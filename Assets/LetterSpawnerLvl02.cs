@@ -159,35 +159,35 @@ public class LetterSpawnerLvl02 : MonoBehaviour
             while(true){
                 
                 if(i % 10 == 0){
-                    x = (float)Random.Range((float)-6.16, (float)-0.44 );
-                    y = (float)Random.Range((float)-1.9, (float)2.26);
+                    x = (float)Random.Range((float)-5.6, (float)-1.25 );
+                    y = (float)Random.Range((float)1.11, (float)3.84);
                 }else if( i % 10 == 1){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19 );
+                    x = (float)Random.Range((float)-0.39, (float)3.86);
+                    y = (float)Random.Range((float)3.13, (float)5.81 );
                 }else if( i % 10 == 3){
-                    x = (float)Random.Range((float)-8.08, (float)-2.64);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
+                    x = (float)Random.Range((float)4.61, (float)9.01);
+                    y = (float)Random.Range((float)5.3, (float)7.27);
                 }else if( i % 10 == 2){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
+                    x = (float)Random.Range((float)10.98, (float)14.77);
+                    y = (float)Random.Range((float)5.3, (float)7.27);
                 }else if( i % 10 == 4){
-                    x = (float)Random.Range((float)4.42, (float)10.38);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
+                    x = (float)Random.Range((float)15.93, (float)19.72);
+                    y = (float)Random.Range((float)3.13, (float)5.81);
                 }else if( i % 10 == 5){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
+                    x = (float)Random.Range((float)20.93, (float)24.82);
+                    y = (float)Random.Range((float)1.11, (float)3.84);
                 }else if( i % 10 == 7){
-                    x = (float)Random.Range((float)11.54, (float)16.8);
-                    y = (float)Random.Range((float)9.43, (float)13.07);
+                    x = (float)Random.Range((float)-6.73, (float)-0.26);
+                    y = (float)Random.Range((float)-1.77, (float)-0.51);
                 }else if( i % 10 == 6){
-                    x = (float)Random.Range((float)22.52, (float)32.12);
-                    y = (float)Random.Range((float)8.27, (float)13.47);
+                    x = (float)Random.Range((float)2.93, (float)23.71);
+                    y = (float)Random.Range((float)-1.77, (float)0.05);
                 }else if( i % 10 == 8){
-                    x = (float)Random.Range((float)-8.07, (float)0.55);
-                    y = (float)Random.Range((float)7.23, (float)9.2);
+                    x = (float)Random.Range((float)27.35, (float)31.29);
+                    y = (float)Random.Range((float)-1.77, (float)0.05);
                 }else if( i % 10 == 9){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
+                    x = (float)Random.Range((float)2.93, (float)23.71);
+                    y = (float)Random.Range((float)-1.77, (float)0.05);
                 }
 
 
@@ -215,12 +215,12 @@ public class LetterSpawnerLvl02 : MonoBehaviour
                 */
             }
 
-            if(i==0){
-                x = -1;
-                y = 4;
-                randomPosition = new Vector3(x,y,0);
-                seenList.Add(new float[2]{x,y});
-            }
+            // if(i==0){
+            //     x = -1;
+            //     y = 4;
+            //     randomPosition = new Vector3(x,y,0);
+            //     seenList.Add(new float[2]{x,y});
+            // }
             int color = colors[i];
             int letter_index = indexes[i];
             /*
