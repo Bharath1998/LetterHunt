@@ -169,6 +169,13 @@ public class PlayerMovement : MonoBehaviour
                 target = LetterSpawnerLvl02.target_word;
                 print("target printed from player movement : " + target);
             }
+
+            else if (sceneName == "Final_Level2") 
+            {
+              
+                target = LetterSpawnerLvl01.target_word;
+                print("target printed from player movement : " + target);
+            }
             print("TARGET FROM PLAYER MOVE : "+target);
             int n = target.Length;
             print("n FROM PLAYER MOVE"+n);

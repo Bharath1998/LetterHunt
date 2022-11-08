@@ -163,6 +163,60 @@
 	
     ], 
 
+    "lvl01": [
+        {
+            "target_word": "LIFE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","T"],
+	   "yellow_letters": ["I","M","G"],
+	"purple_letters": ["E","U", "Z","R"]
+        }, 
+        {
+            "target_word": "FISH", 
+            "blanks": [
+                0, 
+                1
+            ], 
+             "orange_letters": ["F","H","T"],
+	   "yellow_letters": ["I","M","G"],
+	"purple_letters": ["S","U", "Z","Y"]
+        },
+        {
+            "target_word": "TIME", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["T","M","S"],
+	   "yellow_letters": ["I","L","G"],
+	"purple_letters": ["E","U", "Z","N"]
+        },
+        {
+            "target_word": "SING", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","G","T"],
+	   "yellow_letters": ["I","M","F"],
+	"purple_letters": ["N","U", "H","R"]
+        },
+        {
+            "target_word": "FILM", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","T"],
+	   "yellow_letters": ["I","R","G"],
+	"purple_letters": ["M","U", "R","O"]
+        }
+	
+    ], 
+
 
     "lvl1": [
         {
