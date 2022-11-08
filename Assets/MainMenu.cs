@@ -22,18 +22,23 @@ public class MainMenu : MonoBehaviour
 
     public void GoToLvl1(){
 		DataCollection.levelIndicator = 1;
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Level02-Final");
     }
 
     public void GoToLvl2(){
 		DataCollection.levelIndicator = 2;
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Final_Level2");
     }
 
  	public void GoToLvl3(){
+         SceneManager.LoadScene("Level 3");
     }
 
     public void GoToLvl4(){
+        SceneManager.LoadScene("Level 1");
+    }
+    public void GoToLvl5(){
+        SceneManager.LoadScene("Level 6");
     }
 
     public void QuitGame(){

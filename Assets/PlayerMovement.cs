@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     public static int incorrectOrangeLetters;
 
     int JumpCount = 0;
-    public int MaxJumps = 2; //Maximum amount of jumps (i.e. 2 for double jumps)
+    public int MaxJumps = 15; //Maximum amount of jumps (i.e. 2 for double jumps)
     // public static string win_string = "_____";
     // public static char[] arr_win = win_string.ToCharArray();
 
@@ -181,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
             {
               
                 target = LetterSpawnerLvl03.target_word;
-
+            }
             else if (sceneName == "Level 6") 
             {
               
@@ -364,39 +364,35 @@ public class PlayerMovement : MonoBehaviour
                     StartCoroutine(DataCollection.Upload("SUCCESS"));
                 }
 
-                // if (target.Contains(lastCharacter))
-                // {
-                //     int idx = target.IndexOf(lastCharacter);
-                //     arr2[idx] = lastCharacter;
-                //     // GameObject go = GameObject.Find("go" + idx.ToString());
-                //     // Destroy(go.gameObject);
-                // }
-                // wordTMP.text = new string(arr2);
 
                 if (string.Join("", arr_win) == target)
                 {
                     // Change to next level and so on.
-                    // win_string = "_____";
-                    // arr_win = win_string.ToCharArray();
 
-                    // StartCoroutine(SetWinText());
                     StopAllCoroutines();
-                    // SceneManager.LoadScene("Win");
                     
                     Scene currentScene = SceneManager.GetActiveScene ();
                     string sceneName = currentScene.name;
-                    if (sceneName == "Level 2")
+                    //You will have to change this
+                    if (sceneName == "Level02-Final")
                     {
-                        SceneManager.LoadScene("Win");
+                        SceneManager.LoadScene("Final_Level2");
+                    }
+                    else if (sceneName == "Final_Level2"){
+                        SceneManager.LoadScene("Level 3");
+                    }
+                    else if (sceneName == "Level 3"){
+                        SceneManager.LoadScene("Level 1");
+                    }
+                    else if (sceneName == "Level 1"){
+                        SceneManager.LoadScene("Level 6");
                     }
                     else
                     {
                         SceneManager.LoadScene("NextLevel");
                     }
-                     // DestroyImmediate(this.gameObject);
                     StartCoroutine(SetWinText());
-                    // SceneManager.LoadScene("Win");
-                    // SceneManager.LoadScene("Game Over");
+
                 }
             }
             catch (NullReferenceException e)
@@ -436,7 +432,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 7;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 20;
         JumpCount -= 1;
     }
 }

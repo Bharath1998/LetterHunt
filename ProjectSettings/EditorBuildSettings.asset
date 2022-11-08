@@ -24,21 +24,30 @@ EditorBuildSettings:
     path: Assets/Scenes/RoadMap.unity
     guid: fa11f3259e3b244b4b270d8de06caded
   - enabled: 1
+    path: Assets/Scenes/Level02-Final.unity
+    guid: 17b99341b2ad54945a6259807655abaa
+  - enabled: 1
+    path: Assets/Scenes/Final_Level2.unity
+    guid: 65f51a4d18cd941d4a55ed909953c0a7
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 08374a37e23154e81a8be902f107bb0d
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: 26691e1af03054f5585452f27f76f5ac
+  - enabled: 1
     path: Assets/Scenes/NextLevel.unity
     guid: ad7b7f6d0bf8e4a65aa224b3f0d3669a
-  - enabled: 1
-    path: Assets/Scenes/Level 5.unity
-    guid: 08374a37e23154e81a8be902f107bb0d
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: dd5a7e4d53fea4aaf8a2405bd5ae5d58
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: b4921a2a74528134d81b59f850fbd9d1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 2.unity
     guid: 6f81892b280bf440388475b2e2d87e5c
   m_configObjects: {}
