@@ -27,7 +27,7 @@ public class rotating_obstacle : MonoBehaviour
         // timer currentTime = 
         target = GameObject.Find("Player");
         rb = GetComponent<Rigidbody2D>();
-        moveSpeed = Random.Range(4f, 6f);
+        moveSpeed = Random.Range(1f, 2f);
     }
 
     
