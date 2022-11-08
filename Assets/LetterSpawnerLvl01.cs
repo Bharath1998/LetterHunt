@@ -160,10 +160,10 @@ public class LetterSpawnerLvl01 : MonoBehaviour
                 
                 if(i % 10 == 0){
                     x = (float)Random.Range((float)-6.96, (float)3.05);
-                    y = (float)Random.Range((float)-1.92, (float)0.31);
+                    y = (float)Random.Range((float)-1.52, (float)0.31);
                 }else if( i % 10 == 1){
                     x = (float)Random.Range((float)19.18, (float)30.86);
-                    y = (float)Random.Range((float)-1.92, (float)0.31);
+                    y = (float)Random.Range((float)-1.52, (float)0.31);
                 }else if( i % 10 == 3){
                     x = (float)Random.Range((float)-4.13, (float)3.61);
                     y = (float)Random.Range((float)5.46, (float)7.29);
