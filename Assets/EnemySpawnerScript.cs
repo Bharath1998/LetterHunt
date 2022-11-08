@@ -25,8 +25,11 @@ public class EnemySpawnerScript : MonoBehaviour
  
          // Retrieve the name of this scene.
         string sceneName = currentScene.name;
- 
-        if (sceneName == "Level 1") 
+        if (sceneName == "Level02-Final") 
+        {
+            spawnLimit = 3;
+        }
+        else if (sceneName == "Level 1") 
         {
             spawnLimit = 9;
         }

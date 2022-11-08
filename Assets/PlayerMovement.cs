@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
     public static string win_string;
     public static char[] arr_win;
 
+    public int flag = 0;
+
     void Start()
     {
         JumpCount = MaxJumps;
@@ -80,49 +82,57 @@ public class PlayerMovement : MonoBehaviour
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
 
+
         
         // target = "CROWNSA";
-        Scene currentScene = SceneManager.GetActiveScene ();
+        // Scene currentScene = SceneManager.GetActiveScene ();
  
-         // Retrieve the name of this scene.
-        string sceneName = currentScene.name;
- 
-        if (sceneName == "Level 1") 
-        {
-            target = LetterSpawner.target_word;
-        }
-        else if (sceneName == "Level 2")
-        {
-            // print("LEVEL 2");
-            target = LetterSpawnerLvl2.target_word;
-            // print("inside if TARGET FROM PLAYER MOVE "+target);
-        }
-        print("TARGET FROM PLAYER MOVE"+target);
-        int n = target.Length;
-        print("n FROM PLAYER MOVE"+n);
-        string pattern = "_  ";
-        string temp1 = "_  ";
-        for (int i = 0; i < n-2; i++) 
-        {
-            temp1 = temp1 + pattern;
+        //  // Retrieve the name of this scene.
+        // string sceneName = currentScene.name;
+
+
+        // if (sceneName == "Level 1") 
+        // {
+        //     target = LetterSpawner.target_word;
+        // }
+        // else if (sceneName == "Level 2")
+        // {
+        //     // print("LEVEL 2");
+        //     target = LetterSpawnerLvl2.target_word;
+        //     // print("inside if TARGET FROM PLAYER MOVE "+target);
+        // }
+        // else if (sceneName == "Level02-Final") 
+        // {
+
+        //     target = LetterSpawnerLvl02.target_word;
+        //     print("target printed from player movement : " + target);
+        // }
+        // print("TARGET FROM PLAYER MOVE : "+target);
+        // int n = target.Length;
+        // print("n FROM PLAYER MOVE"+n);
+        // string pattern = "_  ";
+        // string temp1 = "_  ";
+        // for (int i = 0; i < n-2; i++) 
+        // {
+        //     temp1 = temp1 + pattern;
             
-        }
-        temp1 = temp1 + "_";
+        // }
+        // temp1 = temp1 + "_";
 
-        // string temp = new string('_', n);
-        // string temp = "_  _  _  _  _";
+        // // string temp = new string('_', n);
+        // // string temp = "_  _  _  _  _";
 
-        win_string = new string('_', n);
-        arr_win = win_string.ToCharArray();
+        // win_string = new string('_', n);
+        // arr_win = win_string.ToCharArray();
 
-        wordTMP.text = temp1;
-        if (wordTMP.text==null){
-            print("NULL");
+        // wordTMP.text = temp1;
+        // if (wordTMP.text==null){
+        //     print("NULL");
 
-        }
-        else{
-            print("DASHES "+wordTMP.text);
-        }
+        // }
+        // else{
+        //     print("DASHES "+wordTMP.text);
+        // }
             
         
         // catch (NullReferenceException e)
@@ -134,6 +144,62 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        flag += 1;
+        if (flag == 1){
+            Scene currentScene = SceneManager.GetActiveScene ();
+ 
+             // Retrieve the name of this scene.
+            string sceneName = currentScene.name;
+
+
+            if (sceneName == "Level 1") 
+            {
+                target = LetterSpawner.target_word;
+            }
+            else if (sceneName == "Level 2")
+            {
+                // print("LEVEL 2");
+                target = LetterSpawnerLvl2.target_word;
+                // print("inside if TARGET FROM PLAYER MOVE "+target);
+            }
+            else if (sceneName == "Level02-Final") 
+            {
+              
+                target = LetterSpawnerLvl02.target_word;
+                print("target printed from player movement : " + target);
+            }
+            print("TARGET FROM PLAYER MOVE : "+target);
+            int n = target.Length;
+            print("n FROM PLAYER MOVE"+n);
+            string pattern = "_  ";
+            string temp1 = "_  ";
+            for (int i = 0; i < n-2; i++) 
+            {
+                temp1 = temp1 + pattern;
+                
+            }
+            temp1 = temp1 + "_";
+
+            // string temp = new string('_', n);
+            // string temp = "_  _  _  _  _";
+
+            win_string = new string('_', n);
+            arr_win = win_string.ToCharArray();
+
+            wordTMP.text = temp1;
+            if (wordTMP.text==null){
+                print("NULL");
+
+            }
+            else{
+                print("DASHES "+wordTMP.text);
+            }
+
+        }
+        
+
+
 
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized;
         anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
@@ -350,7 +416,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 10;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 7;
         JumpCount -= 1;
     }
 }

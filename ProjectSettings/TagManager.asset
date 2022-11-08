@@ -21,10 +21,10 @@ TagManager:
   - Obstacle
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Platforms
+  - Boundary
+  - Enemy
+  - Letter
   - 
   - 
   - 
