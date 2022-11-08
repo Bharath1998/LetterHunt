@@ -2511,6 +2511,7 @@ MonoBehaviour:
   maxHealth: 100
   damage: 10
   MaxJumps: 2
+  flag: 0
 --- !u!61 &486540107
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2576,6 +2577,7 @@ MonoBehaviour:
   maxHealth: 100
   damage: 10
   MaxJumps: 2
+  flag: 0
 --- !u!212 &486540110
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3199,36 +3201,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 805625922}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 553753c18a6c04712bb11dc6240f5d58, type: 3}
+  m_Script: {fileID: 11500000, guid: 6850fd1db750943e09989f9754ff583d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterReference:
-  - {fileID: 7752663306956788760, guid: d316c5538a27941508e26617ab8ed009, type: 3}
-  - {fileID: 6364502180736296767, guid: e3f2ff650a59a46afafcee75fb8f8aa8, type: 3}
-  - {fileID: 6364502180736296767, guid: 17e716d22e0794d80a9c8bf6e25b2524, type: 3}
-  - {fileID: 6364502180736296767, guid: 7021909b8720c4d0aa6a1fb1e3ca5947, type: 3}
-  - {fileID: 6364502180736296767, guid: 1935cfbe36e98428894eda1d29943ff3, type: 3}
-  - {fileID: 6364502180736296767, guid: d9375fbb685f145499e54758e5f26a89, type: 3}
-  - {fileID: 6364502180736296767, guid: 7639fb25798b24f069ad2c70e1f63dc3, type: 3}
-  - {fileID: 6364502180736296767, guid: 5f7e8fae537fb4058a7fd23af252ef8d, type: 3}
-  - {fileID: 6364502180736296767, guid: 066fbe2022ce14d809e97819b28dcbde, type: 3}
-  - {fileID: 6364502180736296767, guid: 0ca77a237fb7a49249d65d41b2ea2a0e, type: 3}
-  - {fileID: 6364502180736296767, guid: d553cd2d70f02490a8f4254d50b443ca, type: 3}
-  - {fileID: 6364502180736296767, guid: ca846b6308f42450ba71ded709f759e5, type: 3}
-  - {fileID: 6364502180736296767, guid: 8d41f8ca61df74848b0d897aaad864eb, type: 3}
-  - {fileID: 6364502180736296767, guid: bc2af49eaa9de4bc0ad93bad9cb6547b, type: 3}
-  - {fileID: 6364502180736296767, guid: f8aa25b6771774ba8a0b66564a5cf9e5, type: 3}
-  - {fileID: 6364502180736296767, guid: 68968d5197d7d4955868fd0bb49b6e1d, type: 3}
-  - {fileID: 6364502180736296767, guid: b523f372477d940829bcbe788482043c, type: 3}
-  - {fileID: 6364502180736296767, guid: 1df2e75bb2e8e4c308118b303e9f3079, type: 3}
-  - {fileID: 6364502180736296767, guid: f8ee9fd9a2f3b4194a9f1b32502ad2cd, type: 3}
-  - {fileID: 6364502180736296767, guid: aac70a2d8e10c406eae820b543df9762, type: 3}
-  - {fileID: 6364502180736296767, guid: 66920bf09262b47248a23f75588eaddd, type: 3}
-  - {fileID: 6364502180736296767, guid: c3d7da5160c2f43819184aec4d6a2dde, type: 3}
-  - {fileID: 6364502180736296767, guid: 7de81b01678274dcc9289582175174cd, type: 3}
-  - {fileID: 6364502180736296767, guid: 2ee8bf976de1f414cbe1a1dbd8b498c2, type: 3}
-  - {fileID: 6364502180736296767, guid: 850f8f838014241de9dd872b9afd4d9e, type: 3}
-  - {fileID: 6364502180736296767, guid: 8643fc452b52348abbc3176fd6624744, type: 3}
+  letterReference: []
   highLetterReference:
   - {fileID: 7752663306956788760, guid: c0997fd7b4e64d9439d47e01daa5f47b, type: 3}
   - {fileID: 6364502180736296767, guid: 26374920e43d41c4b85276c7aa28220f, type: 3}
@@ -3311,15 +3287,15 @@ MonoBehaviour:
   - {fileID: 6364502180736296767, guid: 369d238ef98f227439ca3e00b2dbe5e8, type: 3}
   - {fileID: 6364502180736296767, guid: 33d45619b0eb7e24f8aeac837eaa83bf, type: 3}
   spawnedLetter: {fileID: 0}
-  leftPos: {fileID: 1710165272}
-  rightPos: {fileID: 1028684539}
+  leftPos: {fileID: 0}
+  rightPos: {fileID: 0}
   indexes: 
   colors: 
   colliders: []
   radius: 0
   textJSON: {fileID: 4900000, guid: 299bed34224464cb293d1294722387e0, type: 3}
   myPlayerList:
-    lvl02: []
+    lvl1: []
 --- !u!1 &995670811
 GameObject:
   m_ObjectHideFlags: 0
