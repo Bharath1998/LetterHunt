@@ -11,8 +11,11 @@ public class Teleport : MonoBehaviour
     private bool door1=true;
     private bool door1_final=false;
 
+
      private void Start() {
         player = GameObject.FindWithTag("Player");
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
@@ -21,10 +24,26 @@ public class Teleport : MonoBehaviour
                 player.transform.position = new Vector2(portal2.transform.position.x-2, portal2.transform.position.y);
             }
             else if(this.tag=="Door2"){
-                print("Hiiiii");
-            player.transform.position = new Vector2(portal.transform.position.x-2, portal.transform.position.y);
+            player.transform.position = new Vector2(portal.transform.position.x+2, portal.transform.position.y);
 
             }
+            else if(this.tag=="Door2_1"){
+            player.transform.position = new Vector2(portal2.transform.position.x+2, portal2.transform.position.y);
+
+            }
+            else if(this.tag=="Door2_2"){
+            player.transform.position = new Vector2(portal.transform.position.x-3, portal.transform.position.y);
+
+            }
+            else if(this.tag=="Door3_1"){
+            player.transform.position = new Vector2(portal2.transform.position.x+3, portal2.transform.position.y);
+
+            }
+            else if(this.tag=="Door3_2"){
+            player.transform.position = new Vector2(portal.transform.position.x-3, portal.transform.position.y);
+
+            }
+
 
         }
     }
