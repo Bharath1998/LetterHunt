@@ -539,6 +539,7 @@ MonoBehaviour:
   maxHealth: 100
   damage: 10
   MaxJumps: 2
+  flag: 0
 --- !u!61 &207677055
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -604,6 +605,7 @@ MonoBehaviour:
   maxHealth: 100
   damage: 10
   MaxJumps: 2
+  flag: 0
 --- !u!212 &207677058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4641,6 +4643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738968958}
   - component: {fileID: 1738968957}
+  - component: {fileID: 1738968959}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -4795,6 +4798,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738968959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738968956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3aa3a9b51614714a7ae3d5349241af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1747075151
 GameObject:
   m_ObjectHideFlags: 0
