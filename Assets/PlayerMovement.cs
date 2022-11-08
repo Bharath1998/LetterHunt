@@ -176,10 +176,17 @@ public class PlayerMovement : MonoBehaviour
                 target = LetterSpawnerLvl01.target_word;
                 print("target printed from player movement : " + target);
             }
+
             else if (sceneName == "Level 3") 
             {
               
                 target = LetterSpawnerLvl03.target_word;
+
+            else if (sceneName == "Level 6") 
+            {
+              
+                target = LetterSpawnerLvl06.target_word;
+
                 print("target printed from player movement : " + target);
             }
             print("TARGET FROM PLAYER MOVE : "+target);
