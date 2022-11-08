@@ -45,6 +45,12 @@ public class EnemySpawnerScript : MonoBehaviour
             spawnLimit=15;
             // print("inside if TARGET FROM PLAYER MOVE "+target);
         }
+        else if (sceneName == "Level 6")
+        {
+            // print("LEVEL 2");
+            spawnLimit=12;
+            // print("inside if TARGET FROM PLAYER MOVE "+target);
+        }
     }
 
     void SpawnAMonster(){

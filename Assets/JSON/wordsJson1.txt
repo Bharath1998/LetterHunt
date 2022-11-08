@@ -555,7 +555,7 @@
             ]
         }
     ], 
-    "lvl6": [
+    "lvl06": [
         {
             "target_word": "CAT", 
             "blanks": [

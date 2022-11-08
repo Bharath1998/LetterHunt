@@ -19,7 +19,6 @@ public class PortalAfter : MonoBehaviour
     void Update()
     {
         timer=(int)Timer.currentTime;
-        print(timer);
         if(timer == 105){
             blue_door.SetActive (true);
             // blue_door.GetComponent<BoxCollider2D>().enabled = true;
