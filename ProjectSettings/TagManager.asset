@@ -17,6 +17,10 @@ TagManager:
   - Teleporter
   - Door1
   - Door2
+  - Door2_1
+  - Door2_2
+  - Door3_1
+  - Door3_2
   layers:
   - Default
   - TransparentFX
