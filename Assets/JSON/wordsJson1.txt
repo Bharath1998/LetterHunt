@@ -296,6 +296,81 @@
 
 
 
+    "lvl03": [
+        {
+            "target_word": "POWER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","O","A","M"],
+	   "yellow_letters": ["W","E","R","F","C","B","K","I"],
+	"purple_letters": ["N","L","U", "Z", "X", "Y"]
+        },{
+            "target_word": "SPARK", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","Y","A","M"],
+	   "yellow_letters": ["W","P","K","T","C","B","K","I"],
+	"purple_letters": ["N","R","U", "Z", "X", "M"]
+        },{
+            "target_word": "BEACH", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["M","B","A","I"],
+	   "yellow_letters": ["E","T","L","H","G","R","D","W"],
+	"purple_letters": ["K","C","U", "Z", "X", "F"]
+        },{
+            "target_word": "TIGER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["G","O","A","T"],
+	   "yellow_letters": ["W","I","D","E","C","B","K","L"],
+	"purple_letters": ["N","R","U", "M", "F", "Y"]
+        },{
+            "target_word": "HOUSE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","O","A","M"],
+	   "yellow_letters": ["W","H","R","U","C","B","K","I"],
+	"purple_letters": ["N","T","E", "Z", "L", "Y"]
+        },{
+            "target_word": "GUIDE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["D","T","G","M"],
+	   "yellow_letters": ["W","U","K","I","A","B","K","C"],
+	"purple_letters": ["N","E","H", "Z", "L", "Y"]
+        },{
+            "target_word": "CRAZY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["Y","O","A","M"],
+	   "yellow_letters": ["T","C","R","U","G","B","K","I"],
+	"purple_letters": ["N","Z","E", "D", "L", "F"]
+        },{
+            "target_word": "CROWN", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["R","G","O","M"],
+	   "yellow_letters": ["T","N","D","C","A","B","K","I"],
+	"purple_letters": ["N","E","W", "Z", "L", "Y"]
+        }
+    ], 
 
     "lvl1.5": [
         {
