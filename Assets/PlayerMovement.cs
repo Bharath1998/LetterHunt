@@ -389,7 +389,7 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        SceneManager.LoadScene("NextLevel");
+                        SceneManager.LoadScene("Win");
                     }
                     StartCoroutine(SetWinText());
 
@@ -432,7 +432,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 20;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 7;
         JumpCount -= 1;
     }
 }
