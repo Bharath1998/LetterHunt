@@ -445,7 +445,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 20;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 9;
         JumpCount -= 1;
     }
 }

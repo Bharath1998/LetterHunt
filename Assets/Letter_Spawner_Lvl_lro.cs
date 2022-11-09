@@ -9,7 +9,7 @@ public class Letter_Spawner_Lvl_lro : MonoBehaviour
     public GameObject[] highLetterReference;
     public GameObject[] mediumLetterReference;
     public GameObject[] lowLetterReference;
-
+    public GameObject[] spawnRectangles;
     // public GameObject power_up_highlight;
 
     public GameObject spawnedLetter;
@@ -166,57 +166,9 @@ public class Letter_Spawner_Lvl_lro : MonoBehaviour
 
             while (true)
             {
-
-                if (i % 10 == 0)
-                {
-                    x = (float)Random.Range((float)-6.16, (float)-0.44);
-                    y = (float)Random.Range((float)-1.9, (float)2.26);
-                }
-                else if (i % 10 == 1)
-                {
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }
-                else if (i % 10 == 3)
-                {
-                    x = (float)Random.Range((float)-8.08, (float)-2.64);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
-                }
-                else if (i % 10 == 2)
-                {
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }
-                else if (i % 10 == 4)
-                {
-                    x = (float)Random.Range((float)4.42, (float)10.38);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
-                }
-                else if (i % 10 == 5)
-                {
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }
-                else if (i % 10 == 7)
-                {
-                    x = (float)Random.Range((float)11.54, (float)16.8);
-                    y = (float)Random.Range((float)9.43, (float)13.07);
-                }
-                else if (i % 10 == 6)
-                {
-                    x = (float)Random.Range((float)22.52, (float)32.12);
-                    y = (float)Random.Range((float)8.27, (float)13.47);
-                }
-                else if (i % 10 == 8)
-                {
-                    x = (float)Random.Range((float)-8.07, (float)0.55);
-                    y = (float)Random.Range((float)7.23, (float)9.2);
-                }
-                else if (i % 10 == 9)
-                {
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }
+                int sizeOfSpawners = spawnRectangles.Length;
+                x = (float) Random.Range(spawnRectangles[i%sizeOfSpawners].transform.position[0] - spawnRectangles[i % sizeOfSpawners].transform.localScale[0]/2, spawnRectangles[i % sizeOfSpawners].transform.position[0] + spawnRectangles[i % sizeOfSpawners].transform.localScale[0] / 2);
+                y = (float)Random.Range(spawnRectangles[i % sizeOfSpawners].transform.position[1] - spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2, spawnRectangles[i % sizeOfSpawners].transform.position[1] + spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2);
 
 
                 if (checkCollision(x, y))
