@@ -389,22 +389,22 @@ public class PlayerMovement : MonoBehaviour
                     //You will have to change this
                     if (sceneName == "Level02-Final")
                     {
-                        SceneManager.LoadScene("Final_Level2");
+                        StartCoroutine(toLevel2());
                     }
                     else if (sceneName == "Final_Level2"){
-                        SceneManager.LoadScene("Level 3");
+                        StartCoroutine(toLevel3());
                     }
                     else if (sceneName == "Level 3"){
-                        SceneManager.LoadScene("Level 1");
+                        StartCoroutine(toLevel4());
                     }
                     else if (sceneName == "Level 1"){
-                        SceneManager.LoadScene("Level 6");
+                        StartCoroutine(toLevel5());
                     }
                     else
                     {
                         SceneManager.LoadScene("Win");
                     }
-                    StartCoroutine(SetWinText());
+                    // StartCoroutine(SetWinText());
 
                 }
             }
@@ -443,6 +443,31 @@ public class PlayerMovement : MonoBehaviour
         Destroy(this.gameObject);
         SceneManager.LoadScene("NextLevel");
     }
+    IEnumerator toLevel2()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Final_Level2");
+    }
+    IEnumerator toLevel3()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Level 3");
+    }
+    IEnumerator toLevel4()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Level 1");
+    }
+    IEnumerator toLevel5()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("Level 6");
+    }
+
      public void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = transform.up * 9;
