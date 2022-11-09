@@ -189,7 +189,7 @@ public class PlayerMovement : MonoBehaviour
 
                 print("target printed from player movement : " + target);
             }
-            else if (sceneName == "level-rotating-obstacle")
+            else if (sceneName == "LevelRO")
             {
 
                 target = Letter_Spawner_Lvl_lro.target_word;
