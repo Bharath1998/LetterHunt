@@ -480,6 +480,60 @@
         }
 	
     ], 
+
+     "level_rotating_obstacle": [
+        {
+            "target_word": "FAMILY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","E"],
+	   "yellow_letters": ["I","Y","G","P"],
+	"purple_letters": ["A","M","U", "Z", "X"]
+        }, 
+        {
+            "target_word": "SILVER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","E","F"],
+	   "yellow_letters": ["L","I","T","G","C","B","K","J"],
+	"purple_letters": ["V","R","U", "X", "D"]
+        },
+        {
+            "target_word": "NATURE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["N","T","M"],
+	   "yellow_letters": ["U","E","F","H","B","K"],
+	"purple_letters": ["A","R","G", "X", "Y"]
+        },
+        {
+            "target_word": "PERSON", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","O","A"],
+	   "yellow_letters": ["S","E","D","C","B","K"],
+	"purple_letters": ["R","N","U", "X", "Y"]
+        },
+        {
+            "target_word": "FATHER", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","T","D"],
+	   "yellow_letters": ["E","R","M","F","C","B"],
+	"purple_letters": ["A","H","P", "X", "Y"]
+        }
+	
+    ], 
     "lvl3": [
         {
             "target_word": "CAT", 

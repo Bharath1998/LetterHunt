@@ -189,6 +189,13 @@ public class PlayerMovement : MonoBehaviour
 
                 print("target printed from player movement : " + target);
             }
+            else if (sceneName == "level-rotating-obstacle")
+            {
+
+                target = Letter_Spawner_Lvl_lro.target_word;
+
+                print("target printed from player movement : " + target);
+            }
             print("TARGET FROM PLAYER MOVE : "+target);
             int n = target.Length;
             print("n FROM PLAYER MOVE"+n);
@@ -261,11 +268,17 @@ public class PlayerMovement : MonoBehaviour
         facingRight = !facingRight;
     }
 
-    public void TakeDamage(){
+    public void TakeDamage(int x = 0){
     
     if((GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)==false){
-        
-        currentHealth -= damage;
+        if (x == 0)
+            {
+                currentHealth -= damage;
+            }
+            else
+            {
+                currentHealth -= x;
+            }
         if (currentHealth <= 0)
         {
             StartCoroutine(DataCollection.Upload("KILLED"));
@@ -432,7 +445,7 @@ public class PlayerMovement : MonoBehaviour
     }
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 7;
+        GetComponent<Rigidbody2D>().velocity = transform.up * 9;
         JumpCount -= 1;
     }
 }
