@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5fb31968-ee5e-44dc-ad34-dfcb9bb5c985" name="Changes" comment="Merging master">
+    <list default="true" id="5fb31968-ee5e-44dc-ad34-dfcb9bb5c985" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Assets.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOverScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameOverScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Core/AstarMath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Core/AstarPath.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Core/GraphUpdateShape.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Core/Path.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Editor/AstarUpdateChecker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/ExampleScenes/ExampleScripts/MineBotAnimation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Legacy/LegacyAIPath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AstarPathfindingProject/Modifiers/AlternativePath.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CollectableScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataCollection.cs" root0="SKIP_HIGHLIGHTING" />
@@ -33,7 +36,6 @@
     <setting file="file://$PROJECT_DIR$/KillPlayerScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/MainMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/sladynnunes/LetterHunt/Assets/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PowerUpDestEnemies.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/Level-0/LetterInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Scripts/PowerUpTutorial/PowerUpInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,7 +72,8 @@
       <workItem from="1663014170697" duration="2843000" />
       <workItem from="1663113104316" duration="1235000" />
       <workItem from="1663300171024" duration="8979000" />
-      <workItem from="1666751413742" duration="3989000" />
+      <workItem from="1666751413742" duration="4754000" />
+      <workItem from="1667956702634" duration="1884000" />
     </task>
     <task id="LOCAL-00001" summary="Merging master">
       <created>1666751829968</created>
