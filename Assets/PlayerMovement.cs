@@ -400,6 +400,9 @@ public class PlayerMovement : MonoBehaviour
                     else if (sceneName == "Level 1"){
                         StartCoroutine(toLevel5());
                     }
+                    else if (sceneName == "Level 6"){
+                        StartCoroutine(toLevel6());
+                    }
                     else
                     {
                         SceneManager.LoadScene("Win");
@@ -466,6 +469,12 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 6");
+    }
+    IEnumerator toLevel6()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
+        SceneManager.LoadScene("LevelRO");
     }
 
      public void Jump()

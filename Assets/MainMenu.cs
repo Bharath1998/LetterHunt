@@ -40,6 +40,9 @@ public class MainMenu : MonoBehaviour
     public void GoToLvl5(){
         SceneManager.LoadScene("Level 6");
     }
+    public void GoToLvl6(){
+        SceneManager.LoadScene("LevelRO");
+    }
 
     public void QuitGame(){
         Debug.Log("Quit");
