@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isGamePaused=false;
     public GameObject pauseMenuUI;
+    public GameObject musicGameObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +18,9 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Debug.Log("Hellooo Can you please update the Pause Menu?");
 
         if(Input.GetKeyDown(KeyCode.P)){
 
-            // Debug.Log("Hellooo I am in pausing menu");
             if (isGamePaused){
                 Resume();
             }
@@ -36,13 +35,14 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
-        Debug.Log("sss");
+        musicGameObject.SetActive(true);
 
     }
     void Pause() {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
+        musicGameObject.SetActive(false);
     }
 
 }

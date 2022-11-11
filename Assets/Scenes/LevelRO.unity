@@ -4589,6 +4589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1046411082}
+  musicGameObject: {fileID: 1635683377}
 --- !u!4 &934990386
 Transform:
   m_ObjectHideFlags: 0
@@ -5547,7 +5548,6 @@ MonoBehaviour:
   wordTMP: {fileID: 0}
   maxHealth: 100
   damage: 10
-  pauseMenu: {fileID: 0}
   MaxJumps: 2
   flag: 0
 --- !u!61 &1082698803
@@ -5614,7 +5614,6 @@ MonoBehaviour:
   wordTMP: {fileID: 54634562}
   maxHealth: 100
   damage: 10
-  pauseMenu: {fileID: 0}
   MaxJumps: 2
   flag: 0
 --- !u!212 &1082698806

@@ -34,7 +34,6 @@ public class EnemyControl : MonoBehaviour
     	MoveMonster();   
     }
     void OnCollisionStay2D(Collision2D collision){
-        Debug.Log("In Collision on Stay");
         switch(collision.gameObject.tag){
     		case "Player":
                 //Destroy(collision.gameObject);
@@ -43,10 +42,10 @@ public class EnemyControl : MonoBehaviour
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 
                 var timeSpan = System.DateTime.Now;
-                Debug.Log("On collision stay");
+
                 if(timeSpan.Second %2 == 0){
                     if(isEven == false){
-                        Debug.Log("In collision stay");
+
                         playerMovement.TakeDamage();
                     }
                     isEven = true;
