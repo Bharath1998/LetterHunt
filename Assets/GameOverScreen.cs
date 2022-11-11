@@ -21,8 +21,11 @@ public class GameOverScreen : MonoBehaviour
     }
 
     public void ExitToMain(){
-        Debug.Log("Byee");
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ExitToLevelMap(){
+        SceneManager.LoadScene("RoadMap");
     }
     
   
