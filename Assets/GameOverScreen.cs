@@ -10,7 +10,8 @@ public class GameOverScreen : MonoBehaviour
     public void RestartGame(){
         // For now level 1 - maybe restart at current level using build index -1
         Debug.Log("Hi");
-        SceneManager.LoadScene("RoadMap");
+        // SceneManager.LoadScene("RoadMap");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void ProceedNextLevel() {
@@ -20,8 +21,11 @@ public class GameOverScreen : MonoBehaviour
     }
 
     public void ExitToMain(){
-        Debug.Log("Byee");
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ExitToLevelMap(){
+        SceneManager.LoadScene("RoadMap");
     }
     
   

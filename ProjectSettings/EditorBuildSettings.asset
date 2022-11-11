@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 6.unity
     guid: 26691e1af03054f5585452f27f76f5ac
   - enabled: 1
+    path: Assets/Scenes/LevelRO.unity
+    guid: 97ffab88389ca9d46bf5d61b1e83397b
+  - enabled: 1
     path: Assets/Scenes/NextLevel.unity
     guid: ad7b7f6d0bf8e4a65aa224b3f0d3669a
   - enabled: 1
