@@ -57,6 +57,10 @@ public class EnemySpawnerScript : MonoBehaviour
             spawnLimit=12;
             // print("inside if TARGET FROM PLAYER MOVE "+target);
         }
+        else if (sceneName == "Level 8")
+        {
+            spawnLimit=20;
+        }
         else if (sceneName == "level-rotating-obstacle")
         {
             //print("new level");

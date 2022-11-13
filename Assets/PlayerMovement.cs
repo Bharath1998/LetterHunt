@@ -189,6 +189,13 @@ public class PlayerMovement : MonoBehaviour
 
                 print("target printed from player movement : " + target);
             }
+            else if (sceneName == "Level 8") 
+            {
+              
+                target = LetterSpawnerLvl08.target_word;
+
+                print("target printed from player movement : " + target);
+            }
             else if (sceneName == "LevelRO")
             {
 
@@ -303,6 +310,26 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name.Contains("Enemy") && (GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)){
             Destroy(other.gameObject);
         }
+
+       if (other.gameObject.tag == "bottle_time")
+       {
+           Debug.Log("Increase Health");
+           currentHealth = currentHealth + 15;
+           healthBar.SetHealth (currentHealth);
+       }
+
+       if (other.gameObject.tag == "spike")
+       {
+           Debug.Log("Kileledddddddddddd");
+           StartCoroutine(DataCollection.Upload("KILLED"));
+           Destroy(this.gameObject);
+           target = null;
+           Camera cam = Camera.main;
+           GameObject newCam = new GameObject("newMainCam");
+           newCam.AddComponent<Camera>();
+           SceneManager.LoadScene("Game Over");
+       }
+        
          
         if (other.gameObject.tag == "ground")
         {
