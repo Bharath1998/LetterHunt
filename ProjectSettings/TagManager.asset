@@ -22,6 +22,8 @@ TagManager:
   - Door3_1
   - Door3_2
   - bottle_time
+  - sprite
+  - spike
   layers:
   - Default
   - TransparentFX
