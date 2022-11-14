@@ -21,6 +21,11 @@ TagManager:
   - Door2_2
   - Door3_1
   - Door3_2
+  - bottle_time
+  - dp1
+  - dp2
+  - dp3
+  - p3_da
   layers:
   - Default
   - TransparentFX
