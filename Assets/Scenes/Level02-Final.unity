@@ -4068,7 +4068,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 1500
+  bulletBar: {fileID: 0}
   Bullet: {fileID: 8075736584863624972, guid: 4b62e1557828d457e986bc310fca3bba, type: 3}
+  maxBulletVal: 100
 --- !u!114 &856922350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6947,7 +6949,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 1500
+  bulletBar: {fileID: 0}
   Bullet: {fileID: 8075736584863624972, guid: 4b62e1557828d457e986bc310fca3bba, type: 3}
+  maxBulletVal: 100
 --- !u!114 &1935195508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7500,7 +7504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2049839135
 MonoBehaviour:
   m_ObjectHideFlags: 0

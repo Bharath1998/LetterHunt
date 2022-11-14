@@ -28,14 +28,19 @@ public class PlayerMovement : MonoBehaviour
     GameObject gameObject;
     public HealthBar healthBar;
 
+
     public TMP_Text wordTMP;
 
     public int maxHealth = 100;
 
+
     [SerializeField]
     public static int currentHealth;
 
+
     public int damage = 10;
+
+
 
     [SerializeField]
     public static int correctPurpleLetters;
@@ -72,9 +77,12 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         inventory = new List<string>();
         healthBar = new HealthBar();
+        // bulletBar = new BulletBar();
         
         currentHealth = maxHealth;
+        // currentBulletVal = maxBulletVal;
         healthBar.SetMaxHealth (currentHealth);
+        // bulletBar.SetMaxHealth(currentBulletVal);
         correctPurpleLetters=0;
         correctYellowLetters=0;
         correctOrangeLetters=0;
