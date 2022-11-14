@@ -2481,7 +2481,7 @@ GameObject:
   - component: {fileID: 523058135}
   - component: {fileID: 523058134}
   - component: {fileID: 523058133}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fire_border (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3036,7 +3036,7 @@ GameObject:
   - component: {fileID: 683819183}
   - component: {fileID: 683819184}
   - component: {fileID: 683819185}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: platform
   m_Icon: {fileID: 0}
@@ -4253,7 +4253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 1500
+  bulletBar: {fileID: 0}
   Bullet: {fileID: 8075736584863624972, guid: 4b62e1557828d457e986bc310fca3bba, type: 3}
+  maxBulletVal: 100
 --- !u!114 &894621733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,7 +5107,7 @@ GameObject:
   - component: {fileID: 1080893539}
   - component: {fileID: 1080893541}
   - component: {fileID: 1080893540}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: fire_border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7267,7 +7269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1599335450}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -7647,7 +7649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699048280}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos2
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -7678,7 +7680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712560434}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7778,7 +7780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1741958119}
   - component: {fileID: 1741958120}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crates_02
   m_TagString: platform
   m_Icon: {fileID: 0}
