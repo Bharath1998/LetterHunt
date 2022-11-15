@@ -339,9 +339,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","L","E"],
-	   "yellow_letters": ["I","Y","G","P"],
-	"purple_letters": ["A","M","U", "Z", "X"]
+            "orange_letters": ["E","M","L"],
+	   "yellow_letters": ["Y","G","I","P"],
+	"purple_letters": ["X","F","U", "Z", "A"]
         }, 
         {
             "target_word": "SILVER", 
@@ -349,9 +349,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["S","E","F"],
-	   "yellow_letters": ["L","I","T","G","C","B","K","J"],
-	"purple_letters": ["V","R","U", "X", "D"]
+            "orange_letters": ["F","L","V"],
+	   "yellow_letters": ["T","J","R","G","C","B","K","I"],
+	"purple_letters": ["D","E","U", "X", "S"]
         },
         {
             "target_word": "NATURE", 
@@ -359,9 +359,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["N","T","M"],
-	   "yellow_letters": ["U","E","F","H","B","K"],
-	"purple_letters": ["A","R","G", "X", "Y"]
+            "orange_letters": ["M","T","N"],
+	   "yellow_letters": ["B","F","E","H","U","K"],
+	"purple_letters": ["Y","R","G", "X", "A"]
         },
         {
             "target_word": "PERSON", 
@@ -369,9 +369,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["P","O","A"],
-	   "yellow_letters": ["S","E","D","C","B","K"],
-	"purple_letters": ["R","N","U", "X", "Y"]
+            "orange_letters": ["A","R","O"],
+	   "yellow_letters": ["B","E","D","C","S","K"],
+	"purple_letters": ["Y","X","U", "N", "P"]
         },
         {
             "target_word": "FATHER", 
@@ -379,9 +379,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","T","D"],
-	   "yellow_letters": ["E","R","M","F","C","B"],
-	"purple_letters": ["A","H","P", "X", "Y"]
+            "orange_letters": ["D","T","E"],
+	   "yellow_letters": ["R","B","M","F","C","F"],
+	"purple_letters": ["X","A","P", "H", "Y"]
         }
 	
     ], 
