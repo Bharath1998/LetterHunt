@@ -9,6 +9,7 @@ public class LetterSpawnerLvl06 : MonoBehaviour
     public GameObject[] highLetterReference;
     public GameObject[] mediumLetterReference;
     public GameObject[] lowLetterReference;
+    public GameObject[] spawnRectangles;
     
     // public GameObject power_up_highlight;
 
@@ -157,62 +158,74 @@ public class LetterSpawnerLvl06 : MonoBehaviour
             Vector3 randomPosition = new Vector3(x,y,0);
             
             while(true){
+
+                int sizeOfSpawners = spawnRectangles.Length;
+                x = (float) Random.Range(spawnRectangles[i%sizeOfSpawners].transform.position[0] - spawnRectangles[i % sizeOfSpawners].transform.localScale[0]/2, spawnRectangles[i % sizeOfSpawners].transform.position[0] + spawnRectangles[i % sizeOfSpawners].transform.localScale[0] / 2);
+                y = (float)Random.Range(spawnRectangles[i % sizeOfSpawners].transform.position[1] - spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2, spawnRectangles[i % sizeOfSpawners].transform.position[1] + spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2);
+
+
+                if (checkCollision(x, y))
+                {
+                    randomPosition = new Vector3(x, y, 0);
+                    seenList.Add(new float[2] { x, y });
+                    break;
+                }
                 
-                if(i % 10 == 0){
-                    x = (float)Random.Range((float)-6.16, (float)-0.44 );
-                    y = (float)Random.Range((float)-1.9, (float)2.26);
-                }else if( i % 10 == 1){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19 );
-                }else if( i % 10 == 3){
-                    x = (float)Random.Range((float)-8.08, (float)-2.64);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
-                }else if( i % 10 == 2){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }else if( i % 10 == 4){
-                    x = (float)Random.Range((float)4.42, (float)10.38);
-                    y = (float)Random.Range((float)11.28, (float)13.82);
-                }else if( i % 10 == 5){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }else if( i % 10 == 7){
-                    x = (float)Random.Range((float)11.54, (float)16.8);
-                    y = (float)Random.Range((float)9.43, (float)13.07);
-                }else if( i % 10 == 6){
-                    x = (float)Random.Range((float)22.52, (float)32.12);
-                    y = (float)Random.Range((float)8.27, (float)13.47);
-                }else if( i % 10 == 8){
-                    x = (float)Random.Range((float)-8.07, (float)0.55);
-                    y = (float)Random.Range((float)7.23, (float)9.2);
-                }else if( i % 10 == 9){
-                    x = (float)Random.Range((float)1.58, (float)31.76);
-                    y = (float)Random.Range((float)0.47, (float)3.19);
-                }
+                // if(i % 10 == 0){
+                //     x = (float)Random.Range((float)-6.16, (float)-0.44 );
+                //     y = (float)Random.Range((float)-1.9, (float)2.26);
+                // }else if( i % 10 == 1){
+                //     x = (float)Random.Range((float)1.58, (float)31.76);
+                //     y = (float)Random.Range((float)0.47, (float)3.19 );
+                // }else if( i % 10 == 3){
+                //     x = (float)Random.Range((float)-8.08, (float)-2.64);
+                //     y = (float)Random.Range((float)11.28, (float)13.82);
+                // }else if( i % 10 == 2){
+                //     x = (float)Random.Range((float)1.58, (float)31.76);
+                //     y = (float)Random.Range((float)0.47, (float)3.19);
+                // }else if( i % 10 == 4){
+                //     x = (float)Random.Range((float)4.42, (float)10.38);
+                //     y = (float)Random.Range((float)11.28, (float)13.82);
+                // }else if( i % 10 == 5){
+                //     x = (float)Random.Range((float)1.58, (float)31.76);
+                //     y = (float)Random.Range((float)0.47, (float)3.19);
+                // }else if( i % 10 == 7){
+                //     x = (float)Random.Range((float)11.54, (float)16.8);
+                //     y = (float)Random.Range((float)9.43, (float)13.07);
+                // }else if( i % 10 == 6){
+                //     x = (float)Random.Range((float)22.52, (float)32.12);
+                //     y = (float)Random.Range((float)8.27, (float)13.47);
+                // }else if( i % 10 == 8){
+                //     x = (float)Random.Range((float)-8.07, (float)0.55);
+                //     y = (float)Random.Range((float)7.23, (float)9.2);
+                // }else if( i % 10 == 9){
+                //     x = (float)Random.Range((float)1.58, (float)31.76);
+                //     y = (float)Random.Range((float)0.47, (float)3.19);
+                // }
 
 
-                if(checkCollision(x, y)){
-                    randomPosition = new Vector3(x,y,0);
-                    seenList.Add(new float[2]{x,y});
-                    break;
-                }
-                /*
-                if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
-                (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
-				(x >= -8 && x <= -3 && y >=7 && y<=11) ||
-                (x >= -8 && x <= 31 && y >=15 && y<=17) ||
-                (x >= 2 && x <= 11 && y >=0 && y<=4) ||
-                (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
-                (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
-                    randomPosition = new Vector3(x,y,0);
-                    seenList.Add(new float[2]{x,y});
-                    break;
+                // if(checkCollision(x, y)){
+                //     randomPosition = new Vector3(x,y,0);
+                //     seenList.Add(new float[2]{x,y});
+                //     break;
+                // }
+                // /*
+                // if( checkCollision(x,y) && ((x >= -8 && x <= -4 && y >=0 && y<=4) ||
+                // (x >= -8 && x <= -0.1 && y >=7 && y<=11) ||
+				// (x >= -8 && x <= -3 && y >=7 && y<=11) ||
+                // (x >= -8 && x <= 31 && y >=15 && y<=17) ||
+                // (x >= 2 && x <= 11 && y >=0 && y<=4) ||
+                // (x >= 10 && x <= 20 && y >= 2.9 && y<=9) ||
+                // (x >= 20 && x <= 31 && y >= 1.75 && y<=4))){
+                //     randomPosition = new Vector3(x,y,0);
+                //     seenList.Add(new float[2]{x,y});
+                //     break;
 
-                }else{
-                    x = Random.Range(-7,30);
-                    y = Random.Range(0,16);
-                }
-                */
+                // }else{
+                //     x = Random.Range(-7,30);
+                //     y = Random.Range(0,16);
+                // }
+                // */
             }
 
             if(i==0){
