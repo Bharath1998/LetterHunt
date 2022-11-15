@@ -5,7 +5,7 @@ using UnityEngine;
 public class dis3 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float toggleTime=2;
+    public float toggleTime=4;
     public float currTime;
     public bool enabled1=true;
     public bool enabled2=true;
