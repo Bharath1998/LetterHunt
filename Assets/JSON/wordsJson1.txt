@@ -161,9 +161,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","L","O"],
+            "orange_letters": ["F","I","O"],
 	   "yellow_letters": ["N","R","G"],
-	"purple_letters": ["M","A", "I","C"]
+	"purple_letters": ["M","A", "L","C"]
         }
 	
     ], 
@@ -180,18 +180,18 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["P","O","A","M"],
-	   "yellow_letters": ["W","L","R","F","C","B","K","I"],
-	"purple_letters": ["N","E","U", "Z", "X", "Y"]
+            "orange_letters": ["M","O","A","E"],
+	   "yellow_letters": ["B","L","R","F","C","W","K","I"],
+	"purple_letters": ["N","P","U", "Z", "X", "Y"]
         },{
             "target_word": "SPARK", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["S","Y","A","M"],
-	   "yellow_letters": ["W","P","K","T","C","B","K","I"],
-	"purple_letters": ["N","R","U", "Z", "X", "M"]
+            "orange_letters": ["R","Y","A","M"],
+	   "yellow_letters": ["W","K","C","T","P","B","L","I"],
+	"purple_letters": ["N","S","U", "Z", "X", "M"]
         },{
             "target_word": "BEACH", 
             "blanks": [
