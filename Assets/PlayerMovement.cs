@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
     public static char[] arr_win;
 
     public int flag = 0;
+    public GameObject youwin;
 
     void Start()
     {
@@ -89,64 +90,11 @@ public class PlayerMovement : MonoBehaviour
         incorrectPurpleLetters=0;
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
-
+        // youwin = GameObject.Find("youwin");
+        youwin.SetActive(false);
+        Time.timeScale = 1f;
 
         
-        // target = "CROWNSA";
-        // Scene currentScene = SceneManager.GetActiveScene ();
- 
-        //  // Retrieve the name of this scene.
-        // string sceneName = currentScene.name;
-
-
-        // if (sceneName == "Level 1") 
-        // {
-        //     target = LetterSpawner.target_word;
-        // }
-        // else if (sceneName == "Level 2")
-        // {
-        //     // print("LEVEL 2");
-        //     target = LetterSpawnerLvl2.target_word;
-        //     // print("inside if TARGET FROM PLAYER MOVE "+target);
-        // }
-        // else if (sceneName == "Level02-Final") 
-        // {
-
-        //     target = LetterSpawnerLvl02.target_word;
-        //     print("target printed from player movement : " + target);
-        // }
-        // print("TARGET FROM PLAYER MOVE : "+target);
-        // int n = target.Length;
-        // print("n FROM PLAYER MOVE"+n);
-        // string pattern = "_  ";
-        // string temp1 = "_  ";
-        // for (int i = 0; i < n-2; i++) 
-        // {
-        //     temp1 = temp1 + pattern;
-            
-        // }
-        // temp1 = temp1 + "_";
-
-        // // string temp = new string('_', n);
-        // // string temp = "_  _  _  _  _";
-
-        // win_string = new string('_', n);
-        // arr_win = win_string.ToCharArray();
-
-        // wordTMP.text = temp1;
-        // if (wordTMP.text==null){
-        //     print("NULL");
-
-        // }
-        // else{
-        //     print("DASHES "+wordTMP.text);
-        // }
-            
-        
-        // catch (NullReferenceException e)
-        // {
-        //     Debug.Log (e);
-        // }
     }
 
     // Update is called once per frame
@@ -400,28 +348,38 @@ public class PlayerMovement : MonoBehaviour
                     // Change to next level and so on.
 
                     StopAllCoroutines();
-                    
+                    GamePause();
                     Scene currentScene = SceneManager.GetActiveScene ();
                     string sceneName = currentScene.name;
-                    //You will have to change this
+                    //You will have to change this --now after winning it should not
                     if (sceneName == "Level02-Final")
                     {
-                        StartCoroutine(toLevel2());
+                        youwin.SetActive(true);
+                        // StartCoroutine(toLevel2());
                     }
                     else if (sceneName == "Final_Level2"){
-                        StartCoroutine(toLevel3());
+                        youwin.SetActive(true);
+                        // StartCoroutine(toLevel3());
                     }
                     else if (sceneName == "Level 3"){
-                        StartCoroutine(toLevel4());
+                        youwin.SetActive(true);
+                        // StartCoroutine(toLevel4());
                     }
                     else if (sceneName == "Level 1"){
-                        StartCoroutine(toLevel5());
+                        youwin.SetActive(true);
+                        // StartCoroutine(toLevel5());
                     }
                     else if (sceneName == "Level 6"){
-                        StartCoroutine(toLevel6());
+                        youwin.SetActive(true);
+                        // StartCoroutine(toLevel6());
                     }
                     else if (sceneName == "LevelRO"){
-                        StartCoroutine(toLevel7());
+                        youwin.SetActive(true);
+
+                        // StartCoroutine(toLevel7());
+                    }
+                    else if(sceneName=="lvl9"){
+                        youwin.SetActive(true);
                     }
                     else
                     {
@@ -507,5 +465,12 @@ public class PlayerMovement : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = transform.up * 9;
         JumpCount -= 1;
+    }
+
+    void GamePause() {
+        // pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+        // isGamePaused = true;
+        // musicGameObject.SetActive(false);
     }
 }
