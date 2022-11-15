@@ -162,6 +162,63 @@
         }
 	
     ], 
+    "lvl09": [
+        {
+            "target_word": "PET", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","T"],
+	   "yellow_letters": ["E","O","G"],
+	"purple_letters": ["A","U", "R"]
+        }, 
+        {
+            "target_word": "MAN", 
+            "blanks": [
+                0, 
+                1
+            ], 
+             "orange_letters": ["M","A"],
+	   "yellow_letters": ["N","R","L"],
+	"purple_letters": ["T", "F","Y"]
+        },
+        {
+            "target_word": "AID", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["A","D"],
+	   "yellow_letters": ["I","L","G"],
+	"purple_letters": ["E", "Z","N"]
+        },
+        {
+            "target_word": "WAR", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["W","A"],
+	   "yellow_letters": ["R","M","F"],
+	"purple_letters": ["N", "H","R"]
+        },
+        {
+            "target_word": "ZIP", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["Z","P","T"],
+	   "yellow_letters": ["I","R","G"],
+	"purple_letters": ["M", "R","O"]
+        }
+	
+    ], 
+
+
+
+ 
 
     "lvl01": [
         {
