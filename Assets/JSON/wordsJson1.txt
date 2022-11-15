@@ -1,58 +1,5 @@
 {
 
-"lvl0": [
-        {
-            "target_word": "PET", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["P","T"],
-	   "yellow_letters": ["E","O","G"],
-	"purple_letters": ["A","U", "R"]
-        }, 
-        {
-            "target_word": "MAN", 
-            "blanks": [
-                0, 
-                1
-            ], 
-             "orange_letters": ["M","A"],
-	   "yellow_letters": ["N","R","L"],
-	"purple_letters": ["T", "F","Y"]
-        },
-        {
-            "target_word": "AID", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["A","D"],
-	   "yellow_letters": ["I","L","G"],
-	"purple_letters": ["E", "Z","N"]
-        },
-        {
-            "target_word": "WAR", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["W","A"],
-	   "yellow_letters": ["R","M","F"],
-	"purple_letters": ["N", "H","R"]
-        },
-        {
-            "target_word": "ZIP", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["Z","P","T"],
-	   "yellow_letters": ["I","R","G"],
-	"purple_letters": ["M", "R","O"]
-        }
-	
-    ], 
 "lvl02": [
         {
             "target_word": "PET", 
@@ -60,8 +7,8 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["P","T"],
-	   "yellow_letters": ["E","O","G"],
+            "orange_letters": ["E","T"],
+	   "yellow_letters": ["G","O","P"],
 	"purple_letters": ["A","U", "R"]
         }, 
         {
@@ -70,8 +17,8 @@
                 0, 
                 1
             ], 
-             "orange_letters": ["M","A"],
-	   "yellow_letters": ["N","R","L"],
+             "orange_letters": ["A","M"],
+	   "yellow_letters": ["R","N","L"],
 	"purple_letters": ["T", "F","Y"]
         },
         {
@@ -80,8 +27,8 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["A","D"],
-	   "yellow_letters": ["I","L","G"],
+            "orange_letters": ["D","A"],
+	   "yellow_letters": ["G","L","I"],
 	"purple_letters": ["E", "Z","N"]
         },
         {
@@ -90,8 +37,8 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["W","A"],
-	   "yellow_letters": ["R","M","F"],
+            "orange_letters": ["A","W"],
+	   "yellow_letters": ["M","R","F"],
 	"purple_letters": ["N", "H","R"]
         },
         {
@@ -100,8 +47,8 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["Z","P","T"],
-	   "yellow_letters": ["I","R","G"],
+            "orange_letters": ["I","P"],
+	   "yellow_letters": ["G","R","Z"],
 	"purple_letters": ["M", "R","O"]
         }
 	
@@ -109,116 +56,6 @@
 
 
 
- "lvl0.5": [
-        {
-            "target_word": "LIFE", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["F","L","T"],
-	   "yellow_letters": ["I","M","G"],
-	"purple_letters": ["E","U", "Z","R"]
-        }, 
-        {
-            "target_word": "FISH", 
-            "blanks": [
-                0, 
-                1
-            ], 
-             "orange_letters": ["F","H","T"],
-	   "yellow_letters": ["I","M","G"],
-	"purple_letters": ["S","U", "Z","Y"]
-        },
-        {
-            "target_word": "TIME", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["T","M","S"],
-	   "yellow_letters": ["I","L","G"],
-	"purple_letters": ["E","U", "Z","N"]
-        },
-        {
-            "target_word": "SING", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["S","G","T"],
-	   "yellow_letters": ["I","M","F"],
-	"purple_letters": ["N","U", "H","R"]
-        },
-        {
-            "target_word": "FILM", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["F","L","T"],
-	   "yellow_letters": ["I","R","G"],
-	"purple_letters": ["M","U", "R","O"]
-        }
-	
-    ], 
-    "lvl09": [
-        {
-            "target_word": "PET", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["P","T"],
-	   "yellow_letters": ["E","O","G"],
-	"purple_letters": ["A","U", "R"]
-        }, 
-        {
-            "target_word": "MAN", 
-            "blanks": [
-                0, 
-                1
-            ], 
-             "orange_letters": ["M","A"],
-	   "yellow_letters": ["N","R","L"],
-	"purple_letters": ["T", "F","Y"]
-        },
-        {
-            "target_word": "AID", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["A","D"],
-	   "yellow_letters": ["I","L","G"],
-	"purple_letters": ["E", "Z","N"]
-        },
-        {
-            "target_word": "WAR", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["W","A"],
-	   "yellow_letters": ["R","M","F"],
-	"purple_letters": ["N", "H","R"]
-        },
-        {
-            "target_word": "ZIP", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "orange_letters": ["Z","P","T"],
-	   "yellow_letters": ["I","R","G"],
-	"purple_letters": ["M", "R","O"]
-        }
-	
-    ], 
-
-
-
- 
 
     "lvl01": [
         {
@@ -227,9 +64,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","L","T"],
-	   "yellow_letters": ["I","M","G"],
-	"purple_letters": ["E","U", "Z","R"]
+            "orange_letters": ["T","F","L"],
+	   "yellow_letters": ["M","I","G"],
+	"purple_letters": ["Z","U", "E","R"]
         }, 
         {
             "target_word": "FISH", 
@@ -237,9 +74,9 @@
                 0, 
                 1
             ], 
-             "orange_letters": ["F","H","T"],
+             "orange_letters": ["H","O","F"],
 	   "yellow_letters": ["I","M","G"],
-	"purple_letters": ["S","U", "Z","Y"]
+	"purple_letters": ["M","U", "S","Y"]
         },
         {
             "target_word": "TIME", 
@@ -247,9 +84,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["T","M","S"],
-	   "yellow_letters": ["I","L","G"],
-	"purple_letters": ["E","U", "Z","N"]
+            "orange_letters": ["M","T","R"],
+	   "yellow_letters": ["E","L","G"],
+	"purple_letters": ["O","F", "I","N"]
         },
         {
             "target_word": "SING", 
@@ -257,9 +94,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["S","G","T"],
-	   "yellow_letters": ["I","M","F"],
-	"purple_letters": ["N","U", "H","R"]
+            "orange_letters": ["L","G","S"],
+	   "yellow_letters": ["R","M","I"],
+	"purple_letters": ["N","U", "H","D"]
         },
         {
             "target_word": "FILM", 
@@ -267,12 +104,73 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","L","T"],
-	   "yellow_letters": ["I","R","G"],
-	"purple_letters": ["M","U", "R","O"]
+            "orange_letters": ["G","M","L"],
+	   "yellow_letters": ["O","R","I"],
+	"purple_letters": ["A","U", "F","T"]
         }
 	
     ], 
+
+
+
+
+     "lvl03": [
+        {
+            "target_word": "RING", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","R","G"],
+	   "yellow_letters": ["T","N","S"],
+	"purple_letters": ["E","I", "Z","M"]
+        }, 
+        {
+            "target_word": "WOLF", 
+            "blanks": [
+                0, 
+                1
+            ], 
+             "orange_letters": ["W","H","F"],
+	   "yellow_letters": ["F","M","L"],
+	"purple_letters": ["S","U", "O","Y"]
+        },
+        {
+            "target_word": "STAR", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["T","M","S"],
+	   "yellow_letters": ["I","L","R"],
+	"purple_letters": ["E","A", "O","N"]
+        },
+        {
+            "target_word": "LOVE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","L","V"],
+	   "yellow_letters": ["I","E","F"],
+	"purple_letters": ["N","U", "O","T"]
+        },
+        {
+            "target_word": "LION", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","L","O"],
+	   "yellow_letters": ["N","R","G"],
+	"purple_letters": ["M","A", "I","C"]
+        }
+	
+    ], 
+
+
+
+
 
 
     "lvl1": [
@@ -283,8 +181,8 @@
                 1
             ], 
             "orange_letters": ["P","O","A","M"],
-	   "yellow_letters": ["W","E","R","F","C","B","K","I"],
-	"purple_letters": ["N","L","U", "Z", "X", "Y"]
+	   "yellow_letters": ["W","L","R","F","C","B","K","I"],
+	"purple_letters": ["N","E","U", "Z", "X", "Y"]
         },{
             "target_word": "SPARK", 
             "blanks": [
@@ -353,83 +251,88 @@
 
 
 
-    "lvl03": [
+     "lvl06": [
         {
-            "target_word": "POWER", 
+            "target_word": "NIGHT", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["P","O","A","M"],
-	   "yellow_letters": ["W","E","R","F","C","B","K","I"],
-	"purple_letters": ["N","L","U", "Z", "X", "Y"]
+            "orange_letters": ["P","N","A","T"],
+	   "yellow_letters": ["W","E","I","F","G","B","S","L"],
+	"purple_letters": ["M","H","U", "Z", "R", "Y"]
         },{
-            "target_word": "SPARK", 
+            "target_word": "BREAK", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["S","Y","A","M"],
-	   "yellow_letters": ["W","P","K","T","C","B","K","I"],
-	"purple_letters": ["N","R","U", "Z", "X", "M"]
+            "orange_letters": ["S","E","K","M"],
+	   "yellow_letters": ["W","P","B","T","A","L","N","I"],
+	"purple_letters": ["N","R","U", "C", "X", "M"]
         },{
-            "target_word": "BEACH", 
+            "target_word": "TRAIN", 
             "blanks": [
                 0, 
                 1
             ], 
             "orange_letters": ["M","B","A","I"],
-	   "yellow_letters": ["E","T","L","H","G","R","D","W"],
-	"purple_letters": ["K","C","U", "Z", "X", "F"]
+	   "yellow_letters": ["E","T","L","N","G","F","D","W"],
+	"purple_letters": ["K","C","R", "M", "X", "F"]
         },{
-            "target_word": "TIGER", 
+            "target_word": "IMAGE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["G","O","A","T"],
-	   "yellow_letters": ["W","I","D","E","C","B","K","L"],
-	"purple_letters": ["N","R","U", "M", "F", "Y"]
+            "orange_letters": ["N","O","A","E"],
+	   "yellow_letters": ["W","I","T","D","G","B","K","L"],
+	"purple_letters": ["N","M","U", "M", "F", "Y"]
         },{
-            "target_word": "HOUSE", 
+            "target_word": "ZEBRA", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["S","O","A","M"],
+            "orange_letters": ["O","Z","A","M"],
 	   "yellow_letters": ["W","H","R","U","C","B","K","I"],
-	"purple_letters": ["N","T","E", "Z", "L", "Y"]
+	"purple_letters": ["N","T","E", "0", "L", "Y"]
         },{
-            "target_word": "GUIDE", 
+            "target_word": "CHAIN", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["D","T","G","M"],
-	   "yellow_letters": ["W","U","K","I","A","B","K","C"],
-	"purple_letters": ["N","E","H", "Z", "L", "Y"]
+            "orange_letters": ["D","A","N","R"],
+	   "yellow_letters": ["W","U","C","I","O","B","K","L"],
+	"purple_letters": ["T","E","H", "M", "S", "Y"]
         },{
-            "target_word": "CRAZY", 
+            "target_word": "HOTEL", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["Y","O","A","M"],
-	   "yellow_letters": ["T","C","R","U","G","B","K","I"],
-	"purple_letters": ["N","Z","E", "D", "L", "F"]
+            "orange_letters": ["Y","H","A","E"],
+	   "yellow_letters": ["M","L","R","U","T","B","K","I"],
+	"purple_letters": ["N","Y","O", "D", "F", "U"]
         },{
-            "target_word": "CROWN", 
+            "target_word": "DREAM", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["R","G","O","M"],
-	   "yellow_letters": ["T","N","D","C","A","B","K","I"],
-	"purple_letters": ["N","E","W", "Z", "L", "Y"]
+            "orange_letters": ["A","G","D","C"],
+	   "yellow_letters": ["T","N","E","R","U","B","K","I"],
+	"purple_letters": ["S","M","W", "I", "L", "Y"]
         }
     ], 
 
-    "lvl1.5": [
+
+
+
+
+
+    "level_rotating_obstacle": [
         {
             "target_word": "FAMILY", 
             "blanks": [
@@ -484,7 +387,64 @@
     ], 
 
 
-    "lvl2": [
+
+    "lvl09": [
+        {
+            "target_word": "CASTLE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["L","M","E"],
+	   "yellow_letters": ["I","C","G","T"],
+	"purple_letters": ["A","M","U", "S", "X"]
+        }, 
+        {
+            "target_word": "SCRIPT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["S","E","P"],
+	   "yellow_letters": ["L","I","O","G","C","B","K","J"],
+	"purple_letters": ["V","R","U", "T", "D"]
+        },
+        {
+            "target_word": "BRIGHT", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["N","T","B"],
+	   "yellow_letters": ["U","E","I","H","F","K"],
+	"purple_letters": ["A","R","O", "G", "Y"]
+        },
+        {
+            "target_word": "HUNGRY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["U","O","G"],
+	   "yellow_letters": ["S","E","H","C","R","K"],
+	"purple_letters": ["T","N","I", "X", "Y"]
+        },
+        {
+            "target_word": "JUNIOR", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["F","U","N"],
+	   "yellow_letters": ["E","R","S","F","J","B"],
+	"purple_letters": ["I","H","O", "S", "Y"]
+        }
+	
+    ], 
+
+
+
+     "lvl8": [
         {
             "target_word": "VICTORY", 
             "blanks": [
@@ -538,407 +498,116 @@
 	
     ], 
 
-     "level_rotating_obstacle": [
+
+     "lvl9": [
         {
-            "target_word": "FAMILY", 
+            "target_word": "CLIMATE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["F","L","E"],
-	   "yellow_letters": ["I","Y","G","P"],
-	"purple_letters": ["A","M","U", "Z", "X"]
+            "orange_letters": ["V","I","O","E"],
+	   "yellow_letters": ["C","O","A","F","M","B","K"],
+	"purple_letters": ["U","T","L", "R", "D"]
         }, 
         {
-            "target_word": "SILVER", 
+            "target_word": "KITCHEN", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["S","E","F"],
-	   "yellow_letters": ["L","I","T","G","C","B","K","J"],
-	"purple_letters": ["V","R","U", "X", "D"]
+            "orange_letters": ["P","N","O","I"],
+	   "yellow_letters": ["Y","H","K","G","C","B","M"],
+	"purple_letters": ["A","T","U", "E", "D"]
         },
         {
-            "target_word": "NATURE", 
+            "target_word": "CHARITY", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["N","T","M"],
-	   "yellow_letters": ["U","E","F","H","B","K"],
-	"purple_letters": ["A","R","G", "X", "Y"]
+            "orange_letters": ["P","L","A","I"],
+	   "yellow_letters": ["C","O","Y","F","T","B","K"],
+	"purple_letters": ["M","R","G", "H", "F"]
         },
         {
-            "target_word": "PERSON", 
+            "target_word": "FORTUNE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["P","O","A"],
-	   "yellow_letters": ["S","E","D","C","B","K"],
-	"purple_letters": ["R","N","U", "X", "Y"]
+            "orange_letters": ["C","R","A","E"],
+	   "yellow_letters": ["O","I","D","F","U","B","K"],
+	"purple_letters": ["N","I","M", "T", "Y"]
         },
         {
-            "target_word": "FATHER", 
+            "target_word": "ROUTINE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "orange_letters": ["F","T","D"],
-	   "yellow_letters": ["E","R","M","F","C","B"],
-	"purple_letters": ["A","H","P", "X", "Y"]
+            "orange_letters": ["K","T","A","R"],
+	   "yellow_letters": ["N","O","M","U","C","I","S"],
+	"purple_letters": ["E","D","S", "N", "Y"]
         }
 	
-    ], 
-    "lvl3": [
+    ],
+
+
+    "lvl10": [
         {
-            "target_word": "CAT", 
+            "target_word": "ARTICLE", 
             "blanks": [
                 0, 
                 1
             ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
+            "orange_letters": ["R","B","O","I"],
+	   "yellow_letters": ["M","C","E","F","A","G","K"],
+	"purple_letters": ["U","T","D", "S", "L"]
         }, 
         {
-            "target_word": "ACT", 
+            "target_word": "THERAPY", 
             "blanks": [
                 0, 
                 1
             ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
+            "orange_letters": ["Y","N","E","I"],
+	   "yellow_letters": ["S","P","K","G","H","B","R"],
+	"purple_letters": ["O","T","U", "A", "D"]
+        },
+        {
+            "target_word": "JOURNEY", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","N","A","O"],
+	   "yellow_letters": ["C","S","Y","J","T","R","K"],
+	"purple_letters": ["M","E","G", "U", "F"]
+        },
+        {
+            "target_word": "NUCLEAR", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["P","R","O","C"],
+	   "yellow_letters": ["O","N","D","A","L","B","K"],
+	"purple_letters": ["N","I","U", "T", "E"]
+        },
+        {
+            "target_word": "TROUBLE", 
+            "blanks": [
+                0, 
+                1
+            ], 
+            "orange_letters": ["K","E","A","L"],
+	   "yellow_letters": ["B","A","M","T","C","R","S"],
+	"purple_letters": ["N","U","D", "O", "Y"]
         }
-    ], 
-    "lvl4": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
-    ], 
-    "lvl5": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
-    ], 
-    "lvl06": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
-    ], 
-    "lvl7": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
-    ], 
-    "lvl8": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
-    ], 
-    "lvl9": [
-        {
-            "target_word": "CAT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "J", 
-                "Q", 
-                "T", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }, 
-        {
-            "target_word": "ACT", 
-            "blanks": [
-                0, 
-                1
-            ], 
-            "letters": [
-                "A", 
-                "C", 
-                "B", 
-                "E", 
-                "D", 
-                "G", 
-                "F", 
-                "I", 
-                "H", 
-                "K", 
-                "J", 
-                "M", 
-                "O", 
-                "Q", 
-                "P", 
-                "S", 
-                "T", 
-                "W", 
-                "V", 
-                "Y", 
-                "X", 
-                "Z"
-            ]
-        }
+	
     ]
-}
+
+    }
+
+
