@@ -451,9 +451,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["V","T","A","M"],
-	   "yellow_letters": ["C","O","Y","F","C","B","K"],
-	"purple_letters": ["I","R","U", "Z", "X"]
+            "orange_letters": ["A","M","R","T"],
+	   "yellow_letters": ["Y","B","C","F","N","O","K"],
+	"purple_letters": ["Z","V","U", "I", "X"]
         }, 
         {
             "target_word": "PAYMENT", 
@@ -461,9 +461,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["P","N","O","F"],
-	   "yellow_letters": ["Y","E","T","G","C","B","K"],
-	"purple_letters": ["A","M","U", "X", "D"]
+            "orange_letters": ["O","F","P","N"],
+	   "yellow_letters": ["C","T","K","G","Y","B","E"],
+	"purple_letters": ["D","M","U", "X", "A"]
         },
         {
             "target_word": "PICTURE", 
@@ -471,9 +471,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["P","T","A","M"],
-	   "yellow_letters": ["I","U","E","F","H","B","K"],
-	"purple_letters": ["C","R","G", "X", "Y"]
+            "orange_letters": ["M","T","A","C"],
+	   "yellow_letters": ["H","U","R","F","I","B","K"],
+	"purple_letters": ["X","G","E", "P", "Y"]
         },
         {
             "target_word": "FRIENDS", 
@@ -481,9 +481,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["F","S","A","M"],
-	   "yellow_letters": ["N","E","D","F","C","B","K"],
-	"purple_letters": ["R","I","U", "X", "Y"]
+            "orange_letters": ["I","M","A","S"],
+	   "yellow_letters": ["B","E","D","F","C","N","K"],
+	"purple_letters": ["Y","F","U", "X", "R"]
         },
         {
             "target_word": "KINGDOM", 
@@ -491,9 +491,9 @@
                 0, 
                 1
             ], 
-            "orange_letters": ["K","G","A","R"],
-	   "yellow_letters": ["N","O","M","F","C","B","S"],
-	"purple_letters": ["I","D","T", "X", "Y"]
+            "orange_letters": ["D","G","A","R"],
+	   "yellow_letters": ["S","M","C","F","O","B","N"],
+	"purple_letters": ["X","K","T", "I", "Y"]
         }
 	
     ], 
