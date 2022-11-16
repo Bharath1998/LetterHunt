@@ -31,20 +31,25 @@ public class MainMenu : MonoBehaviour
     }
 
  	public void GoToLvl3(){
+		DataCollection.levelIndicator = 3;
          SceneManager.LoadScene("Level 3");
     }
 
     public void GoToLvl4(){
+        DataCollection.levelIndicator = 4;
         SceneManager.LoadScene("Level 1");
     }
     public void GoToLvl5(){
+        DataCollection.levelIndicator = 5;
         SceneManager.LoadScene("Level 6");
     }
     public void GoToLvl6(){
+        DataCollection.levelIndicator = 6;
         SceneManager.LoadScene("LevelRO");
     }
 
     public void GoToLvl7(){
+        DataCollection.levelIndicator = 7;
         SceneManager.LoadScene("lvl9");
     }
 
