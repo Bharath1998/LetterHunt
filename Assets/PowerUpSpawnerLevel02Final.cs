@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerUpSpawner : MonoBehaviour
+public class PowerUpSpawnerLevel02Final : MonoBehaviour
 {
     public GameObject[] powerUpReference;
     public int[] index = {2, 0, 2, 0, 2, 0};
