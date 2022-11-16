@@ -1,0 +1,7 @@
+_id,correct_orange_letters,correct_purple_letters,correct_yellow_letters,enemies_killed,final_health,incorrect_orange_letters,incorrect_purple_letters,incorrect_yellow_letters,level,reason_end,time_remaining,total_bullets
+634e62abd51a9d930dbb02c7,2,1,1,0,-5,1,5,5,1,KILLED,71,6
+634e65f0d51a9d930dbbcc2e,1,0,0,0,0,0,0,0,1,KILLED,104,0
+634e68c6d51a9d930dbc5bf8,1,0,1,17,80,1,2,1,1,TIME_UP,0,95
+634ed90999c42bd616011667,1,0,0,0,0,0,0,0,1,KILLED,104,1
+634ed9e07448b116a2443da1,2,2,2,3,40,1,0,3,1,SUCCESS,76,5
+634edaa0d02e1e44a2c8057a,2,1,2,1,85,0,0,1,1,SUCCESS,96,3
