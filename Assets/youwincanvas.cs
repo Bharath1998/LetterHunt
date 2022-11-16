@@ -5,29 +5,32 @@ using UnityEngine.SceneManagement;
 public class youwincanvas : MonoBehaviour
 {
     public void GoNextLevel() {
-        // Needs to be generic
-		DataCollection.levelIndicator = 2;
 		Scene currentScene = SceneManager.GetActiveScene ();
         string sceneName = currentScene.name;
 
         if (sceneName == "Level02-Final")
         {
+            DataCollection.levelIndicator = 2;
             SceneManager.LoadScene("Final_Level2");
         }
         else if (sceneName == "Final_Level2"){
+            DataCollection.levelIndicator = 3;
             SceneManager.LoadScene("Level 3");
         }
         else if (sceneName == "Level 3"){
+            DataCollection.levelIndicator = 4;
             SceneManager.LoadScene("Level 1");
         }
         else if (sceneName == "Level 1"){
+            DataCollection.levelIndicator = 5;
             SceneManager.LoadScene("Level 6");
         }
         else if (sceneName == "Level 6"){
+            DataCollection.levelIndicator = 6;
             SceneManager.LoadScene("LevelR0");
         }
         else if (sceneName == "LevelRO"){
-
+            DataCollection.levelIndicator = 7;
             SceneManager.LoadScene("lvl9");
         }
         else if(sceneName=="lvl9"){

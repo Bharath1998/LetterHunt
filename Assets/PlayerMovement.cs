@@ -426,36 +426,43 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator toLevel2()
     {
+        DataCollection.levelIndicator = 2;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Final_Level2");
     }
     IEnumerator toLevel3()
     {
+        DataCollection.levelIndicator = 3;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 3");
     }
     IEnumerator toLevel4()
     {
+        DataCollection.levelIndicator = 4;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 1");
     }
     IEnumerator toLevel5()
     {
+
+        DataCollection.levelIndicator = 5;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 6");
     }
     IEnumerator toLevel6()
     {
+        DataCollection.levelIndicator = 6;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("LevelRO");
     }
     IEnumerator toLevel7()
     {
+        DataCollection.levelIndicator = 7;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("lvl9");
