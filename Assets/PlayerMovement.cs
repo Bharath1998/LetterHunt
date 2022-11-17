@@ -73,16 +73,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Starting new player movement");
         JumpCount = MaxJumps;
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
-        healthBar = new HealthBar();
+        // healthBar = new HealthBar();
         // bulletBar = new BulletBar();
         
         currentHealth = maxHealth;
         // currentBulletVal = maxBulletVal;
-        healthBar.SetMaxHealth (currentHealth);
+        healthBar.SetMaxHealth(currentHealth);
         // bulletBar.SetMaxHealth(currentBulletVal);
         correctPurpleLetters=0;
         correctYellowLetters=0;
@@ -257,7 +258,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             
-            healthBar.SetHealth (currentHealth);
+            healthBar.SetHealth(currentHealth);
         }
     }
         
@@ -328,8 +329,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         print("working");
                     }
-                    currentHealth-=5;
-                    healthBar.SetHealth (currentHealth);
+                    TakeDamage(5);
                     GameObject spawnedLetter = Instantiate(gameObject);
                     spawnedLetter.transform.position = oldPosition;
                     spawnedLetter.transform.localScale = oldscale;
@@ -406,7 +406,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "platform")
         {
             JumpCount = MaxJumps;
-            Debug.Log("I am on the platform okay");
+            // Debug.Log("I am on the platform okay");
             this.transform.parent = other.gameObject.transform;
         }
     }

@@ -37,7 +37,7 @@ public class EnemyControl : MonoBehaviour
         switch(collision.gameObject.tag){
     		case "Player":
                 //Destroy(collision.gameObject);
-                Debug.Log(gameObject.name);
+                // Debug.Log(gameObject.name);
                 // EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 
@@ -63,7 +63,7 @@ public class EnemyControl : MonoBehaviour
     	switch(collision.gameObject.tag){
     		case "Player":
                 //Destroy(collision.gameObject);
-                Debug.Log(gameObject.name);
+                // Debug.Log(gameObject.name);
                 // EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 

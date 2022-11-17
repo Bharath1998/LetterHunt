@@ -37,7 +37,7 @@ public class rotating_obstacle : MonoBehaviour
         {
             case "Player":
                 //Destroy(collision.gameObject);
-                Debug.Log(gameObject.name);
+                // Debug.Log(gameObject.name);
                 // EnemySpawnerScript.spawnAllowed = false;
                 playerMovement = collision.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.TakeDamage(100);
