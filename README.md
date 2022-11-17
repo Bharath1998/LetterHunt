@@ -3,7 +3,7 @@
 
 Collect characters with strategy while avoiding enemies.
 
-![Final Protoype](./Misc/data/Finalprototype.png)
+![Final Protoype](./Misc/data/FinalPrototype.png)
 
 ## Youtube Tutorial Video: https://youtu.be/6dwwZVI5uX4
 
