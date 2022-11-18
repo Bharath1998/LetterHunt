@@ -17,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     bool facingRight = true;
-
+    
     bool wordFormed = true;
-    bool bounce=false;
+    bool canJump=false;
     //List to store Characters collected
     public List<string> inventory;
 
@@ -284,7 +284,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (other.gameObject.tag == "ground")
         {
-        JumpCount = MaxJumps;
+            canJump=true;
+            JumpCount = MaxJumps;
         }
         if (other.gameObject.tag == "Letter")
         {
@@ -426,7 +427,13 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionExit2D(Collision2D other){
         if (other.gameObject.tag == "platform"){
             this.transform.parent = null;
+            
         }
+
+        if(other.gameObject.tag=="ground"){
+            canJump=false;
+        }
+        
 
     }
     IEnumerator SetWinText()
@@ -476,8 +483,14 @@ public class PlayerMovement : MonoBehaviour
 
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 9;
-        JumpCount -= 1;
+        Debug.Log("JUMPING");
+        if(canJump){
+            Debug.Log("JUMPING");
+            GetComponent<Rigidbody2D>().velocity = transform.up * 9;
+            JumpCount -= 1;
+            canJump=false;
+        }
+        
     }
 
     void GamePause() {
