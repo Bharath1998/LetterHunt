@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     bool facingRight = true;
 
     bool wordFormed = true;
-
+    bool bounce=false;
     //List to store Characters collected
     public List<string> inventory;
 
@@ -269,6 +269,11 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
          
+        if(other.gameObject.tag=="spring"){
+            Debug.Log("increase velocity spring");
+            player.velocity= new Vector2(player.velocity.x, 15);
+        }
+
         if (other.gameObject.tag == "ground")
         {
         JumpCount = MaxJumps;
