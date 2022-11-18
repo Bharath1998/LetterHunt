@@ -32,15 +32,15 @@ public class Teleport : MonoBehaviour
 
             }
             else if(this.tag=="Door2_2"){
-            player.transform.position = new Vector2(portal.transform.position.x-3, portal.transform.position.y);
+            player.transform.position = new Vector2(portal.transform.position.x-2, portal.transform.position.y);
 
             }
             else if(this.tag=="Door3_1"){
-            player.transform.position = new Vector2(portal2.transform.position.x+3, portal2.transform.position.y);
+            player.transform.position = new Vector2(portal2.transform.position.x+2, portal2.transform.position.y);
 
             }
             else if(this.tag=="Door3_2"){
-            player.transform.position = new Vector2(portal.transform.position.x-3, portal.transform.position.y);
+            player.transform.position = new Vector2(portal.transform.position.x-2, portal.transform.position.y);
 
             }
 
