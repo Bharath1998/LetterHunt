@@ -3805,7 +3805,6 @@ GameObject:
   - component: {fileID: 1037078951}
   - component: {fileID: 1037078950}
   - component: {fileID: 1037078949}
-  - component: {fileID: 1037078948}
   - component: {fileID: 1037078954}
   - component: {fileID: 1037078955}
   - component: {fileID: 1037078956}
@@ -3816,26 +3815,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1037078948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037078947}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855ff8da59c204cc581cbf1691e3c93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: []
-  healthBar: {fileID: 0}
-  wordTMP: {fileID: 0}
-  maxHealth: 100
-  damage: 10
-  MaxJumps: 2
-  flag: 0
-  youwin: {fileID: 827905125}
 --- !u!61 &1037078949
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3896,7 +3875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 258132013}
   wordTMP: {fileID: 1212421833}
   maxHealth: 100
   damage: 10

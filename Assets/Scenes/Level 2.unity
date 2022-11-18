@@ -3275,6 +3275,7 @@ MonoBehaviour:
   - {fileID: 6364502180736296767, guid: d91558470bd74814eace2fa2eaa6b03f, type: 3}
   - {fileID: 6364502180736296767, guid: 369d238ef98f227439ca3e00b2dbe5e8, type: 3}
   - {fileID: 6364502180736296767, guid: 33d45619b0eb7e24f8aeac837eaa83bf, type: 3}
+  spawnRectangles: []
   spawnedLetter: {fileID: 0}
   leftPos: {fileID: 1916517278}
   rightPos: {fileID: 783926941}
@@ -3405,6 +3406,7 @@ MonoBehaviour:
   - {fileID: 6364502180736296767, guid: d91558470bd74814eace2fa2eaa6b03f, type: 3}
   - {fileID: 6364502180736296767, guid: 369d238ef98f227439ca3e00b2dbe5e8, type: 3}
   - {fileID: 6364502180736296767, guid: 33d45619b0eb7e24f8aeac837eaa83bf, type: 3}
+  spawnRectangles: []
   spawnedLetter: {fileID: 0}
   leftPos: {fileID: 1916517278}
   rightPos: {fileID: 783926941}
@@ -3807,7 +3809,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaunchForce: 1500
+  bulletBar: {fileID: 0}
   Bullet: {fileID: 8075736584863624972, guid: 4b62e1557828d457e986bc310fca3bba, type: 3}
+  maxBulletVal: 100
 --- !u!114 &894621733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,7 +4432,6 @@ GameObject:
   - component: {fileID: 1082698805}
   - component: {fileID: 1082698804}
   - component: {fileID: 1082698803}
-  - component: {fileID: 1082698802}
   - component: {fileID: 1082698801}
   - component: {fileID: 1082698800}
   - component: {fileID: 1082698807}
@@ -4488,24 +4491,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1082698802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082698798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855ff8da59c204cc581cbf1691e3c93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: []
-  healthBar: {fileID: 0}
-  wordTMP: {fileID: 0}
-  maxHealth: 100
-  damage: 10
-  MaxJumps: 2
 --- !u!61 &1082698803
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4566,11 +4551,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 972547272}
   wordTMP: {fileID: 54634562}
   maxHealth: 100
   damage: 10
   MaxJumps: 2
+  flag: 0
+  youwin: {fileID: 0}
 --- !u!212 &1082698806
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5113,6 +5100,7 @@ MonoBehaviour:
   - {fileID: 6364502180736296767, guid: d91558470bd74814eace2fa2eaa6b03f, type: 3}
   - {fileID: 6364502180736296767, guid: 369d238ef98f227439ca3e00b2dbe5e8, type: 3}
   - {fileID: 6364502180736296767, guid: 33d45619b0eb7e24f8aeac837eaa83bf, type: 3}
+  spawnRectangles: []
   spawnedLetter: {fileID: 0}
   leftPos: {fileID: 1539321159}
   rightPos: {fileID: 1621850158}
@@ -7013,6 +7001,8 @@ MonoBehaviour:
   - {fileID: 8509592179412008184, guid: 9bed5a8499aff4fdbb5b79f2251f20e0, type: 3}
   - {fileID: 422877886111286438, guid: 9edc338e444d94d10a9a4e466c5c36e5, type: 3}
   index: 020000000000000002000000000000000200000000000000
+  spawnRectangles: []
+  radius: 0
 --- !u!4 &1977122130
 Transform:
   m_ObjectHideFlags: 0
@@ -7264,7 +7254,9 @@ MonoBehaviour:
   pos1: {fileID: 1604867875}
   pos2: {fileID: 1212362179}
   speed: 2
+  canMove: 0
   startPos: {fileID: 1604867875}
+  player: {fileID: 0}
 --- !u!61 &2090033627
 BoxCollider2D:
   m_ObjectHideFlags: 0
