@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour
 
     public static bool kill;
 
-    float startingTime = 120f;
+    float startingTime = 2f;
 
     public TMP_Text countdownText;
 
@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
             StartCoroutine(DataCollection.Upload("TIME_UP"));
-            SceneManager.LoadScene("Game Over");
+            // SceneManager.LoadScene("Game Over");
         }
     }
 
