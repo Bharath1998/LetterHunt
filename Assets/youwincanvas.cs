@@ -27,7 +27,7 @@ public class youwincanvas : MonoBehaviour
         }
         else if (sceneName == "Level 6"){
             DataCollection.levelIndicator = 6;
-            SceneManager.LoadScene("LevelR0");
+            SceneManager.LoadScene("LevelRO");
         }
         else if (sceneName == "LevelRO"){
             DataCollection.levelIndicator = 7;
