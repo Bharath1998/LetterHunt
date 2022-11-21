@@ -38,9 +38,10 @@ public class DataCollection
         var url =
             "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
         var json = data.Stringify();
-
+    Debug.Log(json);
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
+            Debug.Log("Unique 5");
             request.SetRequestHeader("Content-Type", "application/json");
             byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(json);
             request.uploadHandler =
@@ -50,19 +51,20 @@ public class DataCollection
                 (DownloadHandler) new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             request.SendWebRequest();
-
-            if (
-                request.result == UnityWebRequest.Result.ConnectionError ||
-                request.result == UnityWebRequest.Result.ProtocolError
-            )
-            {
-                Debug.Log(request.error);
-            }
-            else
-            {
-                Debug.Log(request.downloadHandler.text);
-            }
-            yield return null;
+            yield return new WaitForSeconds(3);
+            // Debug.Log("SENT!!!!!!!");
+            // if (
+            //     request.result == UnityWebRequest.Result.ConnectionError ||
+            //     request.result == UnityWebRequest.Result.ProtocolError
+            // )
+            // {
+            //     Debug.Log(request.error);
+            // }
+            // else
+            // {
+            //     Debug.Log(request.downloadHandler.text);
+            // }
+            // yield return null;
         }
     }
 }

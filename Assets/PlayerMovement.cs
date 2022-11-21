@@ -271,10 +271,12 @@ public class PlayerMovement : MonoBehaviour
          
         if (other.gameObject.tag == "ground")
         {
+            Debug.Log("GROUND JUMP");
         JumpCount = MaxJumps;
         }
         if (other.gameObject.tag == "Letter")
         {
+            Debug.Log("LETTER COLLIDE");
             Vector3 oldPosition = other.gameObject.transform.position;
             Vector3 oldscale = other.gameObject.transform.localScale;
             print (oldPosition);
@@ -339,17 +341,14 @@ public class PlayerMovement : MonoBehaviour
 
                 if (string.Join("", arr_win) == target)
                 {
-                    StartCoroutine(DataCollection.Upload("SUCCESS"));
-                }
-
-
-                if (string.Join("", arr_win) == target)
-                {
                     // Change to next level and so on.
 
                     StopAllCoroutines();
+                    Debug.Log("STOPPED");
                     GamePause();
-                    Scene currentScene = SceneManager.GetActiveScene ();
+                    Debug.Log("COR");
+                    StartCoroutine(DataCollection.Upload("SUCCESS"));
+                    Scene currentScene = SceneManager.GetActiveScene();
                     string sceneName = currentScene.name;
                     //You will have to change this --now after winning it should not
                     if (sceneName == "Level02-Final")
@@ -400,7 +399,8 @@ public class PlayerMovement : MonoBehaviour
         {
             // Game won
 
-            StartCoroutine(DataCollection.Upload("SUCCESS"));
+                    // Debug.Log("Unique 4");
+            // StartCoroutine(DataCollection.Upload("SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
         if (other.gameObject.tag == "platform")
@@ -414,7 +414,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "platform"){
             this.transform.parent = null;
         }
-
     }
     IEnumerator SetWinText()
     {
