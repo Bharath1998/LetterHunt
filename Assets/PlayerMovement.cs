@@ -78,20 +78,15 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
-        // healthBar = new HealthBar();
-        // bulletBar = new BulletBar();
         
         currentHealth = maxHealth;
-        // currentBulletVal = maxBulletVal;
         healthBar.SetMaxHealth(currentHealth);
-        // bulletBar.SetMaxHealth(currentBulletVal);
         correctPurpleLetters=0;
         correctYellowLetters=0;
         correctOrangeLetters=0;
         incorrectPurpleLetters=0;
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
-        // youwin = GameObject.Find("youwin");
         youwin.SetActive(false);
         Time.timeScale = 1f;
 
@@ -116,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (sceneName == "Level 2")
             {
-                // print("LEVEL 2");
                 target = LetterSpawnerLvl2.target_word;
                 // print("inside if TARGET FROM PLAYER MOVE "+target);
             }
@@ -181,9 +175,6 @@ public class PlayerMovement : MonoBehaviour
                 
             }
             temp1 = temp1 + "_";
-
-            // string temp = new string('_', n);
-            // string temp = "_  _  _  _  _";
 
             win_string = new string('_', n);
             arr_win = win_string.ToCharArray();
@@ -300,15 +291,6 @@ public class PlayerMovement : MonoBehaviour
                     .GetComponent<CollectableScript>()
                     .CharacterType;
 
-            // print("Item Collected: "+ characterType);
-            // inventory.Add(characterType);
-            // print("Inventory Count: "+ inventory.Count);
-            // string items = "";
-            // for(int i=0;i<inventory.Count;i++)
-            // {
-            //     items = items+inventory[i]+" ";
-            // }
-            // print(items);
             string characterColor = other.gameObject.GetComponent<CollectableScript>().letterColor;
             // print(characterColor);
             try
@@ -356,7 +338,7 @@ public class PlayerMovement : MonoBehaviour
                     // Change to next level and so on.
 
                     StopAllCoroutines();
-                    GamePause();=
+                    GamePause();
                     StartCoroutine(DataCollection.Upload("SUCCESS"));
                     Scene currentScene = SceneManager.GetActiveScene();
                     string sceneName = currentScene.name;

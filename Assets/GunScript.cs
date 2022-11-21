@@ -5,10 +5,10 @@ using UnityEngine;
 public class GunScript : MonoBehaviour
 {
     public Vector2 direction;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,10 +18,10 @@ public class GunScript : MonoBehaviour
         // Vector2 gunpos = transform.position;
         // direction = mousepos-gunpos;
         // FaceMouse();
-
     }
 
-    void FaceMouse(){
+    void FaceMouse()
+    {
         // transform.right = direction;
     }
 }

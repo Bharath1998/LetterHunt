@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isGamePaused=false;
+    public static bool isGamePaused = false;
+
     public GameObject pauseMenuUI;
+
     public GameObject musicGameObject;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,31 +23,32 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(Input.GetKeyDown(KeyCode.Escape)){
-
-            if (isGamePaused){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isGamePaused)
+            {
                 Resume();
             }
-            else{
+            else
+            {
                 Pause();
             }
         }
-        
-        
     }
-    void Resume(){
+
+    void Resume()
+    {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isGamePaused = false;
         musicGameObject.SetActive(true);
-
     }
-    void Pause() {
+
+    void Pause()
+    {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
         musicGameObject.SetActive(false);
     }
-
 }
