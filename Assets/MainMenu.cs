@@ -54,6 +54,7 @@ public class MainMenu : MonoBehaviour
     }
 
      public void GoToLvl8(){
+        DataCollection.levelIndicator = 8;
         SceneManager.LoadScene("lvl8");
     }
 
