@@ -290,7 +290,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (other.gameObject.tag == "Letter")
         {
-            Debug.Log("LETTER COLLIDE");
             Vector3 oldPosition = other.gameObject.transform.position;
             Vector3 oldscale = other.gameObject.transform.localScale;
             print (oldPosition);
@@ -357,9 +356,7 @@ public class PlayerMovement : MonoBehaviour
                     // Change to next level and so on.
 
                     StopAllCoroutines();
-                    Debug.Log("STOPPED");
-                    GamePause();
-                    Debug.Log("COR");
+                    GamePause();=
                     StartCoroutine(DataCollection.Upload("SUCCESS"));
                     Scene currentScene = SceneManager.GetActiveScene();
                     string sceneName = currentScene.name;
@@ -410,10 +407,6 @@ public class PlayerMovement : MonoBehaviour
         // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
         {
-            // Game won
-
-                    // Debug.Log("Unique 4");
-            // StartCoroutine(DataCollection.Upload("SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
         if (other.gameObject.tag == "platform")
@@ -488,9 +481,7 @@ public class PlayerMovement : MonoBehaviour
 
      public void Jump()
     {
-        Debug.Log("JUMPING");
         if(canJump){
-            Debug.Log("JUMPING");
             GetComponent<Rigidbody2D>().velocity = transform.up * 9;
             JumpCount -= 1;
             canJump=false;
