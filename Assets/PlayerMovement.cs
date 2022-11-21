@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int damage = 10;
 
+    
 
 
     [SerializeField]
@@ -70,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     public int flag = 0;
     public GameObject youwin;
+    public GameObject defeatMenuUI;
 
     void Start()
     {
@@ -89,6 +91,9 @@ public class PlayerMovement : MonoBehaviour
         incorrectOrangeLetters=0;
         youwin.SetActive(false);
         Time.timeScale = 1f;
+        defeatMenuUI.SetActive(false);
+      
+    
 
         
     }
@@ -247,12 +252,17 @@ public class PlayerMovement : MonoBehaviour
         if (currentHealth <= 0)
         {
             StartCoroutine(DataCollection.Upload("KILLED"));
-            Destroy(this.gameObject);
-            target = null;
-            Camera cam = Camera.main;
-            GameObject newCam = new GameObject("newMainCam");
-            newCam.AddComponent<Camera>();
-            SceneManager.LoadScene("Game Over");
+        
+            // Destroy(this.gameObject);
+
+           print("HEALTH"+ currentHealth);
+            defeatMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            // target = null;
+            // Camera cam = Camera.main;
+            // GameObject newCam = new GameObject("newMainCam");
+            // newCam.AddComponent<Camera>();
+            // SceneManager.LoadScene("Game Over");
         }
         else
         {
@@ -398,6 +408,7 @@ public class PlayerMovement : MonoBehaviour
             this.transform.parent = other.gameObject.transform;
         }
     }
+  
     void OnCollisionExit2D(Collision2D other){
         if (other.gameObject.tag == "platform"){
             this.transform.parent = null;
