@@ -14,13 +14,17 @@ public class Timer : MonoBehaviour
 
     public static bool kill;
 
-    float startingTime = 2f;
+    float startingTime = 120f;
 
     public TMP_Text countdownText;
+
+    public GameObject defeatMenuUI;
 
     void Start()
     {
         currentTime = startingTime;
+        defeatMenuUI.SetActive(false);
+
     }
 
     void Update()
@@ -46,6 +50,9 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
             StartCoroutine(DataCollection.Upload("TIME_UP"));
+            defeatMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            // PlayerMovement.killPlayer();
             // SceneManager.LoadScene("Game Over");
         }
     }
