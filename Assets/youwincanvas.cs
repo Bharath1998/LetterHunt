@@ -35,6 +35,10 @@ public class youwincanvas : MonoBehaviour
         }
         else if(sceneName=="lvl9"){
             // Change when new level is added.
+            SceneManager.LoadScene("lvl8");
+        }
+        else if(sceneName=="lvl8"){
+            // Change when new level is added.
             SceneManager.LoadScene("Win");
         }
         else

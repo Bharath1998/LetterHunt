@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/lvl9.unity
     guid: 9ffe462b44d0246aca42866d816bb8a2
   - enabled: 1
+    path: Assets/Scenes/lvl8.unity
+    guid: d4fff015bf37fc94db170cfa218725dc
+  - enabled: 1
     path: Assets/Scenes/NextLevel.unity
     guid: ad7b7f6d0bf8e4a65aa224b3f0d3669a
   - enabled: 1

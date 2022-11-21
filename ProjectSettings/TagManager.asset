@@ -26,6 +26,7 @@ TagManager:
   - dp2
   - dp3
   - p3_da
+  - spring
   layers:
   - Default
   - TransparentFX

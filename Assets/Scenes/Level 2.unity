@@ -4551,7 +4551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 972547272}
   wordTMP: {fileID: 54634562}
   maxHealth: 100
   damage: 10
@@ -7001,6 +7001,8 @@ MonoBehaviour:
   - {fileID: 8509592179412008184, guid: 9bed5a8499aff4fdbb5b79f2251f20e0, type: 3}
   - {fileID: 422877886111286438, guid: 9edc338e444d94d10a9a4e466c5c36e5, type: 3}
   index: 020000000000000002000000000000000200000000000000
+  spawnRectangles: []
+  radius: 0
 --- !u!4 &1977122130
 Transform:
   m_ObjectHideFlags: 0

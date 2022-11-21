@@ -36,7 +36,9 @@ public class Platform : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, nextPos, speed * Time.deltaTime);
         }
         
-        
+        else {
+            transform.position = Vector3.MoveTowards(transform.position, pos1.position, speed * Time.deltaTime);
+        }
     }
     private void onDrawGizmos(){
         Gizmos.DrawLine(pos1.position, pos2.position);
@@ -51,6 +53,7 @@ public class Platform : MonoBehaviour
     private void OnCollisionExit2D(Collision2D other){
         if(other.gameObject.name == "Player"){
             canMove=false;
+            
         }
     }
 

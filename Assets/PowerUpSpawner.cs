@@ -6,11 +6,14 @@ public class PowerUpSpawner : MonoBehaviour
 {
     public GameObject[] powerUpReference;
     public int[] index = {2, 0, 2, 0, 2, 0};
+    public GameObject[] spawnRectangles;
+    public List<float[]> seenList;
+    public float radius;
 
-    public double[,] position = {{28.0,12.0},{24.5,12.76},{11.65,12.85},{-2.97,14.04}, {14.02,10.99},{29.15,5.92},{-7.78,13.1}};
-    HashSet<int> used = new HashSet<int>();
     void Start()
     {
+        radius = 1f;
+        seenList = new List<float[]>();
         StartCoroutine(SpawnPowerUp());
     }
 
@@ -22,22 +25,49 @@ public class PowerUpSpawner : MonoBehaviour
 
     IEnumerator SpawnPowerUp() {
         int i=0;
+            
+        float x = Random.Range(-7,30);
+        float y = Random.Range(0,16);
+        Vector3 randomPosition = new Vector3(x,y,0);
         while(i < index.Length){
             yield return new WaitForSeconds(10); //change this
-            // Random rand = new Random();
-            int x = Random.Range(0, 7);
-            
-            // int x = rand.Next(0,7);
-            while(used.Contains(x)){
-                x = Random.Range(0, 7);
+
+            while(true){
+                int sizeOfSpawners = spawnRectangles.Length;
+                x = (float) Random.Range(spawnRectangles[i%sizeOfSpawners].transform.position[0] - spawnRectangles[i % sizeOfSpawners].transform.localScale[0]/2, spawnRectangles[i % sizeOfSpawners].transform.position[0] + spawnRectangles[i % sizeOfSpawners].transform.localScale[0] / 2);
+                y = (float)Random.Range(spawnRectangles[i % sizeOfSpawners].transform.position[1] - spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2, spawnRectangles[i % sizeOfSpawners].transform.position[1] + spawnRectangles[i % sizeOfSpawners].transform.localScale[1] / 2);
+
+
+                if (checkCollision(x, y))
+                {
+                    randomPosition = new Vector3(x, y, 0);
+                    seenList.Add(new float[2] { x, y });
+                    break;
+                }
             }
-            used.Add(x);
-            double posX = position[x, 0];
-            double posY = position[x, 1];
-            Vector3 randomPosition = new Vector3((float)posX,(float)posY,0);
+            
+            
             GameObject spawnedPowerUp = Instantiate(powerUpReference[index[i]]);
             i += 1;
             spawnedPowerUp.transform.position = randomPosition; 
         }
+    }
+
+    bool checkCollision(float x, float y){
+        float left = x - radius;
+        float right = x + radius;
+        float low = y - radius;
+        float high = y + radius;
+        for(int j=0;j < seenList.Count; j++){
+            float posX = seenList[j][0];
+            float posY = seenList[j][1];
+            if( posX >= left && posX <= right){
+                if(posY >=low && posY <= high){
+                    return false;
+                }
+            }
+        }
+        return true;
+
     }
 }

@@ -17,9 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     bool facingRight = true;
-
+    
     bool wordFormed = true;
-
+    bool canJump=false;
     //List to store Characters collected
     public List<string> inventory;
 
@@ -73,16 +73,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Starting new player movement");
         JumpCount = MaxJumps;
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
-        healthBar = new HealthBar();
+        // healthBar = new HealthBar();
         // bulletBar = new BulletBar();
         
         currentHealth = maxHealth;
         // currentBulletVal = maxBulletVal;
-        healthBar.SetMaxHealth (currentHealth);
+        healthBar.SetMaxHealth(currentHealth);
         // bulletBar.SetMaxHealth(currentBulletVal);
         correctPurpleLetters=0;
         correctYellowLetters=0;
@@ -156,6 +157,14 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 target = LetterSpawnerLvl09.target_word;
+
+                print("target printed from player movement : " + target);
+            }
+
+            else if (sceneName == "lvl8")
+            {
+
+                target = LetterSpawnerLvl08.target_word;
 
                 print("target printed from player movement : " + target);
             }
@@ -257,7 +266,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             
-            healthBar.SetHealth (currentHealth);
+            healthBar.SetHealth(currentHealth);
         }
     }
         
@@ -269,10 +278,15 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
         }
          
+        if(other.gameObject.tag=="spring"){
+            Debug.Log("increase velocity spring");
+            player.velocity= new Vector2(player.velocity.x, 15);
+        }
+
         if (other.gameObject.tag == "ground")
         {
-            Debug.Log("GROUND JUMP");
-        JumpCount = MaxJumps;
+            canJump=true;
+            JumpCount = MaxJumps;
         }
         if (other.gameObject.tag == "Letter")
         {
@@ -330,8 +344,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         print("working");
                     }
-                    currentHealth-=5;
-                    healthBar.SetHealth (currentHealth);
+                    TakeDamage(5);
                     GameObject spawnedLetter = Instantiate(gameObject);
                     spawnedLetter.transform.position = oldPosition;
                     spawnedLetter.transform.localScale = oldscale;
@@ -406,14 +419,20 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "platform")
         {
             JumpCount = MaxJumps;
-            Debug.Log("I am on the platform okay");
+            // Debug.Log("I am on the platform okay");
             this.transform.parent = other.gameObject.transform;
         }
     }
     void OnCollisionExit2D(Collision2D other){
         if (other.gameObject.tag == "platform"){
             this.transform.parent = null;
+            
         }
+
+        if(other.gameObject.tag=="ground"){
+            canJump=false;
+        }
+        
     }
     IEnumerator SetWinText()
     {
@@ -469,8 +488,14 @@ public class PlayerMovement : MonoBehaviour
 
      public void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = transform.up * 9;
-        JumpCount -= 1;
+        Debug.Log("JUMPING");
+        if(canJump){
+            Debug.Log("JUMPING");
+            GetComponent<Rigidbody2D>().velocity = transform.up * 9;
+            JumpCount -= 1;
+            canJump=false;
+        }
+        
     }
 
     void GamePause() {
