@@ -10615,7 +10615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 601168405}
   wordTMP: {fileID: 1800565966}
   maxHealth: 100
   damage: 10
