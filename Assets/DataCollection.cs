@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
-using static ShootScript;
 using static EnemyControl;
 using static PlayerMovement;
+using static ShootScript;
 using static Timer;
 
 public class DataCollection
 {
     public static int levelIndicator = 1;
+
     public static IEnumerator Upload(string reasonEnd = "KILLED")
     {
         DatabaseModel data = new DatabaseModel();
@@ -19,8 +20,11 @@ public class DataCollection
         data.reason_end = reasonEnd;
         data.enemies_killed = EnemyControl.enemiesKilled;
         data.total_bullets = ShootScript.totalBullets;
-        data.final_health = PlayerMovement.currentHealth > -1 ? PlayerMovement.currentHealth : 0;
-        data.time_remaining = (int)Mathf.Round(Timer.currentTime);
+        data.final_health =
+            PlayerMovement.currentHealth > -1
+                ? PlayerMovement.currentHealth
+                : 0;
+        data.time_remaining = (int) Mathf.Round(Timer.currentTime);
         data.correct_orange_letters = PlayerMovement.correctOrangeLetters;
         data.correct_purple_letters = PlayerMovement.correctPurpleLetters;
         data.correct_yellow_letters = PlayerMovement.correctYellowLetters;
@@ -38,7 +42,6 @@ public class DataCollection
         var url =
             "https://data.mongodb-api.com/app/data-sirhi/endpoint/get_entry";
         var json = data.Stringify();
-
         using (UnityWebRequest request = new UnityWebRequest(url, "POST"))
         {
             request.SetRequestHeader("Content-Type", "application/json");
@@ -50,19 +53,7 @@ public class DataCollection
                 (DownloadHandler) new DownloadHandlerBuffer();
             request.SetRequestHeader("Content-Type", "application/json");
             request.SendWebRequest();
-
-            if (
-                request.result == UnityWebRequest.Result.ConnectionError ||
-                request.result == UnityWebRequest.Result.ProtocolError
-            )
-            {
-                Debug.Log(request.error);
-            }
-            else
-            {
-                Debug.Log(request.downloadHandler.text);
-            }
-            yield return null;
+            yield return new WaitForSeconds(3);
         }
     }
 }

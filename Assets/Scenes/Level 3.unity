@@ -5436,7 +5436,6 @@ GameObject:
   - component: {fileID: 1155760327}
   - component: {fileID: 1155760326}
   - component: {fileID: 1155760325}
-  - component: {fileID: 1155760324}
   - component: {fileID: 1155760323}
   - component: {fileID: 1155760322}
   - component: {fileID: 1155760321}
@@ -5521,26 +5520,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1155760324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155760318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 855ff8da59c204cc581cbf1691e3c93f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventory: []
-  healthBar: {fileID: 0}
-  wordTMP: {fileID: 0}
-  maxHealth: 100
-  damage: 10
-  MaxJumps: 2
-  flag: 0
-  youwin: {fileID: 2121718610}
 --- !u!61 &1155760325
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -78,20 +78,15 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         inventory = new List<string>();
-        // healthBar = new HealthBar();
-        // bulletBar = new BulletBar();
         
         currentHealth = maxHealth;
-        // currentBulletVal = maxBulletVal;
         healthBar.SetMaxHealth(currentHealth);
-        // bulletBar.SetMaxHealth(currentBulletVal);
         correctPurpleLetters=0;
         correctYellowLetters=0;
         correctOrangeLetters=0;
         incorrectPurpleLetters=0;
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
-        // youwin = GameObject.Find("youwin");
         youwin.SetActive(false);
         Time.timeScale = 1f;
 
@@ -116,7 +111,6 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (sceneName == "Level 2")
             {
-                // print("LEVEL 2");
                 target = LetterSpawnerLvl2.target_word;
                 // print("inside if TARGET FROM PLAYER MOVE "+target);
             }
@@ -181,9 +175,6 @@ public class PlayerMovement : MonoBehaviour
                 
             }
             temp1 = temp1 + "_";
-
-            // string temp = new string('_', n);
-            // string temp = "_  _  _  _  _";
 
             win_string = new string('_', n);
             arr_win = win_string.ToCharArray();
@@ -300,15 +291,6 @@ public class PlayerMovement : MonoBehaviour
                     .GetComponent<CollectableScript>()
                     .CharacterType;
 
-            // print("Item Collected: "+ characterType);
-            // inventory.Add(characterType);
-            // print("Inventory Count: "+ inventory.Count);
-            // string items = "";
-            // for(int i=0;i<inventory.Count;i++)
-            // {
-            //     items = items+inventory[i]+" ";
-            // }
-            // print(items);
             string characterColor = other.gameObject.GetComponent<CollectableScript>().letterColor;
             // print(characterColor);
             try
@@ -353,17 +335,12 @@ public class PlayerMovement : MonoBehaviour
 
                 if (string.Join("", arr_win) == target)
                 {
-                    StartCoroutine(DataCollection.Upload("SUCCESS"));
-                }
-
-
-                if (string.Join("", arr_win) == target)
-                {
                     // Change to next level and so on.
 
                     StopAllCoroutines();
                     GamePause();
-                    Scene currentScene = SceneManager.GetActiveScene ();
+                    StartCoroutine(DataCollection.Upload("SUCCESS"));
+                    Scene currentScene = SceneManager.GetActiveScene();
                     string sceneName = currentScene.name;
                     //You will have to change this --now after winning it should not
                     if (sceneName == "Level02-Final")
@@ -412,9 +389,6 @@ public class PlayerMovement : MonoBehaviour
         // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
         {
-            // Game won
-
-            StartCoroutine(DataCollection.Upload("SUCCESS"));
             SceneManager.LoadScene("Game Over");
         }
         if (other.gameObject.tag == "platform")
@@ -434,7 +408,6 @@ public class PlayerMovement : MonoBehaviour
             canJump=false;
         }
         
-
     }
     IEnumerator SetWinText()
     {
@@ -446,36 +419,43 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator toLevel2()
     {
+        DataCollection.levelIndicator = 2;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Final_Level2");
     }
     IEnumerator toLevel3()
     {
+        DataCollection.levelIndicator = 3;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 3");
     }
     IEnumerator toLevel4()
     {
+        DataCollection.levelIndicator = 4;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 1");
     }
     IEnumerator toLevel5()
     {
+
+        DataCollection.levelIndicator = 5;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("Level 6");
     }
     IEnumerator toLevel6()
     {
+        DataCollection.levelIndicator = 6;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("LevelRO");
     }
     IEnumerator toLevel7()
     {
+        DataCollection.levelIndicator = 7;
         yield return new WaitForSeconds(2f);
         Destroy(this.gameObject);
         SceneManager.LoadScene("lvl9");
@@ -483,9 +463,7 @@ public class PlayerMovement : MonoBehaviour
 
      public void Jump()
     {
-        Debug.Log("JUMPING");
         if(canJump){
-            Debug.Log("JUMPING");
             GetComponent<Rigidbody2D>().velocity = transform.up * 9;
             JumpCount -= 1;
             canJump=false;
