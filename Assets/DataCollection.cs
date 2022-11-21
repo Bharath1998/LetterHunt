@@ -15,6 +15,10 @@ public class DataCollection
 
     public static IEnumerator Upload(string reasonEnd = "KILLED")
     {
+        // Abort analytics if env is local
+#if UNITY_EDITOR
+        yield return new WaitForSeconds(1);
+#endif
         DatabaseModel data = new DatabaseModel();
         data.level = levelIndicator;
         data.reason_end = reasonEnd;
