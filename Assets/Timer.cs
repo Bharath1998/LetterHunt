@@ -26,7 +26,57 @@ public class Timer : MonoBehaviour
 
     void Start()
     {
-        currentTime = startingTime;
+        // currentTime = startingTime;
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Retrieve the name of this scene.
+        string sceneName = currentScene.name;
+        if (sceneName == "Level02-Final")
+        {
+
+            currentTime = 45f;
+        }
+        else if (sceneName == "Final_Level2")
+        {
+
+            currentTime = 45f;
+        }
+        else if (sceneName == "Level 3")
+        {
+
+            currentTime = 60f;
+        }
+        else if (sceneName == "Level 1")
+        {
+
+            currentTime = 45f;
+        }
+        else if (sceneName == "Level 6")
+        {
+
+            currentTime = 45f;
+        }
+        else if (sceneName == "LevelRO")
+        {
+
+            currentTime = 60f;
+        }
+        else if (sceneName == "lvl9")
+        {
+
+            currentTime = 60f;
+        }
+        else if (sceneName == "lvl8")
+        {
+
+            currentTime = 60f;
+        }
+        else if (sceneName == "lvl11")
+        {
+
+            currentTime = 60f;
+        }
+
         defeatMenuUI.SetActive(false);
 
     }
