@@ -5636,7 +5636,7 @@ GameObject:
   - component: {fileID: 683819185}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9615,10 +9615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  score: 0
   healthBar: {fileID: 972547272}
   wordTMP: {fileID: 54634562}
-  scoreDisplay: {fileID: 452412435}
+  scoreDisplay: {fileID: 1878447391}
+  scoreDefeat: {fileID: 1878447391}
   maxHealth: 100
   damage: 10
   MaxJumps: 2
@@ -10682,6 +10682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 947048022}
+  scoreDefeat: {fileID: 1878447391}
   defeatMenuUI: {fileID: 752528956}
 --- !u!114 &1189061098
 MonoBehaviour:
@@ -13536,7 +13537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1496469043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15356,7 +15357,7 @@ GameObject:
   - component: {fileID: 1712560434}
   m_Layer: 6
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15683,7 +15684,7 @@ GameObject:
   - component: {fileID: 1741958120}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

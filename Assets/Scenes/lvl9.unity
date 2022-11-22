@@ -3173,7 +3173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &296716897
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4832,10 +4832,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  score: 0
   healthBar: {fileID: 1627438126}
   wordTMP: {fileID: 640084605}
   scoreDisplay: {fileID: 1052585638}
+  scoreDefeat: {fileID: 403873640}
   maxHealth: 100
   damage: 10
   MaxJumps: 2
@@ -9098,7 +9098,7 @@ GameObject:
   - component: {fileID: 905302996}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9997,7 +9997,7 @@ GameObject:
   - component: {fileID: 1005436048}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10159,7 +10159,7 @@ GameObject:
   - component: {fileID: 1052005555}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10985,7 +10985,7 @@ GameObject:
   - component: {fileID: 1153037323}
   m_Layer: 6
   m_Name: updown2
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13190,6 +13190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 1734187198}
+  scoreDefeat: {fileID: 403873640}
   defeatMenuUI: {fileID: 1391627701}
 --- !u!114 &1394926850
 MonoBehaviour:
@@ -15600,7 +15601,7 @@ GameObject:
   - component: {fileID: 1692996285}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15688,7 +15689,7 @@ GameObject:
   - component: {fileID: 1695794563}
   m_Layer: 6
   m_Name: updown
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
