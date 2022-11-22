@@ -37,6 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int maxHealth = 100;
 
+    public Renderer playerRenderer;
+    public bool playerCanLose = false;
 
     [SerializeField]
     public static int currentHealth;
@@ -99,6 +101,8 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1f;
         defeatMenuUI.SetActive(false);
         winUI.SetActive(false);
+        playerRenderer = GetComponent<Renderer>();
+        StartCoroutine(CheckPlayer());
     }
 
     // Update is called once per frame
@@ -230,6 +234,15 @@ public class PlayerMovement : MonoBehaviour
         }
         this.transform.rotation =
             Quaternion.Euler(new Vector3(0f, !facingRight ? 180f : 0f, 0f));
+
+        if (playerCanLose ==true){
+            if(!playerRenderer.isVisible){
+                scoreDisplay.text = score.ToString();
+                defeatMenuUI.SetActive(true);
+                scoreDefeat.text = score.ToString();
+                Time.timeScale = 0f;
+                     }
+        }   
     }
 
     private void FixedUpdate()
@@ -524,5 +537,10 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 0f;
         // isGamePaused = true;
         // musicGameObject.SetActive(false);
+    }
+
+    IEnumerator CheckPlayer(){
+        yield return new WaitForSeconds(1f);
+        playerCanLose = true;
     }
 }
