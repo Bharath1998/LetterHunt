@@ -25,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
 
     public static string target;
     public static int score;
+    public int weightageForLetters = 60;
+    public int weightageForTime = 20;
+    public int weightageForHealth = 20;
+    public int timeScore = 0;
+    public int healthScore = 0;
+    public int letterScore = 0;
     GameObject gameObject;
     public HealthBar healthBar;
 
@@ -108,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        calculateScore();
         flag += 1;
         if (flag == 1){
             Scene currentScene = SceneManager.GetActiveScene ();
@@ -298,9 +304,28 @@ public class PlayerMovement : MonoBehaviour
     }
         
     }
+    double getTimeBasedScore(float timeRemaining, float maxTime, int weightage){
 
+         if((maxTime-timeRemaining)/maxTime < 0.5){
+             return weightage;
+         }
+         if((maxTime-timeRemaining)/maxTime > 0.95){
+             return weightage * 0.1;
+         }
+         if((maxTime-timeRemaining)/maxTime > 0.75){
+             return weightage * 0.4;
+         }
+         return weightage * 0.5;
+
+     }
+    public void calculateScore(){
+        healthScore = (int)Math.Round(weightageForHealth*((float)currentHealth/(float)maxHealth));
+        timeScore = (int)Convert.ToInt32((getTimeBasedScore(Timer.currentTime, Timer.startingTime, weightageForTime)));
+        score = letterScore + healthScore + timeScore;
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
+        calculateScore();
         if(other.gameObject.name.Contains("Enemy") && (GameObject.Find("Shield") && GameObject.Find("Shield").activeSelf)){
             Destroy(other.gameObject);
         }
@@ -345,7 +370,7 @@ public class PlayerMovement : MonoBehaviour
                     arr2[idx*3] = lastCharacter;
                     print("LAST CHARACTER: " + lastCharacter);
                     arr_win[idx] = lastCharacter;
-                    score += (100/(target.Length));
+                    letterScore += (int)Math.Round((float)weightageForLetters/(float)(target.Length));
                     Debug.Log("score is:");
                     Debug.Log(score);
 
@@ -375,8 +400,7 @@ public class PlayerMovement : MonoBehaviour
 
                 if (string.Join("", arr_win) == target)
                 {
-                    // Change to next level and so on.
-
+                    calculateScore();
                     StopAllCoroutines();
                     GamePause();
                     StartCoroutine(DataCollection.Upload("SUCCESS"));
@@ -449,6 +473,7 @@ public class PlayerMovement : MonoBehaviour
         // If he collects all letters needed and then collides, he moves to next level, else game over. use build index+1
         if (other.gameObject.tag == "FinishLevel" && wordFormed)
         {
+            calculateScore();
             SceneManager.LoadScene("Game Over");
         }
         if (other.gameObject.tag == "platform")
