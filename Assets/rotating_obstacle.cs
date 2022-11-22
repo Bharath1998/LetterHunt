@@ -44,12 +44,11 @@ public class rotating_obstacle : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        print("AM I Here:");
         switch (collision.gameObject.tag)
         {
             case "Player":
-                //Destroy(collision.gameObject);
-                // Debug.Log(gameObject.name);
-                // EnemySpawnerScript.spawnAllowed = false;
+                
                 playerMovement =
                     collision.gameObject.GetComponent<PlayerMovement>();
                 playerMovement.TakeDamage(100);
