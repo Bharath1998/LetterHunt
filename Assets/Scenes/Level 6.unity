@@ -1375,10 +1375,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
-  score: 0
   healthBar: {fileID: 1725984023}
   wordTMP: {fileID: 1376204126}
   scoreDisplay: {fileID: 484204753}
+  scoreDefeat: {fileID: 1136435498}
   maxHealth: 100
   damage: 10
   MaxJumps: 2
@@ -7844,7 +7844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &810671563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15917,6 +15917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 2040112005}
+  scoreDefeat: {fileID: 1136435498}
   defeatMenuUI: {fileID: 1808288781}
 --- !u!114 &1770895003
 MonoBehaviour:

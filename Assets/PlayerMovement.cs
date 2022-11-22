@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public List<string> inventory;
 
     public static string target;
-    public int score;
+    public static int score;
     GameObject gameObject;
     public HealthBar healthBar;
 
@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text wordTMP;
 
     public TMP_Text scoreDisplay;
+
+    public TMP_Text scoreDefeat;
 
     public int maxHealth = 100;
 
@@ -265,7 +267,9 @@ public class PlayerMovement : MonoBehaviour
             // Destroy(this.gameObject);
 
            print("HEALTH"+ currentHealth);
+            scoreDisplay.text = score.ToString();
             defeatMenuUI.SetActive(true);
+            scoreDefeat.text = score.ToString();
             Time.timeScale = 0f;
             // target = null;
             // Camera cam = Camera.main;

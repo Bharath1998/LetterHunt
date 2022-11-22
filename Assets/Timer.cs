@@ -18,6 +18,10 @@ public class Timer : MonoBehaviour
 
     public TMP_Text countdownText;
 
+    public static int score;
+
+    public TMP_Text scoreDefeat;
+
     public GameObject defeatMenuUI;
 
     void Start()
@@ -29,6 +33,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        score = PlayerMovement.score;
         kill = IncreaseTime.kill;
 
         if (kill == true)
@@ -51,6 +56,7 @@ public class Timer : MonoBehaviour
             currentTime = 0;
             StartCoroutine(DataCollection.Upload("TIME_UP"));
             defeatMenuUI.SetActive(true);
+            scoreDefeat.text = score.ToString();
             Time.timeScale = 0f;
             // PlayerMovement.killPlayer();
             // SceneManager.LoadScene("Game Over");
