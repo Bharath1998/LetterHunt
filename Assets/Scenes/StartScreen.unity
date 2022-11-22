@@ -1563,7 +1563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1552928925618576738, guid: a5fb85e6942414e4faba1e1eb410dc3c, type: 3}
       propertyPath: m_text
-      value: L_TTERHUNT
+      value: L_TTERH_NT
       objectReference: {fileID: 0}
     - target: {fileID: 1552928925618576738, guid: a5fb85e6942414e4faba1e1eb410dc3c, type: 3}
       propertyPath: m_textAlignment
