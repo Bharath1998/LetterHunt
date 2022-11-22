@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public List<string> inventory;
 
     public static string target;
-
+    public int score;
     GameObject gameObject;
     public HealthBar healthBar;
 
@@ -76,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        score = 0;
         Debug.Log("Starting new player movement");
         JumpCount = MaxJumps;
         player = GetComponent<Rigidbody2D>();
@@ -325,6 +326,10 @@ public class PlayerMovement : MonoBehaviour
                     arr2[idx*3] = lastCharacter;
                     print("LAST CHARACTER: " + lastCharacter);
                     arr_win[idx] = lastCharacter;
+                    score += (100/(target.Length));
+                    Debug.Log("score is:");
+                    Debug.Log(score);
+
                     // GameObject go = GameObject.Find("go" + idx.ToString());
                     // Destroy(go.gameObject);
                 }
