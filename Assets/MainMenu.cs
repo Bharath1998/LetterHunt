@@ -71,6 +71,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("lvl8");
     }
 
+    public void GoToLvl9()
+    {
+        DataCollection.levelIndicator = 9;
+        SceneManager.LoadScene("lvl11");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
