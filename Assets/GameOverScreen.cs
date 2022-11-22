@@ -48,6 +48,11 @@ public class GameOverScreen : MonoBehaviour
             // Change when new level is added.
             SceneManager.LoadScene("lvl8");
         }
+        else if (sceneName == "lvl11")
+        {
+            // Change when new level is added.
+            SceneManager.LoadScene("lvl11");
+        }
         else if (sceneName == "Win")
         {
             SceneManager.LoadScene("RoadMap");
