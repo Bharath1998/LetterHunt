@@ -48,6 +48,7 @@ public class youwincanvas : MonoBehaviour
         else if (sceneName == "lvl8")
         {
             // Change when new level is added.
+            DataCollection.levelIndicator = 9;
             SceneManager.LoadScene("lvl11");
         }
         else
