@@ -70,8 +70,9 @@ public class PlayerMovement : MonoBehaviour
     public static char[] arr_win;
 
     public int flag = 0;
-    public GameObject youwin;
+    // public GameObject youwin;
     public GameObject defeatMenuUI;
+    public GameObject winUI;
 
     void Start()
     {
@@ -89,13 +90,10 @@ public class PlayerMovement : MonoBehaviour
         incorrectPurpleLetters=0;
         incorrectYellowLetters=0;
         incorrectOrangeLetters=0;
-        youwin.SetActive(false);
+        // youwin.SetActive(false);
         Time.timeScale = 1f;
         defeatMenuUI.SetActive(false);
-      
-    
-
-        
+        winUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -199,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         movement = new Vector2(Input.GetAxisRaw("Horizontal"), 0).normalized;
-        anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 3f));
+        anim.SetFloat("Speed", Mathf.Abs(movement.magnitude * 10f));
         if (Input.GetKey(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             float dirX = Input.GetAxisRaw("Horizontal");
@@ -225,7 +223,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (movement != Vector2.zero)
         {
-            var xMovement = movement.x * 3f * Time.deltaTime;
+            var xMovement = movement.x * 7f * Time.deltaTime;
             this.transform.Translate(new Vector3(xMovement, 0), Space.World);
         }
     }
@@ -355,32 +353,43 @@ public class PlayerMovement : MonoBehaviour
                     //You will have to change this --now after winning it should not
                     if (sceneName == "Level02-Final")
                     {
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                         // StartCoroutine(toLevel2());
                     }
                     else if (sceneName == "Final_Level2"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                         // StartCoroutine(toLevel3());
                     }
                     else if (sceneName == "Level 3"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                         // StartCoroutine(toLevel4());
                     }
                     else if (sceneName == "Level 1"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                         // StartCoroutine(toLevel5());
                     }
                     else if (sceneName == "Level 6"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                         // StartCoroutine(toLevel6());
                     }
                     else if (sceneName == "LevelRO"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
 
                         // StartCoroutine(toLevel7());
                     }
                     else if(sceneName=="lvl9"){
-                        youwin.SetActive(true);
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
+                    }
+                    else if(sceneName=="lvl8"){
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
                     }
                     else
                     {

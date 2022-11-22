@@ -10,12 +10,12 @@ public class youwincanvas : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName == "Level02-Final")
+        if (sceneName == "Level02-Final") 
         {
             DataCollection.levelIndicator = 2;
             SceneManager.LoadScene("Final_Level2");
         }
-        else if (sceneName == "Final_Level2")
+        else if (sceneName == "Final_Level2") 
         {
             DataCollection.levelIndicator = 3;
             SceneManager.LoadScene("Level 3");
@@ -61,23 +61,23 @@ public class youwincanvas : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName == "Level02-Final")
+        if (sceneName == "Level02-Final") 
         {
             SceneManager.LoadScene("Level02-Final");
         }
-        else if (sceneName == "Final_Level2")
+        else if (sceneName == "Final_Level2") 
         {
             SceneManager.LoadScene("Final_Level2");
         }
-        else if (sceneName == "Level 3")
+        else if (sceneName == "Level 3") 
         {
             SceneManager.LoadScene("Level 3");
         }
-        else if (sceneName == "Level 3")
+        else if (sceneName == "Level 1") 
         {
-            SceneManager.LoadScene("Level 3");
+            SceneManager.LoadScene("Level 1");
         }
-        else if (sceneName == "Level 6")
+        else if (sceneName == "Level 6") 
         {
             SceneManager.LoadScene("Level 6");
         }
@@ -88,6 +88,10 @@ public class youwincanvas : MonoBehaviour
         else if (sceneName == "lvl9")
         {
             SceneManager.LoadScene("lvl9");
+        }
+        else if (sceneName == "lvl8")
+        {
+            SceneManager.LoadScene("lvl8");
         }
     }
 
