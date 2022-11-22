@@ -15,7 +15,9 @@ public class MainMenu : MonoBehaviour
 
     public void Tutorials()
     {
-        SceneManager.LoadScene("Tutorial");
+        // SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Level0");
+
     }
 
     public void SkipTutorial()
@@ -75,6 +77,12 @@ public class MainMenu : MonoBehaviour
     {
         DataCollection.levelIndicator = 9;
         SceneManager.LoadScene("lvl11");
+    }
+
+    public void GoToRoadmap()
+    {
+        DataCollection.levelIndicator = 10;
+        SceneManager.LoadScene("RoadMap");
     }
 
     public void QuitGame()
