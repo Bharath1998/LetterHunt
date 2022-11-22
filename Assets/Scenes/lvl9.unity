@@ -9098,7 +9098,7 @@ GameObject:
   - component: {fileID: 905302996}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9997,7 +9997,7 @@ GameObject:
   - component: {fileID: 1005436048}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10159,7 +10159,7 @@ GameObject:
   - component: {fileID: 1052005555}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10985,7 +10985,7 @@ GameObject:
   - component: {fileID: 1153037323}
   m_Layer: 6
   m_Name: updown2
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15601,7 +15601,7 @@ GameObject:
   - component: {fileID: 1692996285}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15689,7 +15689,7 @@ GameObject:
   - component: {fileID: 1695794563}
   m_Layer: 6
   m_Name: updown
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

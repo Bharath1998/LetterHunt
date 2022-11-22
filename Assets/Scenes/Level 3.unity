@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 590150508}
   m_Layer: 6
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5131,7 +5131,7 @@ GameObject:
   - component: {fileID: 635658424}
   m_Layer: 6
   m_Name: Crates_02
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12239,7 +12239,7 @@ GameObject:
   - component: {fileID: 1632645316}
   m_Layer: 6
   m_Name: GameObject
-  m_TagString: platform
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
