@@ -48,7 +48,7 @@ public class youwincanvas : MonoBehaviour
         else if (sceneName == "lvl8")
         {
             // Change when new level is added.
-            SceneManager.LoadScene("Win");
+            SceneManager.LoadScene("lvl11");
         }
         else
         {
@@ -93,6 +93,12 @@ public class youwincanvas : MonoBehaviour
         {
             SceneManager.LoadScene("lvl8");
         }
+        else if (sceneName == "lvl11")
+        {
+            SceneManager.LoadScene("lvl11");
+        }
+
+
     }
 
     public void ToLevelMap()
