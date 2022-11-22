@@ -78,6 +78,7 @@ public class Timer : MonoBehaviour
         }
 
         defeatMenuUI.SetActive(false);
+        startingTime = currentTime;
 
     }
 
