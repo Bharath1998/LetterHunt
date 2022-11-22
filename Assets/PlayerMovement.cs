@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     public TMP_Text wordTMP;
 
+    public TMP_Text scoreDisplay;
+
     public int maxHealth = 100;
 
 
@@ -366,41 +368,50 @@ public class PlayerMovement : MonoBehaviour
                     //You will have to change this --now after winning it should not
                     if (sceneName == "Level02-Final")
                     {
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
+
                         // youwin.SetActive(true);
                         // StartCoroutine(toLevel2());
                     }
                     else if (sceneName == "Final_Level2"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                         // StartCoroutine(toLevel3());
                     }
                     else if (sceneName == "Level 3"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                         // StartCoroutine(toLevel4());
                     }
                     else if (sceneName == "Level 1"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                         // StartCoroutine(toLevel5());
                     }
                     else if (sceneName == "Level 6"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                         // StartCoroutine(toLevel6());
                     }
                     else if (sceneName == "LevelRO"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
 
                         // StartCoroutine(toLevel7());
                     }
                     else if(sceneName=="lvl9"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                     }
                     else if(sceneName=="lvl8"){
+                        scoreDisplay.text = score.ToString();
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                     }

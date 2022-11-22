@@ -9615,8 +9615,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+  score: 0
   healthBar: {fileID: 972547272}
   wordTMP: {fileID: 54634562}
+  scoreDisplay: {fileID: 452412435}
   maxHealth: 100
   damage: 10
   MaxJumps: 2
