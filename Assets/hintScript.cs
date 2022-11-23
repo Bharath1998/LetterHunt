@@ -9,8 +9,9 @@ public class hintScript : MonoBehaviour
     // private GameObject image;
     public static float timer;
     public GameObject button;
-    // public GameObject image;
     public static string target_word;
+    // public GameObject image;
+    
     // [SerializeField] private UnityEngine.UI.Image image = null;
 
     public Canvas imageCanvas;
@@ -19,7 +20,7 @@ public class hintScript : MonoBehaviour
     {
         timer=Timer.currentTime;
         
-        target_word = "MAN";
+        
         // image.SetActive(false);
         button.SetActive(false);
 
@@ -38,7 +39,8 @@ public class hintScript : MonoBehaviour
     
     void Update()
     {
-
+        target_word = PlayerMovement.target;
+        print("TARGET WORD FROM HINTSCRIPT"+target_word);
         timer=(int)Timer.currentTime;
         // print("FROM HINT:"+timer);
         if(timer == 30){
@@ -56,14 +58,14 @@ public class hintScript : MonoBehaviour
         //image = Resources.Load("HintImages/" + target_word+".jpg") as GameObject;
         
         GameObject newObject = new GameObject("hintImage");
-        newObject.transform.position = new Vector3(3, -4, 0);
-        newObject.transform.localScale =  new Vector3(3, 3, 0);
+        // newObject.transform.position = new Vector3(-500, 1000, 0);
+        // newObject.transform.localScale =  new Vector3(3, 3, 0);
         newObject.transform.SetParent(imageCanvas.transform);
-        newObject.transform.position = new Vector3(3, -4, 0);
-        newObject.transform.localScale =  new Vector3(3, 3, 0);
+        newObject.transform.position = new Vector3(950, 600, 1000);
+        newObject.transform.localScale =  new Vector3(2, 2, 0);
         newObject.AddComponent<Image>();
         newObject.GetComponent<Image>().sprite = Resources.Load<Sprite> ("HintImages/" + target_word);
-        // Destroy(newObject,3f);
+        Destroy(newObject,3f);
         // if (image != null)
         // {
         //     print("HINT IMAGE ============= working");
