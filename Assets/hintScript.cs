@@ -56,19 +56,14 @@ public class hintScript : MonoBehaviour
         //image = Resources.Load("HintImages/" + target_word+".jpg") as GameObject;
         
         GameObject newObject = new GameObject("hintImage");
+        newObject.transform.position = new Vector3(3, -4, 0);
+        newObject.transform.localScale =  new Vector3(3, 3, 0);
         newObject.transform.SetParent(imageCanvas.transform);
+        newObject.transform.position = new Vector3(3, -4, 0);
+        newObject.transform.localScale =  new Vector3(3, 3, 0);
         newObject.AddComponent<Image>();
-        newObject.GetComponent<Image>().sprite = Resources.Load<Sprite>( "HintImages/" + target_word+".jpg" );
-        print("HintImages/" + target_word+".jpg");
-        if(Resources.Load("HintImages/" + target_word+".jpg", typeof(Sprite)) as Sprite != null){
-            print("IMAGE IS NOT NULL");
-
-        }
-        else{
-            print("IMAGE IS NULL");
-        }
-
-
+        newObject.GetComponent<Image>().sprite = Resources.Load<Sprite> ("HintImages/" + target_word);
+        // Destroy(newObject,3f);
         // if (image != null)
         // {
         //     print("HINT IMAGE ============= working");
