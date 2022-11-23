@@ -66,6 +66,7 @@ public class hintScript : MonoBehaviour
         newObject.AddComponent<Image>();
         newObject.GetComponent<Image>().sprite = Resources.Load<Sprite> ("HintImages/" + target_word);
         Destroy(newObject,3f);
+        Destroy(button);
         // if (image != null)
         // {
         //     print("HINT IMAGE ============= working");
