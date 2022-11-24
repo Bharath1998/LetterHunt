@@ -19,6 +19,7 @@ public class DataCollection
 #if UNITY_EDITOR
         yield return new WaitForSeconds(1);
 #endif
+
         DatabaseModel data = new DatabaseModel();
         data.level = levelIndicator;
         data.reason_end = reasonEnd;
@@ -35,6 +36,7 @@ public class DataCollection
         data.incorrect_orange_letters = PlayerMovement.incorrectOrangeLetters;
         data.incorrect_purple_letters = PlayerMovement.incorrectPurpleLetters;
         data.incorrect_yellow_letters = PlayerMovement.incorrectYellowLetters;
+        data.score = PlayerMovement.score;
         PlayerMovement.correctYellowLetters = 0;
         PlayerMovement.correctPurpleLetters = 0;
         PlayerMovement.correctOrangeLetters = 0;
