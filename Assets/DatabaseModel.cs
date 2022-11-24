@@ -16,6 +16,7 @@ public class DatabaseModel
     public int incorrect_orange_letters;
     public int incorrect_purple_letters;
     public int incorrect_yellow_letters;
+    public int score;
 
     public string Stringify()
     {
