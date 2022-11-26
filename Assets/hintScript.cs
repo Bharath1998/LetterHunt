@@ -15,14 +15,15 @@ public class hintScript : MonoBehaviour
     public Canvas imageCanvas;
 
 
-    public static bool isGamePaused = false;
+    // public static bool isGamePaused = false;
 
 
-    public GameObject musicGameObject;
+    // public GameObject musicGameObject;
 
 
     void Start()
     {
+        // isGamePaused = false;
         Time.timeScale = 1f;
         timer = Timer.currentTime;
         button.SetActive(false);
@@ -46,13 +47,17 @@ public class hintScript : MonoBehaviour
             button.SetActive(true);
             return;
         }
+       
     }
+
+    
 
     public void hintOnClick()
     {
-        isGamePaused = true;
+        // musicGameObject.SetActive(false);
+        // isGamePaused = true;
         Time.timeScale = 0f;
-        musicGameObject.SetActive(false);
+        Invoke("ResumeGame", 3.0f);
         GameObject newObject = new GameObject("hintImage");
         newObject.transform.SetParent(imageCanvas.transform);
         newObject.transform.position = new Vector3(950, 600, 1000);
@@ -60,12 +65,22 @@ public class hintScript : MonoBehaviour
         newObject.AddComponent<Image>();
         newObject.GetComponent<Image>().sprite =
         Resources.Load<Sprite>("HintImages/" + target_word);
-        Destroy(newObject, 3f);
-        Destroy (button);
-        // pauseMenuUI.SetActive(false);
-        // isGamePaused = false;
-        // musicGameObject.SetActive(true);
-        // musicGameObject.SetActive(true);
+        
+        // Destroy(newObject, 3f);
+        
+        // button.SetActive(false);
+        
+        
 
+    }
+
+     void ResumeGame()
+    {
+        print("in resume game");
+        // musicGameObject.SetActive(true);
+        // isGamePaused = false;
+        Time.timeScale = 1f;
+        // print(isGamePaused);
+         
     }
 }
