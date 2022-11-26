@@ -14,8 +14,16 @@ public class hintScript : MonoBehaviour
 
     public Canvas imageCanvas;
 
+
+    public static bool isGamePaused = false;
+
+
+    public GameObject musicGameObject;
+
+
     void Start()
     {
+        Time.timeScale = 1f;
         timer = Timer.currentTime;
         button.SetActive(false);
         GameObject canvasObject = GameObject.Find("ImageCanvas");
@@ -26,13 +34,14 @@ public class hintScript : MonoBehaviour
 
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+
     }
 
     void Update()
     {
         target_word = PlayerMovement.target;
         timer = (int) Timer.currentTime;
-        if (timer == 20)
+        if (timer == 38)
         {
             button.SetActive(true);
             return;
@@ -41,15 +50,22 @@ public class hintScript : MonoBehaviour
 
     public void hintOnClick()
     {
-        
+        isGamePaused = true;
+        Time.timeScale = 0f;
+        musicGameObject.SetActive(false);
         GameObject newObject = new GameObject("hintImage");
         newObject.transform.SetParent(imageCanvas.transform);
         newObject.transform.position = new Vector3(950, 600, 1000);
         newObject.transform.localScale = new Vector3(2, 2, 0);
         newObject.AddComponent<Image>();
         newObject.GetComponent<Image>().sprite =
-            Resources.Load<Sprite>("HintImages/" + target_word);
+        Resources.Load<Sprite>("HintImages/" + target_word);
         Destroy(newObject, 3f);
         Destroy (button);
+        // pauseMenuUI.SetActive(false);
+        // isGamePaused = false;
+        // musicGameObject.SetActive(true);
+        // musicGameObject.SetActive(true);
+
     }
 }
