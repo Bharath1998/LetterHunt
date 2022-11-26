@@ -68,7 +68,7 @@ public class GameOverScreen : MonoBehaviour
 
     public void ExitToMain()
     {
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("StartScreen");
     }
 
     public void ExitToLevelMap()
