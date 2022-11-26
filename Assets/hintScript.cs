@@ -41,6 +41,7 @@ public class hintScript : MonoBehaviour
 
     public void hintOnClick()
     {
+        
         GameObject newObject = new GameObject("hintImage");
         newObject.transform.SetParent(imageCanvas.transform);
         newObject.transform.position = new Vector3(950, 600, 1000);
