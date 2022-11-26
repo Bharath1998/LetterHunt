@@ -42,7 +42,7 @@ public class hintScript : MonoBehaviour
     {
         target_word = PlayerMovement.target;
         timer = (int) Timer.currentTime;
-        if (timer == 38)
+        if (timer == 20)
         {
             button.SetActive(true);
             return;
@@ -56,29 +56,28 @@ public class hintScript : MonoBehaviour
     {
         // musicGameObject.SetActive(false);
         // isGamePaused = true;
-        Time.timeScale = 0f;
-        Invoke("ResumeGame", 3.0f);
+        Time.timeScale = .00000000001f;
+        StartCoroutine(ResumeGame());
         GameObject newObject = new GameObject("hintImage");
         newObject.transform.SetParent(imageCanvas.transform);
         newObject.transform.position = new Vector3(950, 600, 1000);
         newObject.transform.localScale = new Vector3(2, 2, 0);
         newObject.AddComponent<Image>();
-        newObject.GetComponent<Image>().sprite =
-        Resources.Load<Sprite>("HintImages/" + target_word);
+        newObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("HintImages/" + target_word);
         
-        // Destroy(newObject, 3f);
-        
-        // button.SetActive(false);
+        Destroy(newObject, 0.2f);
+        button.SetActive(false);
         
         
 
     }
 
-     void ResumeGame()
+     IEnumerator ResumeGame()
     {
         print("in resume game");
         // musicGameObject.SetActive(true);
         // isGamePaused = false;
+        yield return new WaitForSeconds(Time.timeScale * 3f);
         Time.timeScale = 1f;
         // print(isGamePaused);
          
