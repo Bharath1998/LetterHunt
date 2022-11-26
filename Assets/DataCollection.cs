@@ -17,7 +17,9 @@ public class DataCollection
     {
         // Abort analytics if env is local
 #if UNITY_EDITOR
+        
         yield return new WaitForSeconds(1);
+        
 #endif
 
         DatabaseModel data = new DatabaseModel();
