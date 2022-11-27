@@ -75,6 +75,11 @@ public class EnemySpawnerScript : MonoBehaviour
             spawnLimit = 12;
         }
 
+        else if (sceneName == "urjit-lvl-10")
+        {
+            spawnLimit = 8;
+        }
+
         else if (sceneName == "lvl11")
         {
             spawnLimit = 12;

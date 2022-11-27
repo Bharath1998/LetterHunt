@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/RoadMapOld.unity
     guid: fa11f3259e3b244b4b270d8de06caded
   - enabled: 1
+    path: Assets/Scenes/urjit-lvl-10.unity
+    guid: ff4aba602b90ef340a5c1b885baac9b2
+  - enabled: 1
     path: Assets/Scenes/Level02-Final.unity
     guid: 17b99341b2ad54945a6259807655abaa
   - enabled: 1

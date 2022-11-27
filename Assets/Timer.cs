@@ -78,6 +78,11 @@ public class Timer : MonoBehaviour
 
             currentTime = 60f;
         }
+        else if (sceneName == "urjit-lvl-10")
+        {
+
+            currentTime = 80f;
+        }
 
         defeatMenuUI.SetActive(false);
         startingTime = currentTime;

@@ -494,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 97325535}
   - component: {fileID: 97325536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crates_02
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -4641,7 +4641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 587170591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1 (1)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -4889,7 +4889,7 @@ GameObject:
   - component: {fileID: 609145485}
   - component: {fileID: 609145484}
   - component: {fileID: 609145483}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -5532,7 +5532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684512980}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos2
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -5640,7 +5640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699832526}
   - component: {fileID: 699832527}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Crates_02
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -8831,7 +8831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972511692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -9875,7 +9875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1114399791}
-  - component: {fileID: 1114399790}
+  - component: {fileID: 1114399792}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -9883,7 +9883,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1114399790
+--- !u!4 &1114399791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114399789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.58, y: -10.2699995, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1442954144}
+  - {fileID: 2143258856}
+  - {fileID: 1397400431}
+  - {fileID: 519358948}
+  - {fileID: 1165119378}
+  - {fileID: 1183391512}
+  - {fileID: 1734693597}
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1114399792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9892,7 +9914,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114399789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01cf180ec6bed4c9e9c34abb0833d0e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 152a128eb0c724570b611837efa5c93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   letterReference: []
@@ -9992,29 +10014,7 @@ MonoBehaviour:
   radius: 0
   textJSON: {fileID: 4900000, guid: 299bed34224464cb293d1294722387e0, type: 3}
   myPlayerList:
-    lvl11: []
---- !u!4 &1114399791
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1114399789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.58, y: -10.2699995, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1442954144}
-  - {fileID: 2143258856}
-  - {fileID: 1397400431}
-  - {fileID: 519358948}
-  - {fileID: 1165119378}
-  - {fileID: 1183391512}
-  - {fileID: 1734693597}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+    lvl10: []
 --- !u!1 &1120289660
 GameObject:
   m_ObjectHideFlags: 0
@@ -10487,7 +10487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1148877750}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos1
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
@@ -12506,18 +12506,18 @@ MonoBehaviour:
   timeScore: 0
   healthScore: 0
   letterScore: 0
-  healthBar: {fileID: 0}
-  wordTMP: {fileID: 0}
-  scoreDisplay: {fileID: 0}
-  scoreDefeat: {fileID: 0}
+  healthBar: {fileID: 143782452}
+  wordTMP: {fileID: 1989830826}
+  scoreDisplay: {fileID: 981580869}
+  scoreDefeat: {fileID: 1897042906}
   maxHealth: 100
-  playerRenderer: {fileID: 0}
+  playerRenderer: {fileID: 1411987522}
   playerCanLose: 0
   damage: 10
   MaxJumps: 2
   flag: 0
-  defeatMenuUI: {fileID: 0}
-  winUI: {fileID: 0}
+  defeatMenuUI: {fileID: 585906051}
+  winUI: {fileID: 176404187}
 --- !u!61 &1411987519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12711,7 +12711,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1441696160}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform 1
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -13481,7 +13481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1634144285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pos2
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -14211,8 +14211,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownText: {fileID: 1229966735}
-  scoreDefeat: {fileID: 0}
-  defeatMenuUI: {fileID: 0}
+  scoreDefeat: {fileID: 1897042906}
+  defeatMenuUI: {fileID: 585906051}
+  collectionFlag: 0
 --- !u!114 &1664987770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16960,7 +16961,7 @@ GameObject:
   - component: {fileID: 1997474202}
   - component: {fileID: 1997474201}
   - component: {fileID: 1997474200}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GameObject
   m_TagString: ground
   m_Icon: {fileID: 0}
