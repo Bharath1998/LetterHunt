@@ -24,6 +24,8 @@ public class Timer : MonoBehaviour
 
     public GameObject defeatMenuUI;
 
+    public int collectionFlag = 0;
+
     void Start()
     {
         // currentTime = startingTime;
@@ -102,9 +104,11 @@ public class Timer : MonoBehaviour
 
         countdownText.text = currentTime.ToString("0");
 
-        if (currentTime <= 0)
+        if (currentTime <= 0 && collectionFlag == 0)
         {
+            collectionFlag = 1;
             currentTime = 0;
+            print(currentTime);
             StartCoroutine(DataCollection.Upload("TIME_UP"));
             defeatMenuUI.SetActive(true);
             scoreDefeat.text = score.ToString();
