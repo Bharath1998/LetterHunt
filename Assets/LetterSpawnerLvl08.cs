@@ -228,12 +228,12 @@ public class LetterSpawnerLvl08 : MonoBehaviour
                 // */
             }
 
-            if(i==0){
-                x = -1;
-                y = 4;
-                randomPosition = new Vector3(x,y,0);
-                seenList.Add(new float[2]{x,y});
-            }
+            // if(i==0){
+            //     x = -1;
+            //     y = 4;
+            //     randomPosition = new Vector3(x,y,0);
+            //     seenList.Add(new float[2]{x,y});
+            // }
             int color = colors[i];
             int letter_index = indexes[i];
             /*
