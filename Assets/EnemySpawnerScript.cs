@@ -21,8 +21,8 @@ public class EnemySpawnerScript : MonoBehaviour
     void Start()
     {
         // spawnAllowed = true;
-        InvokeRepeating("SpawnAMonster", 3f, 6f);
-
+        
+        spawnedMonsters = 0;
         Scene currentScene = SceneManager.GetActiveScene();
 
         // Retrieve the name of this scene.
@@ -69,6 +69,19 @@ public class EnemySpawnerScript : MonoBehaviour
         {
             spawnLimit = 12;
         }
+
+        else if (sceneName == "lvl8")
+        {
+            spawnLimit = 12;
+        }
+
+        else if (sceneName == "lvl11")
+        {
+            spawnLimit = 12;
+        }
+
+        // InvokeRepeating("SpawnAMonster", 3f, 6f);
+        
     }
 
     void SpawnAMonster()
@@ -90,5 +103,8 @@ public class EnemySpawnerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        InvokeRepeating("SpawnAMonster", 3f, 6f);
+        
     }
 }
