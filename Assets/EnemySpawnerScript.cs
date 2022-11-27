@@ -22,6 +22,7 @@ public class EnemySpawnerScript : MonoBehaviour
     {
         // spawnAllowed = true;
         
+        
         spawnedMonsters = 0;
         Scene currentScene = SceneManager.GetActiveScene();
 
@@ -85,7 +86,7 @@ public class EnemySpawnerScript : MonoBehaviour
             spawnLimit = 12;
         }
 
-        // InvokeRepeating("SpawnAMonster", 3f, 6f);
+        InvokeRepeating("SpawnAMonster", 3f, 6f);
         
     }
 
@@ -106,10 +107,4 @@ public class EnemySpawnerScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-        InvokeRepeating("SpawnAMonster", 3f, 6f);
-        
-    }
 }
