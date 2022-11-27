@@ -78,6 +78,11 @@ public class MainMenu : MonoBehaviour
         DataCollection.levelIndicator = 9;
         SceneManager.LoadScene("lvl11");
     }
+    public void GoToLvl10()
+    {
+        DataCollection.levelIndicator = 10;
+        SceneManager.LoadScene("urjit-lvl-10");
+    }
 
     public void GoToRoadmap()
     {

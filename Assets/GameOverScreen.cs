@@ -48,6 +48,11 @@ public class GameOverScreen : MonoBehaviour
             // Change when new level is added.
             SceneManager.LoadScene("lvl8");
         }
+        else if (sceneName == "urjit-lvl-10")
+        {
+            // Change when new level is added.
+            SceneManager.LoadScene("urjit-lvl-10");
+        }
         else if (sceneName == "lvl11")
         {
             // Change when new level is added.
