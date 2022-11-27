@@ -14,8 +14,17 @@ public class hintScript : MonoBehaviour
 
     public Canvas imageCanvas;
 
+
+    // public static bool isGamePaused = false;
+
+
+    // public GameObject musicGameObject;
+
+
     void Start()
     {
+        // isGamePaused = false;
+        Time.timeScale = 1f;
         timer = Timer.currentTime;
         button.SetActive(false);
         GameObject canvasObject = GameObject.Find("ImageCanvas");
@@ -26,6 +35,7 @@ public class hintScript : MonoBehaviour
 
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+
     }
 
     void Update()
@@ -37,19 +47,39 @@ public class hintScript : MonoBehaviour
             button.SetActive(true);
             return;
         }
+       
     }
+
+    
 
     public void hintOnClick()
     {
-        
+        // musicGameObject.SetActive(false);
+        // isGamePaused = true;
+        Time.timeScale = .00000000001f;
+        StartCoroutine(ResumeGame());
         GameObject newObject = new GameObject("hintImage");
         newObject.transform.SetParent(imageCanvas.transform);
         newObject.transform.position = new Vector3(950, 600, 1000);
         newObject.transform.localScale = new Vector3(2, 2, 0);
         newObject.AddComponent<Image>();
-        newObject.GetComponent<Image>().sprite =
-            Resources.Load<Sprite>("HintImages/" + target_word);
-        Destroy(newObject, 3f);
-        Destroy (button);
+        newObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("HintImages/" + target_word);
+        
+        Destroy(newObject, 0.2f);
+        button.SetActive(false);
+        
+        
+
+    }
+
+     IEnumerator ResumeGame()
+    {
+        print("in resume game");
+        // musicGameObject.SetActive(true);
+        // isGamePaused = false;
+        yield return new WaitForSeconds(Time.timeScale * 3f);
+        Time.timeScale = 1f;
+        // print(isGamePaused);
+         
     }
 }
