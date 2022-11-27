@@ -181,6 +181,14 @@ public class PlayerMovement : MonoBehaviour
                 print("target printed from player movement : " + target);
             }
 
+            else if (sceneName == "urjit-lvl-10")
+            {
+
+                target = LetterSpawnerLvl10.target_word;
+
+                print("target printed from player movement : " + target);
+            }
+
             else if (sceneName == "lvl11")
             {
 
