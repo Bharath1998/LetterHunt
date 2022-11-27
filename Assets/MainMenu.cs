@@ -86,7 +86,6 @@ public class MainMenu : MonoBehaviour
 
     public void GoToRoadmap()
     {
-        DataCollection.levelIndicator = 10;
         SceneManager.LoadScene("RoadMap");
     }
 
