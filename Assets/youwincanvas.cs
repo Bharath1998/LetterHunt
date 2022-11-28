@@ -98,6 +98,10 @@ public class youwincanvas : MonoBehaviour
         {
             SceneManager.LoadScene("lvl11");
         }
+        else if (sceneName == "urjit-lvl-10")
+        {
+            SceneManager.LoadScene("urjit-lvl-10");
+        }
 
 
     }
