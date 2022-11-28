@@ -25,9 +25,10 @@ public class PlayerMovement : MonoBehaviour
 
     public static string target;
     public static int score;
-    public int weightageForLetters = 60;
-    public int weightageForTime = 20;
-    public int weightageForHealth = 20;
+    public int weightageForLetters = 50;
+    public int weightageForTime = 10;
+    public int weightageForHealth = 10;
+    public int weightageForHint = 30;
     public int timeScore = 0;
     public int healthScore = 0;
     public int letterScore = 0;
@@ -294,6 +295,7 @@ public class PlayerMovement : MonoBehaviour
             // Destroy(this.gameObject);
 
            print("HEALTH"+ currentHealth);
+           calculateScore();
             scoreDisplay.text = score.ToString();
             defeatMenuUI.SetActive(true);
             scoreDefeat.text = score.ToString();
@@ -329,7 +331,30 @@ public class PlayerMovement : MonoBehaviour
     public void calculateScore(){
         healthScore = (int)Math.Round(weightageForHealth*((float)currentHealth/(float)maxHealth));
         timeScore = (int)Convert.ToInt32((getTimeBasedScore(Timer.currentTime, Timer.startingTime, weightageForTime)));
-        score = letterScore + healthScore + timeScore;
+        if(!hintScript.hintUsed)
+        {
+            // Debug.Log("Letter score");
+            // Debug.Log(letterScore);
+            // Debug.Log("Time score");
+            // Debug.Log(timeScore);
+            // Debug.Log("health score");
+            // Debug.Log(healthScore);
+            // Debug.Log("Himnt");
+            // Debug.Log(weightageForHint);
+            
+            score = letterScore + healthScore + timeScore + weightageForHint;
+        }
+        else{
+            // Debug.Log("Letter score");
+            // Debug.Log(letterScore);
+            // Debug.Log("Time score");
+            // Debug.Log(timeScore);
+            // Debug.Log("health score");
+            // Debug.Log(healthScore);
+            // Debug.Log("Himnt");
+            // Debug.Log(weightageForHint);
+            score = letterScore + healthScore + timeScore;
+        }
     }
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -409,6 +434,8 @@ public class PlayerMovement : MonoBehaviour
                 if (string.Join("", arr_win) == target)
                 {
                     calculateScore();
+                    Debug.Log("the score is ");
+                    Debug.Log(score);
                     StopAllCoroutines();
                     GamePause();
                     StartCoroutine(DataCollection.Upload("SUCCESS"));
