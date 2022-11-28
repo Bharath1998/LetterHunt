@@ -464,6 +464,16 @@ public class PlayerMovement : MonoBehaviour
                         winUI.SetActive(true);
                         // youwin.SetActive(true);
                     }
+                    else if(sceneName=="lvl11"){
+                        scoreDisplay.text = score.ToString();
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
+                    }
+                    else if(sceneName=="urjit-lvl-10"){
+                        scoreDisplay.text = score.ToString();
+                        winUI.SetActive(true);
+                        // youwin.SetActive(true);
+                    }
                     else
                     {
                         SceneManager.LoadScene("Win");
