@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class hintScript : MonoBehaviour
 {
     public static float timer;
-
+    public static bool hintUsed;
     public GameObject button;
 
     public static string target_word;
@@ -23,6 +23,7 @@ public class hintScript : MonoBehaviour
 
     void Start()
     {
+        hintUsed = false;
         // isGamePaused = false;
         Time.timeScale = 1f;
         timer = Timer.currentTime;
@@ -64,7 +65,7 @@ public class hintScript : MonoBehaviour
         newObject.transform.localScale = new Vector3(2, 2, 0);
         newObject.AddComponent<Image>();
         newObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("HintImages/" + target_word);
-        
+        hintUsed = true;
         Destroy(newObject, 0.2f);
         button.SetActive(false);
         
