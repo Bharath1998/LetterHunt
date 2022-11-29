@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2909525913776137475}
   - component: {fileID: 2909525913776137474}
   - component: {fileID: 5920500089975890707}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: power_up_dest_enemies
   m_TagString: power_up_dest_enemies
   m_Icon: {fileID: 0}

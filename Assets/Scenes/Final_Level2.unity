@@ -2149,6 +2149,7 @@ MonoBehaviour:
   countdownText: {fileID: 2110458666}
   scoreDefeat: {fileID: 241711139}
   defeatMenuUI: {fileID: 196040276}
+  collectionFlag: 0
 --- !u!114 &274673939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13158,6 +13159,7 @@ MonoBehaviour:
   weightageForLetters: 60
   weightageForTime: 20
   weightageForHealth: 20
+  weightageForHint: 30
   timeScore: 0
   healthScore: 0
   letterScore: 0
